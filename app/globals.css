@@ -175,6 +175,16 @@ tr:last-child td{border-bottom:0}
 .grade-bar{display:flex;flex-direction:column;gap:6px;margin:10px 0}
 .grade-row{display:flex;align-items:center;justify-content:space-between;font-size:.9rem;font-weight:600}
 
+/* Footer & Author */
+.app-footer{margin-top:36px;border-top:1px solid var(--line);background:var(--paper);padding:22px 0;font-size:.88rem;color:var(--muted);box-shadow:var(--shadow)}
+.footer-wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-author{display:flex;flex-direction:column;gap:4px;min-width:0}
+.footer-author b{color:var(--ink);font-size:1rem;font-family:var(--f-display)}
+.footer-contact{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.footer-contact a{color:var(--accent);text-decoration:none;font-weight:600}
+.footer-contact a:hover{text-decoration:underline}
+.footer-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent-soft);color:var(--accent);padding:4px 10px;border-radius:999px;font-size:.82rem;font-weight:600}
+
 @media (max-width:560px){
   .dayhead{grid-template-columns:auto 1fr}
   .dayhead .nav{grid-column:1/-1}

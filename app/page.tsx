@@ -45,6 +45,20 @@ export default function Home() {
       <div className="wrap">
         <main id="view" tabIndex={-1}></main>
       </div>
+
+      <footer className="app-footer">
+        <div className="wrap footer-wrap">
+          <div className="footer-author">
+            <b>© Bản quyền nội dung & Phần mềm: Thầy Lê Tâm</b>
+            <span>Giáo viên trường THCS Quang Trung, Phường Xuân Hương, TP. Đà Lạt, Tỉnh Lâm Đồng</span>
+          </div>
+          <div className="footer-contact">
+            <span className="footer-badge">Toán Song Ngữ THCS</span>
+            <span>📞 Liên hệ / Zalo: <a href="tel:0913443127"><b>0913.443.127</b></a></span>
+          </div>
+        </div>
+      </footer>
+
       <div className="toast" id="toast" role="status" aria-live="polite" hidden></div>
       <Script src="/app.js" strategy="afterInteractive" />
     </>

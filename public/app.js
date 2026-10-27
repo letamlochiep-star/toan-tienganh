@@ -232,6 +232,7 @@ function exportCSV() {
   const student = s.name || "Học sinh";
   let rows = [
     ["BÁO CÁO KẾT QUẢ HỌC TỪ VỰNG TOÁN TIẾNG ANH (LỚP 6-9)"],
+    ["Tác giả biên soạn & Bản quyền:", "Thầy Lê Tâm - Giáo viên THCS Quang Trung, Phường Xuân Hương, TP. Đà Lạt, Tỉnh Lâm Đồng (SĐT: 0913443127)"],
     ["Thời gian xuất:", new Date().toLocaleString("vi-VN")],
     ["Họ và tên học sinh:", student],
     ["Trường:", s.school || "Chưa cập nhật"],
@@ -290,6 +291,7 @@ function shareStats() {
     '📅 Đã hoàn thành: ' + doneCount + '/40 ngày (' + Math.round(doneCount/40*100) + '%)\n' +
     '🧠 Từ vựng ghi nhớ: ' + wordsInBox + '/240 từ\n' +
     '🎯 Tỉ lệ đúng bài kiểm tra: ' + acc + '%\n' +
+    '👨‍🏫 Tác giả: Thầy Lê Tâm (THCS Quang Trung, Đà Lạt - 0913.443.127)\n' +
     '🌐 Trang web học tập: ' + window.location.origin;
   if (navigator.clipboard) {
     navigator.clipboard.writeText(text).then(() => {
@@ -392,6 +394,15 @@ function vStats() {
   }
   h += '</section>';
 
+  h += '<section class="panel" style="border-left:4px solid var(--accent)">' +
+    '<div class="row" style="justify-content:space-between;align-items:center">' +
+    '<div><span class="pill">Thông tin bản quyền & Tác giả</span>' +
+    '<h3 style="margin:4px 0 2px">Thầy Lê Tâm · Giáo viên Trường THCS Quang Trung</h3>' +
+    '<p class="muted small" style="margin:0">Phường Xuân Hương, TP. Đà Lạt, Tỉnh Lâm Đồng · Tác giả biên soạn chương trình Từ vựng Toán Tiếng Anh Lớp 6–9</p></div>' +
+    '<div class="row">' +
+    '<a class="btn primary" href="tel:0913443127" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px">📞 Liên hệ: 0913.443.127</a>' +
+    '</div></div></section>';
+
   $("#view").innerHTML = h;
 }
 
@@ -399,6 +410,12 @@ function vStats() {
 function vExt(){
   const s=S.settings;
   let h='<section class="panel"><h2>Khu vực mở rộng</h2><p class="muted" style="margin:6px 0 0">Các ô dưới đây dành cho nội dung bổ sung ở những phiên bản sau. Mọi thông tin được lưu ngay trên thiết bị này; dùng mục Sao lưu để mang sang thiết bị khác.</p></section>';
+  h+='<section class="panel" style="border-left:4px solid var(--accent)"><div class="row" style="justify-content:space-between;align-items:center">' +
+   '<div><span class="pill">Bản quyền & Tác giả</span>' +
+   '<h3 style="margin:4px 0 2px">Thầy Lê Tâm · Giáo viên Trường THCS Quang Trung</h3>' +
+   '<p class="muted small" style="margin:0">Phường Xuân Hương, TP. Đà Lạt, Tỉnh Lâm Đồng</p>' +
+   '<p class="small" style="margin:4px 0 0">Biên soạn dữ liệu 240 từ vựng và câu hỏi trắc nghiệm Toán Tiếng Anh THCS (Lớp 6–9 SGK Kết nối tri thức).</p></div>' +
+   '<div><a class="btn primary" href="tel:0913443127" style="text-decoration:none">📞 Gọi / Zalo: 0913.443.127</a></div></div></section>';
   h+='<section class="panel"><h3>1. Thông tin lớp học</h3><div class="two" style="margin-top:10px">'+
    '<label class="f">Họ và tên học sinh<input type="text" data-path="name" value="'+esc(s.name||"")+'" placeholder="Ví dụ: Nguyễn Văn An"></label>'+
    '<label class="f">Trường<input type="text" data-path="school" value="'+esc(s.school)+'" placeholder="Tên trường"></label>'+
