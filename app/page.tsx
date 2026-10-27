@@ -1,7 +1,7 @@
 'use client';
 
-import Header from "../components/Header";
-import ProgressBar from "../components/ProgressBar";
+import Header from "@/components/Header";
+import ProgressBar from "@/components/ProgressBar";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 

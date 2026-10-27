@@ -1,5 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import { usePronunciation } from "../hooks/usePronunciation";
+'use client';
+
+import React, { useEffect, useState } from "react";
+import { usePronunciation } from "@/hooks/usePronunciation";
 
 interface SpeakableWordProps {
   /** English term to be spoken */
@@ -11,41 +13,23 @@ interface SpeakableWordProps {
 }
 
 /**
- * <SpeakableWord> renders the English term. When hovered / focused / touched it shows a small speaker icon.
- * Clicking the icon plays the pronunciation.
- * The component uses the `usePronunciation` hook which implements the priority chain:
- *   (a) pre‑generated file → (b) server‑side /api/tts → (c) browser speechSynthesis.
+ * <SpeakableWord> renders the English term with a speaker icon.
  */
 export const SpeakableWord: React.FC<SpeakableWordProps> = ({ text, audioId, lang = "en-US" }) => {
-  const [showIcon, setShowIcon] = useState(false);
+  const [showIcon, setShowIcon] = useState(true);
   const { play, loading, error, playing } = usePronunciation(audioId, text, lang);
-
-  // Hover / focus handlers for desktop, always show on touch devices
-  const handleMouseEnter = () => setShowIcon(true);
-  const handleMouseLeave = () => setShowIcon(false);
-  const handleFocus = () => setShowIcon(true);
-  const handleBlur = () => setShowIcon(false);
-
-  // Touch devices – show icon persistently (simplified detection)
-  useEffect(() => {
-    const mql = window.matchMedia("(hover: none) and (pointer: coarse)");
-    if (mql.matches) setShowIcon(true);
-  }, []);
 
   return (
     <span
-      className="relative inline-flex items-center hover:underline focus:outline-none"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onFocus={handleFocus}
-      onBlur={handleBlur}
+      className="relative inline-flex items-center gap-1 hover:underline focus:outline-none"
       tabIndex={0}
     >
-      {text}
+      <span>{text}</span>
       {showIcon && (
         <button
+          type="button"
           aria-label={`Nghe phát âm: ${text}`}
-          className="ml-2 flex items-center justify-center rounded-full p-1 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-600"
+          className="inline-flex items-center justify-center rounded-full p-1.5 min-w-[32px] min-h-[32px] hover:bg-gray-100 focus-visible:ring-2 focus-visible:ring-primary-600"
           onClick={(e) => {
             e.stopPropagation();
             play();
@@ -58,18 +42,20 @@ export const SpeakableWord: React.FC<SpeakableWordProps> = ({ text, audioId, lan
               <path d="M22 12a10 10 0 0 1-10 10" stroke="currentColor" strokeWidth="4" />
             </svg>
           ) : playing ? (
-            <svg className="h-4 w-4 text-primary-600" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <svg className="h-4 w-4 text-primary-600 animate-pulse" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
             </svg>
           ) : (
-            <svg className="h-4 w-4 text-gray-600" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 3v18c-4.418 0-8-3.582-8-8s3.582-8 8-8z" />
+            <svg className="h-4 w-4 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" />
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
             </svg>
-          ))}
+          )}
         </button>
       )}
       {error && (
-        <span className="ml-1 text-sm text-red-500" title={error}>⚠️</span>
+        <span className="ml-1 text-xs text-red-500" title={error}>⚠️</span>
       )}
     </span>
   );
