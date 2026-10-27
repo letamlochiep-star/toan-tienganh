@@ -60,6 +60,7 @@ export default function Home() {
       </footer>
 
       <div className="toast" id="toast" role="status" aria-live="polite" hidden></div>
+      <Script src="/word-icons.js" strategy="beforeInteractive" />
       <Script src="/app.js" strategy="afterInteractive" />
     </>
   );

@@ -98,13 +98,17 @@ function hl(w){const b=baseTerm(w.term).replace(/[.*+?^${}()|[\]\\]/g,"\\$&");co
 function cardHTML(w){
   const e=ext(w.id);
   const cov=S.hide?" cover":"";
-  const img=e.img?'<img src="'+e.img+'" alt="Hình minh họa: '+esc(w.term)+'">':'<div class="ph" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m4 18 5-5 4 4 3-3 4 4"/></svg></div>';
+  const icon=(typeof getWordIcon==="function")?getWordIcon(w):null;
+  const imgContent=e.img
+    ?'<img src="'+e.img+'" alt="Hình minh họa: '+esc(w.term)+'">'
+    :(icon?icon.svg:'<div class="ph" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m4 18 5-5 4 4 3-3 4 4"/></svg></div>');
+  const caption=e.img?'Hình riêng do bạn tải lên':(icon?icon.cap:'Minh họa khái niệm toán học');
   return '<article class="card" data-w="'+w.id+'"><div class="head"><div>'+sw(esc(w.term),baseTerm(w.term),w.id,"term")+'<div class="ipa">'+esc(w.ipa)+'</div></div><span class="pill">Lớp '+w.grade+'</span></div>'+
    '<div class="vi'+cov+'" data-cover>'+esc(w.vi)+'</div>'+
+   '<div class="card-illus"><div class="illus-svg">'+imgContent+'</div><div class="illus-info"><span class="illus-tag">Hình minh họa trực quan</span><span class="illus-caption">'+esc(caption)+'</span></div></div>'+
    '<div class="ex">'+sw(hl(w),w.ex,w.id+"-s")+'</div>'+
    (e.vi?'<div class="exvi'+cov+'" data-cover>'+esc(e.vi)+'</div>':'')+
    (e.tip?'<div class="small"><b>Mẹo nhớ:</b> '+esc(e.tip)+'</div>':'')+
-   '<div class="imgslot">'+img+'<span>'+(e.img?'Hình do bạn tải lên.':'Chưa có hình riêng cho từ này. Mở “Bổ sung thông tin” để tải hình lên.')+'</span></div>'+
    moreHTML(w)+'</article>';
 }
 function moreHTML(w){const e=ext(w.id);
@@ -161,7 +165,7 @@ function vQuiz(){
   const a=Q.picked;
   let h='<section class="panel qwrap"><div class="row small muted"><span>Câu '+(Q.i+1)+'/'+Q.items.length+'</span><span class="grow"></span><span>Đúng: '+Q.score+'</span></div><div class="progress"><i style="width:'+(Q.i/Q.items.length*100)+'%"></i></div>'+
     '<div class="qprompt">'+p+'</div><div class="opts">'+q.opts.map((o,k)=>{let c="opt";if(a!==null){if(o===q.ans)c+=" ok";else if(o===a)c+=" bad";}return '<button class="'+c+'" data-opt="'+k+'" '+(a!==null?'disabled':'')+'>'+esc(o)+'</button>';}).join("")+'</div>';
-  if(a!==null){const ok=a===q.ans;h+='<div class="feedback '+(ok?'ok':'bad')+'"><b>'+(ok?'Chính xác!':'Chưa đúng.')+'</b><span>'+esc(w.term)+' <span class="ipa">'+esc(w.ipa)+'</span> – '+esc(w.vi)+'</span><span class="small muted">'+esc(w.ex)+'</span></div><button class="btn primary" id="nextq">'+(Q.i+1>=Q.items.length?'Xem kết quả':'Câu tiếp theo')+'</button>';}
+  if(a!==null){const ok=a===q.ans;const icon=(typeof getWordIcon==="function")?getWordIcon(w):null;const iconHtml=icon?'<div class="illus-svg" style="width:72px;height:58px;flex:0 0 72px">'+icon.svg+'</div>':'';h+='<div class="feedback '+(ok?'ok':'bad')+'"><div class="row" style="gap:12px;align-items:center">'+iconHtml+'<div style="flex:1 1 auto;min-width:0"><b>'+(ok?'Chính xác!':'Chưa đúng.')+'</b><div>'+esc(w.term)+' <span class="ipa">'+esc(w.ipa)+'</span> – '+esc(w.vi)+'</div><div class="small muted">'+esc(w.ex)+'</div>'+(icon?'<div class="small" style="color:var(--accent);margin-top:2px">'+esc(icon.cap)+'</div>':'')+'</div></div></div><button class="btn primary" id="nextq">'+(Q.i+1>=Q.items.length?'Xem kết quả':'Câu tiếp theo')+'</button>';}
   $("#view").innerHTML=h+'</section>';
   if(q.t==="listen"&&a===null){const b=document.querySelector(".spk.big");if(b)setTimeout(()=>{try{speak(b);}catch(e){}},250);}
 }
@@ -219,8 +223,8 @@ function vReview(){
   if(!RV)RV={list:due.slice(0,12),i:0,show:false,ok:0};
   if(!RV.list.length){h+='<section class="panel"><h3>Chưa có từ nào đến hạn ôn</h3><p class="muted">Hoàn thành bài kiểm tra của ngày 1, các từ sẽ xuất hiện ở đây vào ngày hôm sau.</p><button class="btn primary" data-go="hom-nay">Về bài học hôm nay</button></section>';}
   else if(RV.i>=RV.list.length){h+='<section class="panel"><h3>Xong lượt ôn: nhớ '+RV.ok+'/'+RV.list.length+' từ</h3><button class="btn" id="rvreset">Ôn lượt mới</button></section>';}
-  else{const w=RV.list[RV.i];h+='<section class="panel qwrap"><div class="small muted">Từ '+(RV.i+1)+'/'+RV.list.length+'</div><div class="qprompt">'+sw(esc(w.term),baseTerm(w.term),w.id,"qbig")+'<div class="ipa">'+esc(w.ipa)+'</div>'+
-    (RV.show?'<div class="vi" style="font-size:1.2rem">'+esc(w.vi)+'</div><div class="ex">'+esc(w.ex)+'</div>':'<button class="btn" id="rvshow">Hiện nghĩa</button>')+'</div>'+
+  else{const w=RV.list[RV.i];const icon=(typeof getWordIcon==="function")?getWordIcon(w):null;h+='<section class="panel qwrap"><div class="small muted">Từ '+(RV.i+1)+'/'+RV.list.length+'</div><div class="qprompt">'+sw(esc(w.term),baseTerm(w.term),w.id,"qbig")+'<div class="ipa">'+esc(w.ipa)+'</div>'+
+    (RV.show?(icon?'<div style="margin:12px auto;display:flex;flex-direction:column;align-items:center"><div class="illus-svg" style="width:110px;height:84px">'+icon.svg+'</div><span class="small muted" style="margin-top:4px">'+esc(icon.cap)+'</span></div>':'')+'<div class="vi" style="font-size:1.2rem">'+esc(w.vi)+'</div><div class="ex">'+esc(w.ex)+'</div>':'<button class="btn" id="rvshow">Hiện nghĩa</button>')+'</div>'+
     (RV.show?'<div class="row" style="justify-content:center"><button class="btn" data-rv="0">Chưa nhớ</button><button class="btn primary" data-rv="1">Nhớ rồi</button></div>':'')+'</section>';}
   $("#view").innerHTML=h;
 }
