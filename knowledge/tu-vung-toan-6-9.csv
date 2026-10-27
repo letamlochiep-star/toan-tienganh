@@ -1,0 +1,245 @@
+day,grade,topic,term,ipa_us,meaning_vi
+1,6,so-tu-nhien,natural number,/ˈnætʃrəl ˈnʌmbər/,số tự nhiên
+1,6,so-tu-nhien,digit,/ˈdɪdʒɪt/,chữ số
+1,6,so-tu-nhien,addition,/əˈdɪʃn/,phép cộng
+1,6,so-tu-nhien,subtraction,/səbˈtrækʃn/,phép trừ
+1,6,so-tu-nhien,multiplication,/ˌmʌltɪplɪˈkeɪʃn/,phép nhân
+1,6,so-tu-nhien,power,/ˈpaʊər/,lũy thừa
+2,6,chia-het,divisible,/dɪˈvɪzəbl/,chia hết
+2,6,chia-het,divisor,/dɪˈvaɪzər/,ước
+2,6,chia-het,multiple,/ˈmʌltɪpl/,bội
+2,6,chia-het,prime number,/praɪm ˈnʌmbər/,số nguyên tố
+2,6,chia-het,greatest common divisor,/ˈɡreɪtɪst ˈkɑːmən dɪˈvaɪzər/,ước chung lớn nhất
+2,6,chia-het,least common multiple,/liːst ˈkɑːmən ˈmʌltɪpl/,bội chung nhỏ nhất
+3,6,so-nguyen,integer,/ˈɪntɪdʒər/,số nguyên
+3,6,so-nguyen,negative number,/ˈneɡətɪv ˈnʌmbər/,số âm
+3,6,so-nguyen,positive number,/ˈpɑːzətɪv ˈnʌmbər/,số dương
+3,6,so-nguyen,opposite number,/ˈɑːpəzɪt ˈnʌmbər/,số đối
+3,6,so-nguyen,absolute value,/ˈæbsəluːt ˈvæljuː/,giá trị tuyệt đối
+3,6,so-nguyen,number line,/ˈnʌmbər laɪn/,trục số
+4,6,hinh-phang,equilateral triangle,/ˌiːkwɪˈlætərəl ˈtraɪæŋɡl/,tam giác đều
+4,6,hinh-phang,square,/skwer/,hình vuông
+4,6,hinh-phang,regular hexagon,/ˈreɡjələr ˈheksəɡɑːn/,lục giác đều
+4,6,hinh-phang,side,/saɪd/,cạnh
+4,6,hinh-phang,vertex (vertices),/ˈvɜːrteks/ (/ˈvɜːrtɪsiːz/),đỉnh
+4,6,hinh-phang,perimeter,/pəˈrɪmɪtər/,chu vi
+5,6,tu-giac-dac-biet,rectangle,/ˈrektæŋɡl/,hình chữ nhật
+5,6,tu-giac-dac-biet,rhombus,/ˈrɑːmbəs/,hình thoi
+5,6,tu-giac-dac-biet,parallelogram,/ˌpærəˈleləɡræm/,hình bình hành
+5,6,tu-giac-dac-biet,isosceles trapezoid (UK: trapezium),/aɪˈsɑːsəliːz ˈtræpəzɔɪd/,hình thang cân
+5,6,tu-giac-dac-biet,diagonal,/daɪˈæɡənl/,đường chéo
+5,6,tu-giac-dac-biet,area,/ˈeriə/,diện tích
+6,6,doi-xung,symmetry,/ˈsɪmətri/,tính đối xứng
+6,6,doi-xung,axis of symmetry,/ˈæksɪs əv ˈsɪmətri/,trục đối xứng
+6,6,doi-xung,symmetric,/sɪˈmetrɪk/,đối xứng
+6,6,doi-xung,center of symmetry,/ˈsentər əv ˈsɪmətri/,tâm đối xứng
+6,6,doi-xung,rotation,/roʊˈteɪʃn/,phép quay
+6,6,doi-xung,fold,/foʊld/,gấp
+7,6,phan-so-1,fraction,/ˈfrækʃn/,phân số
+7,6,phan-so-1,numerator,/ˈnuːməreɪtər/,tử số
+7,6,phan-so-1,denominator,/dɪˈnɑːmɪneɪtər/,mẫu số
+7,6,phan-so-1,equivalent fractions,/ɪˈkwɪvələnt ˈfrækʃnz/,phân số bằng nhau
+7,6,phan-so-1,simplify,/ˈsɪmplɪfaɪ/,rút gọn
+7,6,phan-so-1,mixed number,/mɪkst ˈnʌmbər/,hỗn số
+8,6,phan-so-2,sum,/sʌm/,tổng
+8,6,phan-so-2,difference,/ˈdɪfrəns/,hiệu
+8,6,phan-so-2,product,/ˈprɑːdʌkt/,tích
+8,6,phan-so-2,quotient,/ˈkwoʊʃnt/,thương
+8,6,phan-so-2,reciprocal,/rɪˈsɪprəkl/,số nghịch đảo
+8,6,phan-so-2,percent,/pərˈsent/,phần trăm
+9,6,so-thap-phan,decimal,/ˈdesɪml/,số thập phân
+9,6,so-thap-phan,decimal point,/ˈdesɪml pɔɪnt/,dấu phẩy thập phân
+9,6,so-thap-phan,tenth,/tenθ/,phần mười
+9,6,so-thap-phan,hundredth,/ˈhʌndrədθ/,phần trăm (hàng)
+9,6,so-thap-phan,round,/raʊnd/,làm tròn
+9,6,so-thap-phan,approximate,/əˈprɑːksɪmət/,xấp xỉ
+10,6,diem-duong-thang,point,/pɔɪnt/,điểm
+10,6,diem-duong-thang,line,/laɪn/,đường thẳng
+10,6,diem-duong-thang,ray,/reɪ/,tia
+10,6,diem-duong-thang,line segment,/laɪn ˈseɡmənt/,đoạn thẳng
+10,6,diem-duong-thang,midpoint,/ˈmɪdpɔɪnt/,trung điểm
+10,6,diem-duong-thang,intersect,/ˌɪntərˈsekt/,cắt nhau
+11,6,goc,angle,/ˈæŋɡl/,góc
+11,6,goc,right angle,/raɪt ˈæŋɡl/,góc vuông
+11,6,goc,acute angle,/əˈkjuːt ˈæŋɡl/,góc nhọn
+11,6,goc,obtuse angle,/ɑːbˈtuːs ˈæŋɡl/,góc tù
+11,6,goc,degree,/dɪˈɡriː/,độ
+11,6,goc,protractor,/proʊˈtræktər/,thước đo góc
+12,6,du-lieu-xac-suat,data,/ˈdeɪtə/,dữ liệu
+12,6,du-lieu-xac-suat,bar chart,/bɑːr tʃɑːrt/,biểu đồ cột
+12,6,du-lieu-xac-suat,experiment,/ɪkˈsperɪmənt/,thí nghiệm / phép thử
+12,6,du-lieu-xac-suat,outcome,/ˈaʊtkʌm/,kết quả
+12,6,du-lieu-xac-suat,event,/ɪˈvent/,biến cố
+12,6,du-lieu-xac-suat,experimental probability,/ɪkˌsperɪˈmentl ˌprɑːbəˈbɪləti/,xác suất thực nghiệm
+13,7,so-huu-ti,rational number,/ˈræʃnəl ˈnʌmbər/,số hữu tỉ
+13,7,so-huu-ti,compare,/kəmˈper/,so sánh
+13,7,so-huu-ti,order of operations,/ˈɔːrdər əv ˌɑːpəˈreɪʃnz/,thứ tự thực hiện phép tính
+13,7,so-huu-ti,parentheses,/pəˈrenθəsiːz/,dấu ngoặc
+13,7,so-huu-ti,exponent,/ɪkˈspoʊnənt/,số mũ
+13,7,so-huu-ti,base,/beɪs/,cơ số
+14,7,so-thuc,real number,/ˈriːəl ˈnʌmbər/,số thực
+14,7,so-thuc,irrational number,/ɪˈræʃənl ˈnʌmbər/,số vô tỉ
+14,7,so-thuc,square root,/skwer ruːt/,căn bậc hai
+14,7,so-thuc,perfect square,/ˈpɜːrfɪkt skwer/,số chính phương
+14,7,so-thuc,repeating decimal,/rɪˈpiːtɪŋ ˈdesɪml/,số thập phân vô hạn tuần hoàn
+14,7,so-thuc,approximation,/əˌprɑːksɪˈmeɪʃn/,giá trị gần đúng
+15,7,goc-song-song-dinh-li,vertical angles,/ˈvɜːrtɪkl ˈæŋɡlz/,hai góc đối đỉnh
+15,7,goc-song-song-dinh-li,perpendicular,/ˌpɜːrpənˈdɪkjələr/,vuông góc
+15,7,goc-song-song-dinh-li,corresponding angles,/ˌkɔːrəˈspɑːndɪŋ ˈæŋɡlz/,các góc đồng vị
+15,7,goc-song-song-dinh-li,alternate interior angles,/ˈɔːltərnət ɪnˈtɪriər ˈæŋɡlz/,các góc so le trong
+15,7,goc-song-song-dinh-li,theorem,/ˈθiːrəm/,định lí
+15,7,goc-song-song-dinh-li,hypothesis,/haɪˈpɑːθəsɪs/,giả thiết
+15,7,goc-song-song-dinh-li,conclusion,/kənˈkluːʒn/,kết luận
+15,7,goc-song-song-dinh-li,proof,/pruːf/,chứng minh
+16,7,tam-giac-bang-nhau,congruent,/kənˈɡruːənt/,bằng nhau (hai hình)
+16,7,tam-giac-bang-nhau,corresponding sides,/ˌkɔːrəˈspɑːndɪŋ saɪdz/,các cạnh tương ứng
+16,7,tam-giac-bang-nhau,isosceles triangle,/aɪˈsɑːsəliːz ˈtraɪæŋɡl/,tam giác cân
+16,7,tam-giac-bang-nhau,base angle,/beɪs ˈæŋɡl/,góc ở đáy
+16,7,tam-giac-bang-nhau,hypotenuse,/haɪˈpɑːtənuːs/,cạnh huyền
+16,7,tam-giac-bang-nhau,leg,/leɡ/,cạnh góc vuông
+17,7,quan-he-tam-giac,median,/ˈmiːdiən/,đường trung tuyến
+17,7,quan-he-tam-giac,altitude,/ˈæltɪtuːd/,đường cao
+17,7,quan-he-tam-giac,angle bisector,/ˈæŋɡl baɪˈsektər/,tia phân giác
+17,7,quan-he-tam-giac,perpendicular bisector,/ˌpɜːrpənˈdɪkjələr baɪˈsektər/,đường trung trực
+17,7,quan-he-tam-giac,concurrent,/kənˈkɜːrənt/,đồng quy
+17,7,quan-he-tam-giac,triangle inequality,/ˈtraɪæŋɡl ˌɪnɪˈkwɑːləti/,bất đẳng thức tam giác
+18,7,thu-thap-du-lieu,survey,/ˈsɜːrveɪ/,khảo sát
+18,7,thu-thap-du-lieu,categorical data,/ˌkætəˈɡɔːrɪkl ˈdeɪtə/,dữ liệu định tính
+18,7,thu-thap-du-lieu,numerical data,/nuːˈmerɪkl ˈdeɪtə/,dữ liệu định lượng
+18,7,thu-thap-du-lieu,pie chart,/paɪ tʃɑːrt/,biểu đồ hình quạt tròn
+18,7,thu-thap-du-lieu,line graph,/laɪn ɡræf/,biểu đồ đoạn thẳng
+18,7,thu-thap-du-lieu,percentage,/pərˈsentɪdʒ/,tỉ lệ phần trăm
+19,7,ti-le,ratio,/ˈreɪʃioʊ/,tỉ số
+19,7,ti-le,proportion,/prəˈpɔːrʃn/,tỉ lệ thức
+19,7,ti-le,directly proportional,/dəˈrektli prəˈpɔːrʃnəl/,tỉ lệ thuận
+19,7,ti-le,inversely proportional,/ɪnˈvɜːrsli prəˈpɔːrʃnəl/,tỉ lệ nghịch
+19,7,ti-le,constant,/ˈkɑːnstənt/,hằng số
+19,7,ti-le,term,/tɜːrm/,số hạng
+20,7,da-thuc-mot-bien,algebraic expression,/ˌældʒəˈbreɪɪk ɪkˈspreʃn/,biểu thức đại số
+20,7,da-thuc-mot-bien,variable,/ˈveriəbl/,biến
+20,7,da-thuc-mot-bien,coefficient,/ˌkoʊɪˈfɪʃnt/,hệ số
+20,7,da-thuc-mot-bien,polynomial,/ˌpɑːliˈnoʊmiəl/,đa thức
+20,7,da-thuc-mot-bien,degree,/dɪˈɡriː/,bậc
+20,7,da-thuc-mot-bien,like terms,/laɪk tɜːrmz/,các hạng tử đồng dạng
+21,7,xac-suat,random,/ˈrændəm/,ngẫu nhiên
+21,7,xac-suat,possible outcome,/ˈpɑːsəbl ˈaʊtkʌm/,kết quả có thể
+21,7,xac-suat,certain event,/ˈsɜːrtn ɪˈvent/,biến cố chắc chắn
+21,7,xac-suat,impossible event,/ɪmˈpɑːsəbl ɪˈvent/,biến cố không thể
+21,7,xac-suat,equally likely,/ˈiːkwəli ˈlaɪkli/,đồng khả năng
+21,7,xac-suat,probability,/ˌprɑːbəˈbɪləti/,xác suất
+22,7,hinh-khoi,cube,/kjuːb/,hình lập phương
+22,7,hinh-khoi,rectangular prism (cuboid),/rekˈtæŋɡjələr ˈprɪzəm/,hình hộp chữ nhật
+22,7,hinh-khoi,triangular prism,/traɪˈæŋɡjələr ˈprɪzəm/,lăng trụ đứng tam giác
+22,7,hinh-khoi,face,/feɪs/,mặt
+22,7,hinh-khoi,edge,/edʒ/,cạnh (của khối)
+22,7,hinh-khoi,volume,/ˈvɑːljuː/,thể tích
+23,8,da-thuc-nhieu-bien,monomial,/mɑːˈnoʊmiəl/,đơn thức
+23,8,da-thuc-nhieu-bien,polynomial,/ˌpɑːliˈnoʊmiəl/,đa thức
+23,8,da-thuc-nhieu-bien,term,/tɜːrm/,hạng tử
+23,8,da-thuc-nhieu-bien,degree,/dɪˈɡriː/,bậc
+23,8,da-thuc-nhieu-bien,expand,/ɪkˈspænd/,khai triển / nhân phân phối
+23,8,da-thuc-nhieu-bien,like terms,/laɪk tɜːrmz/,các hạng tử đồng dạng
+24,8,hang-dang-thuc,identity,/aɪˈdentəti/,hằng đẳng thức
+24,8,hang-dang-thuc,square of a sum,/skwer əv ə sʌm/,bình phương của một tổng
+24,8,hang-dang-thuc,difference of two squares,/ˈdɪfrəns əv tuː skwerz/,hiệu hai bình phương
+24,8,hang-dang-thuc,binomial,/baɪˈnoʊmiəl/,nhị thức
+24,8,hang-dang-thuc,factorize,/ˈfæktəraɪz/,phân tích thành nhân tử
+24,8,hang-dang-thuc,cube,/kjuːb/,lập phương
+25,8,tu-giac,quadrilateral,/ˌkwɑːdrɪˈlætərəl/,tứ giác
+25,8,tu-giac,trapezoid (UK: trapezium),/ˈtræpəzɔɪd/,hình thang
+25,8,tu-giac,parallelogram,/ˌpærəˈleləɡræm/,hình bình hành
+25,8,tu-giac,rectangle,/ˈrektæŋɡl/,hình chữ nhật
+25,8,tu-giac,rhombus,/ˈrɑːmbəs/,hình thoi
+25,8,tu-giac,square,/skwer/,hình vuông
+26,8,dinh-li-thales,Thales' theorem,/ˈθeɪliːz ˈθiːrəm/,định lí Thalès
+26,8,dinh-li-thales,proportional segments,/prəˈpɔːrʃnəl ˈseɡmənts/,các đoạn thẳng tỉ lệ
+26,8,dinh-li-thales,parallel,/ˈpærəlel/,song song
+26,8,dinh-li-thales,midline,/ˈmɪdlaɪn/,đường trung bình
+26,8,dinh-li-thales,angle bisector theorem,/ˈæŋɡl baɪˈsektər ˈθiːrəm/,tính chất đường phân giác
+26,8,dinh-li-thales,ratio,/ˈreɪʃioʊ/,tỉ số
+27,8,du-lieu-bieu-do,data classification,/ˈdeɪtə ˌklæsɪfɪˈkeɪʃn/,phân loại dữ liệu
+27,8,du-lieu-bieu-do,double bar chart,/ˈdʌbl bɑːr tʃɑːrt/,biểu đồ cột kép
+27,8,du-lieu-bieu-do,pie chart,/paɪ tʃɑːrt/,biểu đồ hình quạt tròn
+27,8,du-lieu-bieu-do,line graph,/laɪn ɡræf/,biểu đồ đoạn thẳng
+27,8,du-lieu-bieu-do,reasonable,/ˈriːznəbl/,hợp lí
+27,8,du-lieu-bieu-do,represent,/ˌreprɪˈzent/,biểu diễn
+28,8,phan-thuc,algebraic fraction,/ˌældʒəˈbreɪɪk ˈfrækʃn/,phân thức đại số
+28,8,phan-thuc,numerator,/ˈnuːməreɪtər/,tử thức
+28,8,phan-thuc,denominator,/dɪˈnɑːmɪneɪtər/,mẫu thức
+28,8,phan-thuc,common denominator,/ˈkɑːmən dɪˈnɑːmɪneɪtər/,mẫu thức chung
+28,8,phan-thuc,reduce,/rɪˈduːs/,rút gọn
+28,8,phan-thuc,undefined,/ˌʌndɪˈfaɪnd/,không xác định
+29,8,phuong-trinh-bac-nhat,equation,/ɪˈkweɪʒn/,phương trình
+29,8,phuong-trinh-bac-nhat,linear equation,/ˈlɪniər ɪˈkweɪʒn/,phương trình bậc nhất
+29,8,phuong-trinh-bac-nhat,unknown,/ʌnˈnoʊn/,ẩn số
+29,8,phuong-trinh-bac-nhat,solve,/sɑːlv/,giải
+29,8,phuong-trinh-bac-nhat,solution,/səˈluːʃn/,nghiệm
+29,8,phuong-trinh-bac-nhat,side,/saɪd/,vế
+30,8,ham-so-bac-nhat,function,/ˈfʌŋkʃn/,hàm số
+30,8,ham-so-bac-nhat,coordinate plane,/koʊˈɔːrdnət pleɪn/,mặt phẳng tọa độ
+30,8,ham-so-bac-nhat,axis (axes),/ˈæksɪs/ (/ˈæksiːz/),trục tọa độ
+30,8,ham-so-bac-nhat,origin,/ˈɔːrɪdʒɪn/,gốc tọa độ
+30,8,ham-so-bac-nhat,slope,/sloʊp/,hệ số góc
+30,8,ham-so-bac-nhat,ordered pair,/ˈɔːrdərd per/,cặp số có thứ tự
+31,8,tam-giac-dong-dang,similar triangles,/ˈsɪmələr ˈtraɪæŋɡlz/,tam giác đồng dạng
+31,8,tam-giac-dong-dang,similarity ratio,/ˌsɪməˈlerəti ˈreɪʃioʊ/,tỉ số đồng dạng
+31,8,tam-giac-dong-dang,corresponding,/ˌkɔːrəˈspɑːndɪŋ/,tương ứng
+31,8,tam-giac-dong-dang,scale factor,/skeɪl ˈfæktər/,hệ số tỉ lệ
+31,8,tam-giac-dong-dang,proportional,/prəˈpɔːrʃnəl/,tỉ lệ
+31,8,tam-giac-dong-dang,height,/haɪt/,chiều cao
+32,8,hinh-chop-xac-suat,pyramid,/ˈpɪrəmɪd/,hình chóp
+32,8,hinh-chop-xac-suat,apex,/ˈeɪpeks/,đỉnh (chóp)
+32,8,hinh-chop-xac-suat,slant height,/slænt haɪt/,trung đoạn
+32,8,hinh-chop-xac-suat,regular pyramid,/ˈreɡjələr ˈpɪrəmɪd/,hình chóp đều
+32,8,hinh-chop-xac-suat,favorable outcome,/ˈfeɪvərəbl ˈaʊtkʌm/,kết quả thuận lợi
+32,8,hinh-chop-xac-suat,probability,/ˌprɑːbəˈbɪləti/,xác suất
+33,9,he-phuong-trinh,system of equations,/ˈsɪstəm əv ɪˈkweɪʒnz/,hệ phương trình
+33,9,he-phuong-trinh,substitution,/ˌsʌbstɪˈtuːʃn/,phương pháp thế
+33,9,he-phuong-trinh,elimination,/ɪˌlɪmɪˈneɪʃn/,phương pháp cộng đại số
+33,9,he-phuong-trinh,unique solution,/juˈniːk səˈluːʃn/,nghiệm duy nhất
+33,9,he-phuong-trinh,no solution,/noʊ səˈluːʃn/,vô nghiệm
+33,9,he-phuong-trinh,infinitely many solutions,/ˈɪnfɪnətli ˈmeni səˈluːʃnz/,vô số nghiệm
+34,9,bat-phuong-trinh,inequality,/ˌɪnɪˈkwɑːləti/,bất đẳng thức / bất phương trình
+34,9,bat-phuong-trinh,greater than,/ˈɡreɪtər ðæn/,lớn hơn
+34,9,bat-phuong-trinh,less than,/les ðæn/,nhỏ hơn
+34,9,bat-phuong-trinh,at least,/æt liːst/,ít nhất
+34,9,bat-phuong-trinh,at most,/æt moʊst/,nhiều nhất
+34,9,bat-phuong-trinh,solution set,/səˈluːʃn set/,tập nghiệm
+35,9,can-bac-hai-ba,square root,/skwer ruːt/,căn bậc hai
+35,9,can-bac-hai-ba,cube root,/kjuːb ruːt/,căn bậc ba
+35,9,can-bac-hai-ba,radical,/ˈrædɪkl/,dấu căn / căn thức
+35,9,can-bac-hai-ba,perfect square,/ˈpɜːrfɪkt skwer/,số chính phương
+35,9,can-bac-hai-ba,rationalize,/ˈræʃnəlaɪz/,trục căn thức
+35,9,can-bac-hai-ba,simplify,/ˈsɪmplɪfaɪ/,rút gọn
+36,9,he-thuc-luong,right triangle,/raɪt ˈtraɪæŋɡl/,tam giác vuông
+36,9,he-thuc-luong,adjacent side,/əˈdʒeɪsnt saɪd/,cạnh kề
+36,9,he-thuc-luong,opposite side,/ˈɑːpəzɪt saɪd/,cạnh đối
+36,9,he-thuc-luong,sine,/saɪn/,sin
+36,9,he-thuc-luong,cosine,/ˈkoʊsaɪn/,cosin
+36,9,he-thuc-luong,tangent,/ˈtændʒənt/,tang
+36,9,he-thuc-luong,cotangent,/koʊˈtændʒənt/,cotang
+36,9,he-thuc-luong,angle of elevation,/ˈæŋɡl əv ˌelɪˈveɪʃn/,góc nâng
+37,9,duong-tron,circle,/ˈsɜːrkl/,đường tròn
+37,9,duong-tron,radius (radii),/ˈreɪdiəs/ (/ˈreɪdiaɪ/),bán kính
+37,9,duong-tron,diameter,/daɪˈæmɪtər/,đường kính
+37,9,duong-tron,chord,/kɔːrd/,dây cung
+37,9,duong-tron,arc,/ɑːrk/,cung
+37,9,duong-tron,tangent line,/ˈtændʒənt laɪn/,tiếp tuyến
+38,9,ham-so-bac-hai,quadratic equation,/kwɑːˈdrætɪk ɪˈkweɪʒn/,phương trình bậc hai
+38,9,ham-so-bac-hai,parabola,/pəˈræbələ/,parabol
+38,9,ham-so-bac-hai,discriminant,/dɪˈskrɪmɪnənt/,biệt thức
+38,9,ham-so-bac-hai,root,/ruːt/,nghiệm
+38,9,ham-so-bac-hai,sum and product of roots,/sʌm ənd ˈprɑːdʌkt əv ruːts/,tổng và tích hai nghiệm
+38,9,ham-so-bac-hai,vertex,/ˈvɜːrteks/,đỉnh (parabol)
+39,9,tan-so-xac-suat,frequency,/ˈfriːkwənsi/,tần số
+39,9,tan-so-xac-suat,relative frequency,/ˈrelətɪv ˈfriːkwənsi/,tần số tương đối
+39,9,tan-so-xac-suat,grouped frequency table,/ɡruːpt ˈfriːkwənsi ˈteɪbl/,bảng tần số ghép nhóm
+39,9,tan-so-xac-suat,histogram,/ˈhɪstəɡræm/,biểu đồ tần số dạng cột liền kề
+39,9,tan-so-xac-suat,sample space,/ˈsæmpl speɪs/,không gian mẫu
+39,9,tan-so-xac-suat,probability,/ˌprɑːbəˈbɪləti/,xác suất
+40,9,noi-ngoai-tiep-hinh-khoi,circumscribed circle,/ˈsɜːrkəmskraɪbd ˈsɜːrkl/,đường tròn ngoại tiếp
+40,9,noi-ngoai-tiep-hinh-khoi,inscribed circle,/ɪnˈskraɪbd ˈsɜːrkl/,đường tròn nội tiếp
+40,9,noi-ngoai-tiep-hinh-khoi,regular polygon,/ˈreɡjələr ˈpɑːlɪɡɑːn/,đa giác đều
+40,9,noi-ngoai-tiep-hinh-khoi,cylinder,/ˈsɪləndər/,hình trụ
+40,9,noi-ngoai-tiep-hinh-khoi,cone,/koʊn/,hình nón
+40,9,noi-ngoai-tiep-hinh-khoi,sphere,/sfɪr/,hình cầu
