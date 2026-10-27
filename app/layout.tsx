@@ -2,16 +2,16 @@ import './globals.css';
 
 export const metadata = {
   title: 'Từ vựng Toán mỗi ngày',
-  description: 'Học từ vựng Toán cho học sinh THCS',
+  description: 'Học từ vựng Toán Tiếng Anh cho học sinh THCS',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
-      <body className="bg-white text-black antialiased">
+      <body>
         {children}
       </body>
     </html>
