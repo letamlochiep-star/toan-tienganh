@@ -15,7 +15,7 @@ const PLAN=[
 const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const KEY="tvt-v1"; let mem=null;
-function defaults(){return {day:1,done:{},box:{},ext:{},settings:{school:"",klass:"",teacher:"",audioBase:"",note:""},custom:[],plan:{},streak:{last:"",count:0},hide:false};}
+function defaults(){return {day:1,done:{},box:{},ext:{},settings:{school:"",klass:"",teacher:"",name:"",audioBase:"",note:""},custom:[],plan:{},streak:{last:"",count:0},hide:false};}
 function load(){let o=defaults();try{const r=localStorage.getItem(KEY);if(r){const p=JSON.parse(r);o=Object.assign(o,p);o.settings=Object.assign(defaults().settings,p.settings||{});}}catch(e){if(mem)return mem;}return o;}
 let S=load();
 function save(){mem=S;try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){toast("Không lưu được trên thiết bị này. Dữ liệu chỉ giữ đến khi đóng trang.");}}
@@ -49,14 +49,46 @@ function speak(btn){
 }
 document.addEventListener("click",e=>{const b=e.target.closest(".spk");if(b){e.preventDefault();speak(b);}});
 
-/* ---- Router ---- */
-const ROUTES={"hom-nay":vToday,"kiem-tra":vQuiz,"lo-trinh":vRoad,"tu-dien":vDict,"on-tap":vReview,"mo-rong":vExt};
+/* ---- Router & Stats ---- */
+let globalVisits = 0;
+function fetchVisits() {
+  const localKey = "tvt_visit_logged";
+  const shouldUp = !sessionStorage.getItem(localKey);
+  const endpoint = shouldUp 
+    ? "https://api.counterapi.dev/v1/toan-tienganh-letam/visits/up" 
+    : "https://api.counterapi.dev/v1/toan-tienganh-letam/visits";
+  fetch(endpoint)
+    .then(r => r.json())
+    .then(d => {
+      if (d && typeof d.count === "number") {
+        globalVisits = d.count;
+        if (shouldUp) sessionStorage.setItem(localKey, "1");
+        updateVisitUI();
+      }
+    })
+    .catch(() => {
+      let v = +(localStorage.getItem("tvt_local_visits") || 168);
+      if (shouldUp) { v++; localStorage.setItem("tvt_local_visits", v); sessionStorage.setItem(localKey, "1"); }
+      globalVisits = v;
+      updateVisitUI();
+    });
+}
+function updateVisitUI() {
+  const el = $("#visitcount");
+  if (el) el.textContent = globalVisits > 0 ? globalVisits.toLocaleString('vi-VN') : "168";
+  const el2 = $("#v-global-visits");
+  if (el2) el2.textContent = globalVisits > 0 ? globalVisits.toLocaleString('vi-VN') : "168";
+}
+try { fetchVisits(); } catch(e){}
+
+const ROUTES={"hom-nay":vToday,"kiem-tra":vQuiz,"lo-trinh":vRoad,"tu-dien":vDict,"on-tap":vReview,"thong-ke":vStats,"mo-rong":vExt};
 function route(){const r=(location.hash||"#hom-nay").slice(1);const key=ROUTES[r]?r:"hom-nay";
   document.querySelectorAll("#tabs a").forEach(a=>{if(a.dataset.r===key)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
   stopSpeak();ROUTES[key]();header();}
 function go(h){if(location.hash==="#"+h)route();else location.hash=h;}
 window.addEventListener("hashchange",route);
 function header(){$("#streak").textContent=S.streak.count||0;$("#donecount").textContent=Object.keys(S.done).length;
+  updateVisitUI();
   const s=S.settings;const parts=[s.klass,s.school].filter(Boolean);$("#sub").textContent=parts.length?parts.join(" · "):"Lớp 6–9 · SGK Kết nối tri thức";}
 
 /* ---- Hôm nay ---- */
@@ -194,11 +226,181 @@ function vReview(){
 }
 function rvMark(ok){const w=RV.list[RV.i];const cur=S.box[w.id]||{b:1};const b=ok?Math.min(5,cur.b+1):1;S.box[w.id]={b:b,due:Date.now()+BOX_DAYS[b]*864e5};if(ok)RV.ok++;RV.i++;RV.show=false;save();vReview();}
 
+/* ---- Thống kê ---- */
+function exportCSV() {
+  const s = S.settings || {};
+  const student = s.name || "Học sinh";
+  let rows = [
+    ["BÁO CÁO KẾT QUẢ HỌC TỪ VỰNG TOÁN TIẾNG ANH (LỚP 6-9)"],
+    ["Thời gian xuất:", new Date().toLocaleString("vi-VN")],
+    ["Họ và tên học sinh:", student],
+    ["Trường:", s.school || "Chưa cập nhật"],
+    ["Lớp:", s.klass || "Chưa cập nhật"],
+    ["Chuỗi ngày học liên tục:", (S.streak.count || 0) + " ngày"],
+    ["Số ngày hoàn thành:", Object.keys(S.done).length + " / 40 ngày"],
+    ["Số từ vựng đã nạp vào hộp Leitner:", Object.keys(S.box).length + " / 240 từ"],
+    [],
+    ["Ngày học", "Chủ đề bài học", "Lớp", "Điểm số", "Tỉ lệ đúng (%)", "Thời gian hoàn thành"]
+  ];
+  Object.keys(S.done).sort((a,b)=>+a-+b).forEach(d => {
+    const item = S.done[d] || {};
+    const dayData = DAYS.find(x => x.d === +d) || {};
+    const score = item.score != null ? item.score : 0;
+    const total = item.total || 6;
+    const pct = Math.round(score / total * 100);
+    const dateStr = item.ts ? new Date(item.ts).toLocaleString("vi-VN") : "";
+    rows.push([
+      "Ngày " + d,
+      dayData.title || "",
+      dayData.grade ? "Lớp " + dayData.grade : "",
+      score + " / " + total,
+      pct + "%",
+      dateStr
+    ]);
+  });
+  const csvContent = "\uFEFF" + rows.map(r => r.map(c => '"' + String(c).replace(/"/g, '""') + '"').join(",")).join("\r\n");
+  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "bao-cao-toan-tieng-anh-" + student.toLowerCase().replace(/\s+/g, '-') + ".csv";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  toast("Đã xuất file báo cáo kết quả (CSV)!");
+}
+
+function shareStats() {
+  const s = S.settings || {};
+  const doneCount = Object.keys(S.done).length;
+  const wordsInBox = Object.keys(S.box).length;
+  let totalCorrect = 0, totalAttempts = 0;
+  Object.values(S.done).forEach(x => {
+    if (x) {
+      totalCorrect += (x.score || 0);
+      totalAttempts += (x.total || 6);
+    }
+  });
+  const acc = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
+  let text = '📊 BÁO CÁO THÀNH TÍCH HỌC TỪ VỰNG TOÁN TIẾNG ANH (LỚP 6-9)\n' +
+    (s.name ? '👤 Học sinh: ' + s.name + '\n' : '') +
+    (s.klass || s.school ? '🏫 Trường/Lớp: ' + [s.klass, s.school].filter(Boolean).join(' - ') + '\n' : '') +
+    '🔥 Chuỗi ngày liên tục: ' + (S.streak.count || 0) + ' ngày\n' +
+    '📅 Đã hoàn thành: ' + doneCount + '/40 ngày (' + Math.round(doneCount/40*100) + '%)\n' +
+    '🧠 Từ vựng ghi nhớ: ' + wordsInBox + '/240 từ\n' +
+    '🎯 Tỉ lệ đúng bài kiểm tra: ' + acc + '%\n' +
+    '🌐 Trang web học tập: ' + window.location.origin;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => {
+      toast("Đã sao chép tóm tắt thành tích vào Clipboard!");
+    }).catch(() => {
+      toast("Vui lòng cho phép quyền sao chép.");
+    });
+  } else {
+    toast("Trình duyệt không hỗ trợ sao chép tự động.");
+  }
+}
+
+function vStats() {
+  const s = S.settings || {};
+  const doneKeys = Object.keys(S.done);
+  const doneDays = doneKeys.length;
+  const wordsInBox = Object.keys(S.box).length;
+  let totalCorrect = 0, totalAttempts = 0;
+  doneKeys.forEach(k => {
+    const it = S.done[k];
+    if (it) {
+      totalCorrect += (it.score || 0);
+      totalAttempts += (it.total || 6);
+    }
+  });
+  const accuracy = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
+  const visitStr = globalVisits > 0 ? globalVisits.toLocaleString('vi-VN') : (localStorage.getItem('tvt_local_visits') || '168');
+
+  const boxCounts = [0, 0, 0, 0, 0, 0];
+  Object.values(S.box).forEach(x => { if (x && x.b >= 1 && x.b <= 5) boxCounts[x.b]++; });
+
+  const grades = [
+    { g: 6, start: 1, end: 12, label: 'Lớp 6 (Số học & Hình trực quan)' },
+    { g: 7, start: 13, end: 22, label: 'Lớp 7 (Số thực, Hình học phẳng & Đại số)' },
+    { g: 8, start: 23, end: 32, label: 'Lớp 8 (Đa thức, Hằng đẳng thức & Tứ giác)' },
+    { g: 9, start: 33, end: 40, label: 'Lớp 9 (Hệ phương trình, Lượng giác & Đường tròn)' }
+  ];
+
+  let h = '<section class="panel"><h2>📊 Bảng thống kê học tập & Lượt truy cập</h2>' +
+    '<p class="muted" style="margin:4px 0 0">Theo dõi thời gian thực lượt xem trang web, tiến độ hoàn thành 40 ngày học, tỉ lệ chính xác và phân bố ghi nhớ Leitner.</p></section>';
+
+  h += '<section class="statgrid">' +
+    '<div class="statcard"><b id="v-global-visits">' + visitStr + '</b><span>👁️ Tổng lượt truy cập</span></div>' +
+    '<div class="statcard"><b>' + doneDays + '<small style="font-size:1.1rem;color:var(--muted)">/40</small></b><span>📅 Số ngày hoàn thành (' + Math.round(doneDays/40*100) + '%)</span></div>' +
+    '<div class="statcard"><b>' + wordsInBox + '<small style="font-size:1.1rem;color:var(--muted)">/240</small></b><span>🧠 Từ vựng nạp vào hộp</span></div>' +
+    '<div class="statcard"><b>' + accuracy + '%</b><span>🎯 Tỉ lệ đúng (' + totalCorrect + '/' + totalAttempts + ')</span></div>' +
+    '<div class="statcard"><b>' + (S.streak.count || 0) + ' <small style="font-size:1rem;color:var(--muted)">ngày</small></b><span>🔥 Chuỗi học liên tục</span></div>' +
+    '</section>';
+
+  h += '<section class="panel"><div class="row" style="justify-content:space-between;align-items:center">' +
+    '<div><h3>Hồ sơ người học: ' + esc(s.name || "Chưa đặt tên") + '</h3>' +
+    '<p class="muted small" style="margin:2px 0 0">' + ([s.klass ? "Lớp " + s.klass : null, s.school, s.teacher ? "GV: " + s.teacher : null].filter(Boolean).join(" · ") || "Học sinh tự do") + '</p></div>' +
+    '<div class="row">' +
+    '<button class="btn primary" id="btn-export-csv" title="Tải file CSV gửi cho thầy cô">📥 Xuất báo cáo (CSV)</button>' +
+    '<button class="btn" id="btn-share-stats" title="Sao chép kết quả gửi Zalo/Facebook">📋 Sao chép thành tích</button>' +
+    '</div></div></section>';
+
+  h += '<section class="panel"><h3>Tiến độ theo từng khối lớp</h3><div style="display:flex;flex-direction:column;gap:12px;margin-top:12px">';
+  grades.forEach(gr => {
+    const totalDays = gr.end - gr.start + 1;
+    let dn = 0;
+    for (let d = gr.start; d <= gr.end; d++) { if (S.done[d]) dn++; }
+    const pct = Math.round(dn / totalDays * 100);
+    h += '<div class="grade-bar">' +
+      '<div class="grade-row"><span>' + esc(gr.label) + ' (Ngày ' + gr.start + '–' + gr.end + ')</span><span>' + dn + '/' + totalDays + ' ngày (' + pct + '%)</span></div>' +
+      '<div class="progress"><i style="width:' + pct + '%"></i></div></div>';
+  });
+  h += '</div></section>';
+
+  h += '<section class="panel"><h3>Phân bố 5 hộp ghi nhớ Leitner</h3>' +
+    '<p class="muted small" style="margin:4px 0 10px">Các từ chuyển dịch dần từ Hộp 1 (mới học) đến Hộp 5 (thành thạo).</p>' +
+    '<div class="boxes">' +
+    '<div class="bx"><b>' + boxCounts[1] + '</b><span>Hộp 1 (Ôn sau 1 ngày)</span></div>' +
+    '<div class="bx"><b>' + boxCounts[2] + '</b><span>Hộp 2 (Ôn sau 3 ngày)</span></div>' +
+    '<div class="bx"><b>' + boxCounts[3] + '</b><span>Hộp 3 (Ôn sau 7 ngày)</span></div>' +
+    '<div class="bx"><b>' + boxCounts[4] + '</b><span>Hộp 4 (Ôn sau 14 ngày)</span></div>' +
+    '<div class="bx"><b>' + boxCounts[5] + '</b><span>Hộp 5 (Ôn sau 30 ngày)</span></div>' +
+    '</div></section>';
+
+  h += '<section class="panel"><h3>Lịch sử làm bài kiểm tra</h3>' +
+    '<p class="muted small" style="margin:4px 0 10px">Danh sách các ngày đã hoàn thành bài trắc nghiệm 6 câu.</p>';
+  if (doneKeys.length === 0) {
+    h += '<p class="muted">Chưa hoàn thành bài kiểm tra nào. Hãy bắt đầu với Ngày 1!</p>' +
+      '<button class="btn primary" data-go="hom-nay" style="margin-top:8px">Đến bài học Ngày 1</button>';
+  } else {
+    h += '<div class="tablewrap"><table><thead><tr><th>Ngày</th><th>Chủ đề</th><th>Khối lớp</th><th>Điểm số</th><th>Tỉ lệ</th><th>Đánh giá</th></tr></thead><tbody>';
+    doneKeys.sort((a,b)=>+b-+a).forEach(d => {
+      const it = S.done[d] || {};
+      const dayData = DAYS.find(x => x.d === +d) || {};
+      const score = it.score != null ? it.score : 0;
+      const total = it.total || 6;
+      const pct = Math.round(score / total * 100);
+      let badge = '<span class="pill" style="background:var(--ok-soft);color:var(--ok)">🌟 Xuất sắc</span>';
+      if (pct < 60) badge = '<span class="pill" style="background:var(--bad-soft);color:var(--bad)">📖 Cần ôn lại</span>';
+      else if (pct < 100) badge = '<span class="pill" style="background:var(--accent-soft);color:var(--accent)">👍 Đạt</span>';
+      h += '<tr><td><b>Ngày ' + d + '</b></td><td>' + esc(dayData.title || "") + '</td><td>Lớp ' + (dayData.grade || "") + '</td>' +
+        '<td><b>' + score + '/' + total + '</b></td><td>' + pct + '%</td><td>' + badge + '</td></tr>';
+    });
+    h += '</tbody></table></div>';
+  }
+  h += '</section>';
+
+  $("#view").innerHTML = h;
+}
+
 /* ---- Mở rộng ---- */
 function vExt(){
   const s=S.settings;
   let h='<section class="panel"><h2>Khu vực mở rộng</h2><p class="muted" style="margin:6px 0 0">Các ô dưới đây dành cho nội dung bổ sung ở những phiên bản sau. Mọi thông tin được lưu ngay trên thiết bị này; dùng mục Sao lưu để mang sang thiết bị khác.</p></section>';
   h+='<section class="panel"><h3>1. Thông tin lớp học</h3><div class="two" style="margin-top:10px">'+
+   '<label class="f">Họ và tên học sinh<input type="text" data-path="name" value="'+esc(s.name||"")+'" placeholder="Ví dụ: Nguyễn Văn An"></label>'+
    '<label class="f">Trường<input type="text" data-path="school" value="'+esc(s.school)+'" placeholder="Tên trường"></label>'+
    '<label class="f">Lớp<input type="text" data-path="klass" value="'+esc(s.klass)+'" placeholder="Ví dụ: 8A"></label>'+
    '<label class="f">Giáo viên phụ trách<input type="text" data-path="teacher" value="'+esc(s.teacher)+'" placeholder="Họ tên giáo viên"></label>'+
@@ -222,6 +424,8 @@ function vExt(){
 /* ---- Sự kiện ---- */
 document.addEventListener("click",e=>{
   const t=e.target;let b;
+  if(t.closest("#btn-export-csv")){exportCSV();return;}
+  if(t.closest("#btn-share-stats")){shareStats();return;}
   if(t.closest("#startq")){startQuiz(S.day);return;}
   if(t.closest("#pickday")){go("lo-trinh");return;}
   if((b=t.closest("[data-day]"))&&b.id!=="pickday"){const dl=+b.dataset.day;if(dl){S.day=Math.max(1,Math.min(40,S.day+dl));save();vToday();}return;}

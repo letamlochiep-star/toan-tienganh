@@ -21,10 +21,13 @@ export default function Home() {
             </div>
             <div className="chips">
               <span className="chip" title="Số ngày học liên tiếp">
-                Chuỗi <b id="streak">0</b> ngày
+                🔥 Chuỗi <b id="streak">0</b> ngày
               </span>
-              <span className="chip">
-                Hoàn thành <b id="donecount">0</b>/40
+              <span className="chip" title="Số ngày hoàn thành">
+                📚 Hoàn thành <b id="donecount">0</b>/40
+              </span>
+              <span className="chip" title="Tổng lượt truy cập website">
+                👁️ <b id="visitcount">...</b> lượt xem
               </span>
             </div>
           </div>
@@ -34,6 +37,7 @@ export default function Home() {
             <a href="#lo-trinh" data-r="lo-trinh">Lộ trình 40 ngày</a>
             <a href="#tu-dien" data-r="tu-dien">Từ điển</a>
             <a href="#on-tap" data-r="on-tap">Ôn tập</a>
+            <a href="#thong-ke" data-r="thong-ke">Thống kê</a>
             <a href="#mo-rong" data-r="mo-rong">Mở rộng</a>
           </nav>
         </div>
