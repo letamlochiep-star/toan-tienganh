@@ -7,12 +7,4 @@ export default {
     ignoreBuildErrors: true,
   },
   reactStrictMode: true,
-  async rewrites() {
-    return [
-      {
-        source: '/',
-        destination: '/index.html',
-      },
-    ];
-  },
 };
