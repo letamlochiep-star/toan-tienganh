@@ -1,21 +1,22 @@
 'use client';
 
-import { useEffect, useState } from "react";
-import { useRouter, useParams, useSearchParams } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
+import { useRouter, useParams } from "next/navigation";
 import WordCard from "@/components/WordCard";
 
-export default function LearnDay() {
+function LearnDayContent() {
   const router = useRouter();
   const params = useParams();
-  const searchParams = useSearchParams();
   const day = params?.day as string;
-  const wrongOnly = searchParams?.get('wrongOnly');
   const [words, setWords] = useState<any[]>([]);
   const [filterWrong, setFilterWrong] = useState<boolean>(false);
 
   useEffect(() => {
-    setFilterWrong(wrongOnly === "true");
-  }, [wrongOnly]);
+    if (typeof window !== 'undefined') {
+      const sp = new URLSearchParams(window.location.search);
+      setFilterWrong(sp.get('wrongOnly') === "true");
+    }
+  }, []);
 
   useEffect(() => {
     if (!day) return;
@@ -67,5 +68,13 @@ export default function LearnDay() {
         </button>
       </div>
     </main>
+  );
+}
+
+export default function LearnDay() {
+  return (
+    <Suspense fallback={<div className="p-4 text-center">Đang tải...</div>}>
+      <LearnDayContent />
+    </Suspense>
   );
 }
