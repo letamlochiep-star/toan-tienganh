@@ -81,7 +81,7 @@ function updateVisitUI() {
 }
 try { fetchVisits(); } catch(e){}
 
-const ROUTES={"hom-nay":vToday,"kiem-tra":vQuiz,"lo-trinh":vRoad,"tu-dien":vDict,"on-tap":vReview,"thong-ke":vStats,"mo-rong":vExt};
+const ROUTES={"hom-nay":vToday,"toan-6":vToan6,"kiem-tra":vQuiz,"lo-trinh":vRoad,"tu-dien":vDict,"on-tap":vReview,"thong-ke":vStats,"mo-rong":vExt};
 function route(){const r=(location.hash||"#hom-nay").slice(1);const key=ROUTES[r]?r:"hom-nay";
   document.querySelectorAll("#tabs a").forEach(a=>{if(a.dataset.r===key)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
   stopSpeak();ROUTES[key]();header();}
@@ -186,6 +186,109 @@ function finishQuiz(){
   h+='<div class="row" style="justify-content:center"><button class="btn" id="again">Làm lại</button>'+(Q.day<40?'<button class="btn primary" id="goNext">Sang ngày '+(Q.day+1)+'</button>':'')+'<button class="btn" data-go="lo-trinh">Xem lộ trình</button></div></section>';
   $("#view").innerHTML=h;
 }
+
+/* ---- Toán 6 (42 bài chuẩn SGK) ---- */
+let T6_FILTER = "";
+function vToan6() {
+  const data = window.TOAN6_DATA || [];
+  const groups = window.TOAN6_GROUPS || [
+    ["Số tự nhiên", 1, 7],
+    ["Tính chia hết", 8, 12],
+    ["Số nguyên", 13, 17],
+    ["Hình phẳng trong thực tiễn", 18, 20],
+    ["Tính đối xứng", 21, 22],
+    ["Phân số", 23, 27],
+    ["Số thập phân", 28, 31],
+    ["Hình học cơ bản", 32, 37],
+    ["Dữ liệu và xác suất", 38, 42]
+  ];
+
+  let totalTerms = data.reduce((sum, l) => sum + (l.cards ? l.cards.length : 0), 0);
+
+  let h = '<section class="t6-hero">' +
+    '<h2>Toán 6 · 42 bài Từ vựng Tiếng Anh Chuẩn SGK</h2>' +
+    '<p>Trọn bộ <b>42 bài học</b> với <b>' + (totalTerms || 504) + ' thuật ngữ</b>, phiên âm chuẩn IPA, ví dụ thực tế và các đoạn hội thoại thú vị giữa <b>Mr. Pi, Tron & Vuong</b>. Hỗ trợ luyện nghe nhận diện từ và đọc chậm từng câu!</p>' +
+    '<div class="t6-actions">' +
+      '<a href="/toan6.html" class="t6-btn-room">🚀 Mở giao diện học tương tác Toán 6 (Toàn màn hình & Hội thoại)</a>' +
+      '<span class="chip">📚 42 bài học</span>' +
+      '<span class="chip">🔊 Phát âm giọng đọc chuẩn</span>' +
+      '<span class="chip">💬 Math Class Dialogues</span>' +
+    '</div>' +
+  '</section>';
+
+  h += '<section class="panel">' +
+    '<div class="filters" style="margin-bottom:14px">' +
+      '<div class="grow">' +
+        '<label class="f" for="t6q">Tìm bài học hoặc từ vựng trong 42 bài Toán 6</label>' +
+        '<input type="search" id="t6q" value="' + esc(T6_FILTER) + '" placeholder="Ví dụ: fraction, tập hợp, set, số nguyên...">' +
+      '</div>' +
+    '</div>' +
+  '</section>';
+
+  const q = (T6_FILTER || "").toLowerCase().trim();
+
+  h += '<div class="t6-groups" id="t6-groups-container">';
+  groups.forEach(([gName, startL, endL]) => {
+    const lessonsInGroup = data.slice(startL - 1, endL);
+    const matchedLessons = lessonsInGroup.filter(l => {
+      if (!q) return true;
+      if (l.en.toLowerCase().includes(q) || l.vi.toLowerCase().includes(q) || ("bài " + l.n).includes(q)) return true;
+      return l.cards && l.cards.some(c => c.t.toLowerCase().includes(q) || c.vi.toLowerCase().includes(q));
+    });
+
+    if (matchedLessons.length === 0) return;
+
+    h += '<div class="t6-group-card">' +
+      '<div class="t6-group-head">' +
+        '<h3>' + esc(gName) + ' <span class="muted small">(Bài ' + startL + '–' + endL + ')</span></h3>' +
+        '<span class="t6-badge">' + matchedLessons.length + ' bài</span>' +
+      '</div>' +
+      '<div class="t6-lesson-grid">' +
+        matchedLessons.map(l => {
+          return '<div class="t6-lesson-tile">' +
+            '<div>' +
+              '<span class="n">BÀI ' + l.n + '</span>' +
+              '<div class="en">' + esc(l.en) + '</div>' +
+              '<div class="vi">' + esc(l.vi) + '</div>' +
+              '<div class="small muted" style="margin-top:4px">' + (l.cards ? l.cards.length : 12) + ' từ vựng & hội thoại Mr. Pi</div>' +
+            '</div>' +
+            '<div class="t6-lesson-acts">' +
+              '<a href="/toan6.html#bai-' + l.n + '" class="btn primary" title="Mở bài học tương tác">▶ Vào bài ' + l.n + '</a>' +
+              '<button type="button" class="btn" data-t6-toggle="' + l.n + '">👁️ Xem 12 từ</button>' +
+            '</div>' +
+            '<div class="t6-subwords" id="t6-sub-' + l.n + '" hidden>' +
+              (l.cards || []).map(c => '<div>' + sw(esc(c.t), c.t, "t6-" + l.n + "-" + c.t) + ' <span class="ipa">' + esc(c.ipa) + '</span>: ' + esc(c.vi) + '</div>').join("") +
+            '</div>' +
+          '</div>';
+        }).join("") +
+      '</div>' +
+    '</div>';
+  });
+  h += '</div>';
+
+  $("#view").innerHTML = h;
+
+  const inputQ = $("#t6q");
+  if (inputQ) {
+    inputQ.addEventListener("input", e => {
+      T6_FILTER = e.target.value;
+      vToan6();
+    });
+  }
+}
+
+document.addEventListener("click", e => {
+  const btn = e.target.closest("[data-t6-toggle]");
+  if (btn) {
+    const num = btn.dataset.t6Toggle;
+    const sub = $("#t6-sub-" + num);
+    if (sub) {
+      const isHidden = sub.hidden;
+      sub.hidden = !isHidden;
+      btn.textContent = isHidden ? "Ẩn danh sách từ" : "👁️ Xem 12 từ";
+    }
+  }
+});
 
 /* ---- Lộ trình ---- */
 function vRoad(){

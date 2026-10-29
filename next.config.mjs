@@ -9,6 +9,18 @@ const nextConfig = {
   },
   reactStrictMode: true,
   swcMinify: true,
+  async rewrites() {
+    return [
+      {
+        source: '/toan-6',
+        destination: '/toan6.html',
+      },
+      {
+        source: '/lop-6',
+        destination: '/toan6.html',
+      },
+    ];
+  },
 };
 
 export default nextConfig;

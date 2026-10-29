@@ -1,0 +1,4669 @@
+{
+  "groups": [
+    [
+      "Số tự nhiên",
+      1,
+      7
+    ],
+    [
+      "Tính chia hết",
+      8,
+      12
+    ],
+    [
+      "Số nguyên",
+      13,
+      17
+    ],
+    [
+      "Hình phẳng trong thực tiễn",
+      18,
+      20
+    ],
+    [
+      "Tính đối xứng",
+      21,
+      22
+    ],
+    [
+      "Phân số",
+      23,
+      27
+    ],
+    [
+      "Số thập phân",
+      28,
+      31
+    ],
+    [
+      "Hình học cơ bản",
+      32,
+      37
+    ],
+    [
+      "Dữ liệu và xác suất",
+      38,
+      42
+    ]
+  ],
+  "lessons": [
+    {
+      "n": 1,
+      "en": "SETS",
+      "vi": "TẬP HỢP",
+      "page": "p-001",
+      "cards": [
+        {
+          "t": "set",
+          "pos": "noun",
+          "ipa": "/set/",
+          "vi": "tập hợp",
+          "ex": "Let A be the set of natural numbers less than 5, so A = {0, 1, 2, 3, 4}."
+        },
+        {
+          "t": "element",
+          "pos": "noun",
+          "ipa": "/ˈel.ɪ.mənt/",
+          "vi": "phần tử",
+          "ex": "The number 9 is an element of the set M = {1, 4, 8, 9}."
+        },
+        {
+          "t": "belongs to",
+          "pos": "verb phrase",
+          "ipa": "/bɪˈlɒŋz tuː/",
+          "vi": "thuộc (phần tử thuộc tập hợp)",
+          "ex": "Since 4 is in set M, we write 4 ∈ M (4 belongs to M)."
+        },
+        {
+          "t": "does not belong to",
+          "pos": "verb phrase",
+          "ipa": "/dʌz nɒt bɪˈlɒŋ tuː/",
+          "vi": "không thuộc",
+          "ex": "The number 7 does not belong to set M, written as 7 ∉ M."
+        },
+        {
+          "t": "list",
+          "pos": "verb",
+          "ipa": "/lɪst/",
+          "vi": "liệt kê (các phần tử)",
+          "ex": "To describe set B, we list its elements: B = {2, 4, 6, 8}."
+        },
+        {
+          "t": "characteristic property",
+          "pos": "noun phrase",
+          "ipa": "/ˌkær.ək.təˈrɪs.tɪk ˈprɒp.ə.ti/",
+          "vi": "dấu hiệu đặc trưng",
+          "ex": "We describe set P by stating its characteristic property: P = {n ∈ ℕ | n < 6}."
+        },
+        {
+          "t": "natural number",
+          "pos": "noun phrase",
+          "ipa": "/ˈnætʃ.ər.əl ˈnʌm.bər/",
+          "vi": "số tự nhiên",
+          "ex": "The set of natural numbers is denoted by ℕ = {0, 1, 2, 3, ...}."
+        },
+        {
+          "t": "non-zero natural number",
+          "pos": "noun phrase",
+          "ipa": "/nɒn-ˈzɪə.rəʊ ˈnætʃ.ər.əl ˈnʌm.bər/",
+          "vi": "số tự nhiên khác 0",
+          "ex": "The set of non-zero natural numbers is denoted by ℕ* = {1, 2, 3, ...}."
+        },
+        {
+          "t": "finite set",
+          "pos": "noun phrase",
+          "ipa": "/ˈfaɪ.naɪt set/",
+          "vi": "tập hợp hữu hạn",
+          "ex": "The set of planets in the Solar System is a finite set with exactly 8 elements."
+        },
+        {
+          "t": "infinite set",
+          "pos": "noun phrase",
+          "ipa": "/ˈɪn.fɪ.nət set/",
+          "vi": "tập hợp vô hạn",
+          "ex": "The set of all natural numbers ℕ is an infinite set."
+        },
+        {
+          "t": "intersection",
+          "pos": "noun",
+          "ipa": "/ˌɪn.təˈsek.ʃən/",
+          "vi": "giao (của hai tập hợp)",
+          "ex": "The intersection of sets A and B is denoted by A ∩ B."
+        },
+        {
+          "t": "curly brackets",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɜː.li ˈbræk.ɪts/",
+          "vi": "dấu ngoặc nhọn",
+          "ex": "We enclose the elements of a set within curly brackets { }."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Can you list the elements of set A of natural numbers less than 5?"
+        },
+        {
+          "who": "Tron",
+          "text": "Yes, Mr. Pi! Set A is written as A = {0, 1, 2, 3, 4}."
+        },
+        {
+          "who": "Vuong",
+          "text": "And the number 5 does not belong to set A, so we write 5 ∉ A!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent job! You both mastered sets in English!"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "en": "WRITING NATURAL NUMBERS",
+      "vi": "GHI SỐ TỰ NHIÊN",
+      "page": "p-002",
+      "cards": [
+        {
+          "t": "natural number",
+          "pos": "noun phrase",
+          "ipa": "/ˈnætʃ.ər.əl ˈnʌm.bər/",
+          "vi": "số tự nhiên",
+          "ex": "The set of natural numbers is denoted by ℕ = {0, 1, 2, 3, ...}."
+        },
+        {
+          "t": "decimal system",
+          "pos": "noun phrase",
+          "ipa": "/ˈdes.ɪ.məl ˈsɪs.təm/",
+          "vi": "hệ thập phân",
+          "ex": "In the decimal system, we write numbers using ten basic digits from 0 to 9."
+        },
+        {
+          "t": "digit",
+          "pos": "noun",
+          "ipa": "/ˈdɪdʒ.ɪt/",
+          "vi": "chữ số",
+          "ex": "The number 32,019 is written using five distinct digits."
+        },
+        {
+          "t": "place value",
+          "pos": "noun phrase",
+          "ipa": "/pleɪs ˈvæl.juː/",
+          "vi": "giá trị theo hàng / vị trí",
+          "ex": "In the number 32,019, the digit 2 has a place value of 2 × 1,000 = 2,000."
+        },
+        {
+          "t": "class",
+          "pos": "noun",
+          "ipa": "/klɑːs/",
+          "vi": "lớp (trong cách ghi số)",
+          "ex": "For large numbers like 221,707,263,598, we group digits into classes of three from right to left."
+        },
+        {
+          "t": "expanded form",
+          "pos": "noun phrase",
+          "ipa": "/ɪkˈspæn.dɪd fɔːm/",
+          "vi": "dạng khai triển / dạng tổng giá trị",
+          "ex": "We can write the number 236 in its expanded form as (2 × 100) + (3 × 10) + 6."
+        },
+        {
+          "t": "Roman numeral",
+          "pos": "noun phrase",
+          "ipa": "/ˈrəʊ.mən ˈnjuː.mə.rəl/",
+          "vi": "số La Mã",
+          "ex": "The Roman numeral XXIV represents the decimal number 24."
+        },
+        {
+          "t": "Arabic digit",
+          "pos": "noun phrase",
+          "ipa": "/ˈær.ə.bɪk ˈdɪdʒ.ɪt/",
+          "vi": "chữ số Ả Rập",
+          "ex": "Modern mathematics uses Arabic digits which were originally created in India."
+        },
+        {
+          "t": "binary system",
+          "pos": "noun phrase",
+          "ipa": "/ˈbaɪ.nər.i ˈsɪs.təm/",
+          "vi": "hệ nhị phân",
+          "ex": "In the binary system, the sequence 1001 represents the decimal number 9."
+        },
+        {
+          "t": "matchstick",
+          "pos": "noun",
+          "ipa": "/ˈmætʃ.stɪk/",
+          "vi": "que tính",
+          "ex": "You can form the Roman numeral VII using exactly five matchsticks."
+        },
+        {
+          "t": "value",
+          "pos": "noun",
+          "ipa": "/ˈvæl.juː/",
+          "vi": "giá trị",
+          "ex": "The value of the digit 4 in 34,604 is 4,000."
+        },
+        {
+          "t": "represent",
+          "pos": "verb",
+          "ipa": "/ˌrep.rɪˈzent/",
+          "vi": "biểu diễn",
+          "ex": "We use the symbol ab (with a bar) to represent a two-digit natural number."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Can you tell me the place value of the digit 2 in 32,019?"
+        },
+        {
+          "who": "Tron",
+          "text": "The digit 2 is in the thousands place, so its place value is 2,000!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! And the expanded form is 30,000 + 2,000 + 10 + 9!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Incredible job! You have fully mastered place values and expanded forms!"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "en": "ORDER IN THE SET OF NATURAL NUMBERS",
+      "vi": "THỨ TỰ TRONG TẬP HỢP SỐ TỰ NHIÊN",
+      "page": "p-003",
+      "cards": [
+        {
+          "t": "order",
+          "pos": "noun",
+          "ipa": "/ˈɔː.dər/",
+          "vi": "thứ tự",
+          "ex": "We need to understand the order of natural numbers in the set ℕ."
+        },
+        {
+          "t": "number line",
+          "pos": "noun",
+          "ipa": "/ˈnʌm.bər laɪn/",
+          "vi": "tia số",
+          "ex": "Every natural number is represented by a point on the horizontal number line."
+        },
+        {
+          "t": "origin",
+          "pos": "noun",
+          "ipa": "/ˈɒr.ɪ.dʒɪn/",
+          "vi": "gốc (gốc O của tia số)",
+          "ex": "The point representing the number 0 is called the origin O."
+        },
+        {
+          "t": "represent",
+          "pos": "verb",
+          "ipa": "/ˌrep.rɪˈzent/",
+          "vi": "biểu diễn",
+          "ex": "On the number line, point 3 is used to represent the natural number 3."
+        },
+        {
+          "t": "consecutive natural numbers",
+          "pos": "noun phrase",
+          "ipa": "/kənˈsek.jə.tɪv ˈnætʃ.ər.əl ˈnʌm.bərz/",
+          "vi": "các số tự nhiên liên tiếp",
+          "ex": "The numbers 8 and 9 are two consecutive natural numbers."
+        },
+        {
+          "t": "predecessor",
+          "pos": "noun",
+          "ipa": "/ˈpriː.dɪ.ses.ər/",
+          "vi": "số liền trước",
+          "ex": "The number 8 is the predecessor of 9 on the number line."
+        },
+        {
+          "t": "successor",
+          "pos": "noun",
+          "ipa": "/səkˈses.ər/",
+          "vi": "số liền sau",
+          "ex": "The successor of 8 is the natural number 9."
+        },
+        {
+          "t": "compare",
+          "pos": "verb",
+          "ipa": "/kəmˈpeər/",
+          "vi": "so sánh",
+          "ex": "Compare two natural numbers a and b to see which one is smaller."
+        },
+        {
+          "t": "transitive property",
+          "pos": "noun phrase",
+          "ipa": "/ˈtræn.zɪ.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất bắc cầu",
+          "ex": "If a < 5 and 5 < 7, then a < 7 according to the transitive property."
+        },
+        {
+          "t": "less than or equal to",
+          "pos": "phrase",
+          "ipa": "/les ðæn ɔːr ˈiː.kwəl tuː/",
+          "vi": "nhỏ hơn hoặc bằng",
+          "ex": "The set of natural numbers less than or equal to 4 is written as {x ∈ ℕ | x ≤ 4}."
+        },
+        {
+          "t": "greater than or equal to",
+          "pos": "phrase",
+          "ipa": "/ˈɡreɪ.tər ðæn ɔːr ˈiː.kwəl tuː/",
+          "vi": "lớn hơn hoặc bằng",
+          "ex": "The set {x ∈ ℕ | x ≥ 5} contains all numbers starting from 5 onwards."
+        },
+        {
+          "t": "arrange",
+          "pos": "verb",
+          "ipa": "/əˈreɪndʒ/",
+          "vi": "sắp xếp",
+          "ex": "Arrange the given numbers in according order from least to greatest."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Look at these two points, 5 and 8. Which one lies further to the left on our number line?"
+        },
+        {
+          "who": "Tron",
+          "text": "Point 5 lies to the left of point 8, which means 5 is less than 8! We write 5 < 8."
+        },
+        {
+          "who": "Vuong",
+          "text": "And since 8 is right next to 9, 8 is the predecessor of 9, and 9 is the successor of 8!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Perfect! You both used the number line beautifully to compare and find consecutive numbers!"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "en": "ADDITION AND SUBTRACTION OF NATURAL NUMBERS",
+      "vi": "PHÉP CỘNG VÀ PHÉP TRỪ SỐ TỰ NHIÊN",
+      "page": "p-004",
+      "cards": [
+        {
+          "t": "addition",
+          "pos": "noun",
+          "ipa": "/əˈdɪʃ.ən/",
+          "vi": "phép cộng",
+          "ex": "The addition of two natural numbers a and b gives their sum, written as a + b."
+        },
+        {
+          "t": "subtraction",
+          "pos": "noun",
+          "ipa": "/səbˈtræk.ʃən/",
+          "vi": "phép trừ",
+          "ex": "In the set of natural numbers, subtraction a − b is only possible if a ≥ b."
+        },
+        {
+          "t": "addend",
+          "pos": "noun",
+          "ipa": "/ˈæd.end/",
+          "vi": "số hạng (trong phép cộng)",
+          "ex": "In the equation 3 + 4 = 7, both 3 and 4 are called addends."
+        },
+        {
+          "t": "sum",
+          "pos": "noun",
+          "ipa": "/sʌm/",
+          "vi": "tổng",
+          "ex": "The sum of 28 and 34 is equal to 62."
+        },
+        {
+          "t": "minuend",
+          "pos": "noun",
+          "ipa": "/ˈmɪn.ju.end/",
+          "vi": "số bị trừ",
+          "ex": "In the subtraction 7 − 4 = 3, the number 7 is the minuend."
+        },
+        {
+          "t": "subtrahend",
+          "pos": "noun",
+          "ipa": "/ˈsʌb.trə.hend/",
+          "vi": "số trừ",
+          "ex": "In the subtraction 7 − 4 = 3, the number 4 is the subtrahend."
+        },
+        {
+          "t": "difference",
+          "pos": "noun",
+          "ipa": "/ˈdɪf.ər.əns/",
+          "vi": "hiệu",
+          "ex": "The difference between 865,279 and 45,027 is 820,252."
+        },
+        {
+          "t": "commutative property",
+          "pos": "noun phrase",
+          "ipa": "/kəˈmjuː.tə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất giao hoán",
+          "ex": "The commutative property of addition states that a + b = b + a."
+        },
+        {
+          "t": "associative property",
+          "pos": "noun phrase",
+          "ipa": "/əˈsəʊ.ʃi.ə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất kết hợp",
+          "ex": "We use the associative property to write (a + b) + c = a + (b + c)."
+        },
+        {
+          "t": "number line",
+          "pos": "noun phrase",
+          "ipa": "/ˈnʌm.bər laɪn/",
+          "vi": "tia số",
+          "ex": "We can easily illustrate the addition 3 + 4 = 7 on a horizontal number line."
+        },
+        {
+          "t": "evaluate",
+          "pos": "verb",
+          "ipa": "/ɪˈvæl.ju.eɪt/",
+          "vi": "tính giá trị (biểu thức)",
+          "ex": "Evaluate the expression 117 + 68 + 23 in a reasonable way."
+        },
+        {
+          "t": "parentheses",
+          "pos": "noun plural",
+          "ipa": "/pəˈren.θə.siːz/",
+          "vi": "dấu ngoặc đơn",
+          "ex": "In math, always calculate the terms inside the parentheses ( ) first."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Can you evaluate this sum in a reasonable and quick way? 117 + 68 + 23 = ?"
+        },
+        {
+          "who": "Tron",
+          "text": "Yes! I can swap and group: (117 + 23) + 68!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Exactly! That makes 140 + 68, which equals 208!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Brilliant! You used the commutative and associative properties perfectly!"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "en": "MULTIPLICATION AND DIVISION OF NATURAL NUMBERS",
+      "vi": "PHÉP NHÂN VÀ PHÉP CHIA SỐ TỰ NHIÊN",
+      "page": "p-005",
+      "cards": [
+        {
+          "t": "multiplication",
+          "pos": "noun",
+          "ipa": "/ˌmʌl.tɪ.plɪˈkeɪ.ʃən/",
+          "vi": "phép nhân",
+          "ex": "The multiplication of two natural numbers a and b is written as a × b or a · b."
+        },
+        {
+          "t": "factor",
+          "pos": "noun",
+          "ipa": "/ˈfæk.tər/",
+          "vi": "thừa số",
+          "ex": "In the multiplication 738 × 48 = 35,424, both 738 and 48 are factors."
+        },
+        {
+          "t": "product",
+          "pos": "noun",
+          "ipa": "/ˈprɒd.ʌkt/",
+          "vi": "tích",
+          "ex": "The product of 24 and 25 is equal to 600."
+        },
+        {
+          "t": "commutative property",
+          "pos": "noun phrase",
+          "ipa": "/kəˈmjuː.tə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất giao hoán",
+          "ex": "The commutative property of multiplication states that a · b = b · a."
+        },
+        {
+          "t": "associative property",
+          "pos": "noun phrase",
+          "ipa": "/əˈsəʊ.ʃi.ə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất kết hợp",
+          "ex": "Using the associative property, we can write (a · b) · c = a · (b · c)."
+        },
+        {
+          "t": "distributive property",
+          "pos": "noun phrase",
+          "ipa": "/dɪˈstrɪb.jə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất phân phối",
+          "ex": "The distributive property of multiplication over addition is a(b + c) = ab + ac."
+        },
+        {
+          "t": "exact division",
+          "pos": "noun phrase",
+          "ipa": "/ɪɡˈzækt dɪˈvɪʒ.ən/",
+          "vi": "phép chia hết",
+          "ex": "If the remainder is zero, we have an exact division, written as a : b = q."
+        },
+        {
+          "t": "division with remainder",
+          "pos": "noun phrase",
+          "ipa": "/dɪˈvɪʒ.ən wɪð rɪˈmeɪn.dər/",
+          "vi": "phép chia có dư",
+          "ex": "The calculation 5,580 : 157 = 35 with a remainder of 85 is a division with remainder."
+        },
+        {
+          "t": "dividend",
+          "pos": "noun",
+          "ipa": "/ˈdɪv.ɪ.dend/",
+          "vi": "số bị chia",
+          "ex": "In the division 4,847 : 131 = 37, the number 4,847 is the dividend."
+        },
+        {
+          "t": "divisor",
+          "pos": "noun",
+          "ipa": "/dɪˈvaɪ.zər/",
+          "vi": "số chia",
+          "ex": "In the division a : b, the divisor b must always be different from zero."
+        },
+        {
+          "t": "quotient",
+          "pos": "noun",
+          "ipa": "/ˈkwəʊ.ʃənt/",
+          "vi": "thương",
+          "ex": "The quotient of 4,847 divided by 131 is 37."
+        },
+        {
+          "t": "remainder",
+          "pos": "noun",
+          "ipa": "/rɪˈmeɪn.dər/",
+          "vi": "số dư",
+          "ex": "In any division with remainder, the remainder must be strictly less than the divisor."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Your mom buys 10 kg of rice at 20 thousand VND per kg. How much does she pay?"
+        },
+        {
+          "who": "Tron",
+          "text": "The product of 10 and 20 is 200, so she pays 200 thousand VND! We use multiplication!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Great! How many 50-thousand VND bills does she need to give the cashier?"
+        },
+        {
+          "who": "Vuong",
+          "text": "We divide the dividend 200 by the divisor 50. The quotient is 4. She needs exactly 4 bills!"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "en": "POWERS WITH NATURAL EXPONENTS",
+      "vi": "LUỸ THỪA VỚI SỐ MŨ TỰ NHIÊN",
+      "page": "p-006",
+      "cards": [
+        {
+          "t": "power",
+          "pos": "noun",
+          "ipa": "/ˈpaʊ.ər/",
+          "vi": "luỹ thừa",
+          "ex": "The expression 2³ is a power with a value of 8."
+        },
+        {
+          "t": "base",
+          "pos": "noun",
+          "ipa": "/beɪs/",
+          "vi": "cơ số",
+          "ex": "In the power 3⁵, the number 3 is the base."
+        },
+        {
+          "t": "exponent",
+          "pos": "noun",
+          "ipa": "/ɪkˈspəʊ.nənt/",
+          "vi": "số mũ",
+          "ex": "In the power 3⁵, the number 5 is the exponent."
+        },
+        {
+          "t": "exponentiation",
+          "pos": "noun",
+          "ipa": "/ˌek.spəʊ.nenˈʃi.eɪ.ʃən/",
+          "vi": "phép nâng lên luỹ thừa",
+          "ex": "Exponentiation is the shorthand for repeated multiplication: aⁿ = a · a · … · a."
+        },
+        {
+          "t": "squared",
+          "pos": "adjective / verb",
+          "ipa": "/skweəd/",
+          "vi": "bình phương",
+          "ex": "The expression 5² is read as \"five squared\" and is equal to 25."
+        },
+        {
+          "t": "cubed",
+          "pos": "adjective / verb",
+          "ipa": "/kjuːbd/",
+          "vi": "lập phương",
+          "ex": "The expression 2³ is read as \"two cubed\" and is equal to 8."
+        },
+        {
+          "t": "perfect square",
+          "pos": "noun phrase",
+          "ipa": "/ˌpɜː.fɪkt ˈskweər/",
+          "vi": "số chính phương",
+          "ex": "The numbers 1, 4, 9, 16, and 25 are perfect squares."
+        },
+        {
+          "t": "multiply powers",
+          "pos": "verb phrase",
+          "ipa": "/ˈmʌl.tɪ.plaɪ ˈpaʊ.əz/",
+          "vi": "nhân hai luỹ thừa",
+          "ex": "To multiply powers with the same base: aᵐ · aⁿ = aᵐ⁺ⁿ."
+        },
+        {
+          "t": "divide powers",
+          "pos": "verb phrase",
+          "ipa": "/dɪˈvaɪd ˈpaʊ.əz/",
+          "vi": "chia hai luỹ thừa",
+          "ex": "To divide powers with the same base: aᵐ : aⁿ = aᵐ⁻ⁿ (a ≠ 0)."
+        },
+        {
+          "t": "power of ten",
+          "pos": "noun phrase",
+          "ipa": "/ˈpaʊ.ər əv ten/",
+          "vi": "luỹ thừa của mười",
+          "ex": "We can write the number 1,000 as a power of ten: 10³."
+        },
+        {
+          "t": "value of a power",
+          "pos": "noun phrase",
+          "ipa": "/ˈvæl.juː əv ə ˈpaʊ.ər/",
+          "vi": "giá trị của luỹ thừa",
+          "ex": "The value of the power 2⁵ is equal to 32."
+        },
+        {
+          "t": "convention",
+          "pos": "noun",
+          "ipa": "/kənˈven.ʃən/",
+          "vi": "quy ước",
+          "ex": "We have the mathematical convention that a⁰ = 1 for any non-zero a."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Who can multiply these two powers with the same base? 2³ · 2⁴ = ?"
+        },
+        {
+          "who": "Tron",
+          "text": "We keep the base 2 and add the exponents: 2³ · 2⁴ = 2³⁺⁴ = 2⁷!"
+        },
+        {
+          "who": "Vuong",
+          "text": "And to divide them, we subtract the exponents: 2⁶ : 2² = 2⁶⁻² = 2⁴!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Perfect! You both mastered the rules of multiplying and dividing powers!"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "en": "ORDER OF OPERATIONS",
+      "vi": "THỨ TỰ THỰC HIỆN CÁC PHÉP TÍNH",
+      "page": "p-007",
+      "cards": [
+        {
+          "t": "expression",
+          "pos": "noun",
+          "ipa": "/ɪkˈspreʃ.ən/",
+          "vi": "biểu thức",
+          "ex": "The calculation 5 + 3 × 2 is a mathematical expression."
+        },
+        {
+          "t": "value of an expression",
+          "pos": "noun phrase",
+          "ipa": "/ˈvæl.juː əv ən ɪkˈspreʃ.ən/",
+          "vi": "giá trị của một biểu thức",
+          "ex": "The value of the expression 42 − 30 + 8 is 20."
+        },
+        {
+          "t": "order of operations",
+          "pos": "noun phrase",
+          "ipa": "/ˈɔː.dər əv ˌɒp.əˈreɪ.ʃənz/",
+          "vi": "thứ tự thực hiện các phép tính",
+          "ex": "Follow the standard order of operations to solve the expression correctly."
+        },
+        {
+          "t": "parentheses",
+          "pos": "noun plural",
+          "ipa": "/pəˈren.θə.siːz/",
+          "vi": "dấu ngoặc tròn",
+          "ex": "We always calculate the operations inside the parentheses ( ) first, such as in (10 + 5) : 5."
+        },
+        {
+          "t": "brackets",
+          "pos": "noun plural",
+          "ipa": "/ˈbræk.ɪts/",
+          "vi": "dấu ngoặc vuông",
+          "ex": "Evaluate expressions inside the brackets [ ] after solving the inner parentheses."
+        },
+        {
+          "t": "braces",
+          "pos": "noun plural",
+          "ipa": "/ˈbreɪ.sɪz/",
+          "vi": "dấu ngoặc nhọn",
+          "ex": "The curly braces { } are calculated last among all grouping symbols."
+        },
+        {
+          "t": "operation",
+          "pos": "noun",
+          "ipa": "/ˌɒp.əˈreɪ.ʃən/",
+          "vi": "phép tính",
+          "ex": "Addition, subtraction, multiplication, and division are mathematical operations."
+        },
+        {
+          "t": "perform",
+          "pos": "verb",
+          "ipa": "/pəˈfɔːm/",
+          "vi": "thực hiện",
+          "ex": "Perform the calculations from left to right if only addition and subtraction are present."
+        },
+        {
+          "t": "evaluate",
+          "pos": "verb",
+          "ipa": "/ɪˈvæl.ju.eɪt/",
+          "vi": "tính giá trị (biểu thức)",
+          "ex": "Evaluate the expression [1 + 2 · (5 · 3 − 2³)] · 7 step by step."
+        },
+        {
+          "t": "variable",
+          "pos": "noun",
+          "ipa": "/ˈveə.ri.ə.bəl/",
+          "vi": "biến / chữ đại diện",
+          "ex": "An expression can contain letters called variables, such as a and b in 1 + 2(a + b) − 4³."
+        },
+        {
+          "t": "rule",
+          "pos": "noun",
+          "ipa": "/ruːl/",
+          "vi": "quy tắc / quy ước",
+          "ex": "We need a shared mathematical rule to ensure everyone gets the same value for an expression."
+        },
+        {
+          "t": "left to right",
+          "pos": "adverb phrase",
+          "ipa": "/left tuː raɪt/",
+          "vi": "từ trái qua phải",
+          "ex": "For the expression 100 : 5 · 2, calculate from left to right: first divide, then multiply."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "What is the value of this expression: 5 + 3 × 2?"
+        },
+        {
+          "who": "Tron",
+          "text": "It is 16! I did addition first: 5 + 3 = 8, then 8 × 2 = 16!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Wait, Tron! It is 11! We must perform multiplication first: 3 × 2 = 6, then 5 + 6 = 11!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent, Vuong! We always perform multiplication before addition when there are no parentheses!"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "en": "DIVISIBILITY RELATION AND PROPERTIES",
+      "vi": "QUAN HỆ CHIA HẾT VÀ TÍNH CHẤT",
+      "page": "p-008",
+      "cards": [
+        {
+          "t": "divisibility",
+          "pos": "noun",
+          "ipa": "/dɪˌvɪz.əˈbɪl.ə.ti/",
+          "vi": "tính chia hết / quan hệ chia hết",
+          "ex": "In this lesson, we will explore the divisibility relation in the set of natural numbers."
+        },
+        {
+          "t": "divisible",
+          "pos": "adjective",
+          "ipa": "/dɪˈvɪz.ə.bəl/",
+          "vi": "chia hết",
+          "ex": "Since there is a natural number 5 such that 15 = 5 · 3, we say 15 is divisible by 3, written as 15 ⋮ 3."
+        },
+        {
+          "t": "not divisible",
+          "pos": "adjective phrase",
+          "ipa": "/nɒt dɪˈvɪz.ə.bəl/",
+          "vi": "không chia hết",
+          "ex": "The number 16 is not divisible by 3, which is written as 16 ⋮̸ 3."
+        },
+        {
+          "t": "divisor",
+          "pos": "noun",
+          "ipa": "/dɪˈvaɪ.zər/",
+          "vi": "ước",
+          "ex": "If a is divisible by b, then b is called a divisor of a."
+        },
+        {
+          "t": "multiple",
+          "pos": "noun",
+          "ipa": "/ˈmʌl.tɪ.pəl/",
+          "vi": "bội",
+          "ex": "Since 15 is divisible by 3, we say that 15 is a multiple of 3."
+        },
+        {
+          "t": "set of divisors",
+          "pos": "noun phrase",
+          "ipa": "/set əv dɪˈvaɪ.zəz/",
+          "vi": "tập hợp các ước",
+          "ex": "The set of divisors of 15 is denoted by Ư(15) = {1, 3, 5, 15}."
+        },
+        {
+          "t": "set of multiples",
+          "pos": "noun phrase",
+          "ipa": "/set əv ˈmʌl.tɪ.pəlz/",
+          "vi": "tập hợp các bội",
+          "ex": "The set of multiples of 6 is denoted by B(6) = {0, 6, 12, 18, 24, ...}."
+        },
+        {
+          "t": "non-zero",
+          "pos": "adjective",
+          "ipa": "/nɒn-ˈzɪə.rəʊ/",
+          "vi": "khác không / khác 0",
+          "ex": "To find the multiples of a non-zero number b, we multiply b by 0, 1, 2, 3, ... sequentially."
+        },
+        {
+          "t": "sum",
+          "pos": "noun",
+          "ipa": "/sʌm/",
+          "vi": "tổng",
+          "ex": "We can determine if a sum is divisible by a number without calculating its exact value."
+        },
+        {
+          "t": "difference",
+          "pos": "noun",
+          "ipa": "/ˈdɪf.ər.əns/",
+          "vi": "hiệu",
+          "ex": "If 30 ⋮ 3 and 18 ⋮ 3, then their difference (30 − 18) ⋮ 3 according to the divisibility properties."
+        },
+        {
+          "t": "remainder",
+          "pos": "noun",
+          "ipa": "/rɪˈmeɪn.dər/",
+          "vi": "số dư",
+          "ex": "Dividing 16 by 3 gives a quotient of 5 and a remainder of 1."
+        },
+        {
+          "t": "property",
+          "pos": "noun",
+          "ipa": "/ˈprɒp.ə.ti/",
+          "vi": "tính chất",
+          "ex": "The divisibility properties of a sum help us simplify complex arithmetic expressions."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "We want to divide 50 pens and 4 equal boxes of pens among 4 groups. Can we do this equally?"
+        },
+        {
+          "who": "Tron",
+          "text": "Each box has the same number of pens, so the total pens in 4 boxes is a multiple of 4. That part is divisible!"
+        },
+        {
+          "who": "Vuong",
+          "text": "But the number 50 is not divisible by 4! According to the property, the entire sum cannot be divided equally! 50 : 4 = 12 remainder 2."
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Fantastic! You used the divisibility properties of a sum perfectly without even opening the boxes!"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "en": "DIVISIBILITY RULES",
+      "vi": "DẤU HIỆU CHIA HẾT",
+      "page": "p-009",
+      "cards": [
+        {
+          "t": "divisibility rule",
+          "pos": "noun phrase",
+          "ipa": "/dɪˌvɪz.əˈbɪl.ə.ti ruːl/",
+          "vi": "dấu hiệu chia hết",
+          "ex": "We can use the divisibility rule to find out if 71,001 is divisible by 9 without performing a long division."
+        },
+        {
+          "t": "last digit",
+          "pos": "noun phrase",
+          "ipa": "/lɑːst ˈdɪdʒ.ɪt/",
+          "vi": "chữ số tận cùng",
+          "ex": "A natural number is divisible by 5 if its last digit is either 0 or 5."
+        },
+        {
+          "t": "even number",
+          "pos": "noun phrase",
+          "ipa": "/ˈiː.vən ˈnʌm.bər/",
+          "vi": "số chẵn",
+          "ex": "Any even number, such as 324 or 2,020, is always divisible by 2."
+        },
+        {
+          "t": "odd number",
+          "pos": "noun phrase",
+          "ipa": "/ɒd ˈnʌm.bər/",
+          "vi": "số lẻ",
+          "ex": "An odd number, like 2,025 or 1,975, is not divisible by 2."
+        },
+        {
+          "t": "divisible",
+          "pos": "adjective",
+          "ipa": "/dɪˈvɪz.ə.bəl/",
+          "vi": "chia hết",
+          "ex": "The number 180 is divisible by 9 because the sum of its digits is 9."
+        },
+        {
+          "t": "not divisible",
+          "pos": "adjective phrase",
+          "ipa": "/nɒt dɪˈvɪz.ə.bəl/",
+          "vi": "không chia hết",
+          "ex": "The number 1,954 is not divisible by 5 because its last digit is 4."
+        },
+        {
+          "t": "sum of digits",
+          "pos": "noun phrase",
+          "ipa": "/sʌm əv ˈdɪdʒ.ɪts/",
+          "vi": "tổng các chữ số",
+          "ex": "To check divisibility by 3, we calculate the sum of digits of 1,254 as 1 + 2 + 5 + 4 = 12."
+        },
+        {
+          "t": "remainder",
+          "pos": "noun",
+          "ipa": "/rɪˈmeɪn.dər/",
+          "vi": "số dư",
+          "ex": "The remainder of 71,001 divided by 9 is zero because 71,001 is divisible by 9."
+        },
+        {
+          "t": "replace",
+          "pos": "verb",
+          "ipa": "/rɪˈpleɪs/",
+          "vi": "thay thế",
+          "ex": "Replace the asterisk in 12* with a digit to make the number divisible by 9."
+        },
+        {
+          "t": "asterisk",
+          "pos": "noun",
+          "ipa": "/ˈæs.tər.ɪsk/",
+          "vi": "dấu sao / dấu *",
+          "ex": "We need to find the correct digit to substitute for the asterisk * in the expression 345*."
+        },
+        {
+          "t": "divisibility",
+          "pos": "noun",
+          "ipa": "/dɪˌvɪz.əˈbɪl.ə.ti/",
+          "vi": "tính chia hết",
+          "ex": "We can determine the divisibility of any number by 2 or 5 just by observing its last digit."
+        },
+        {
+          "t": "digit",
+          "pos": "noun",
+          "ipa": "/ˈdɪdʒ.ɪt/",
+          "vi": "chữ số",
+          "ex": "A digit is a single numerical symbol from the set {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Who can find the remainder of the division of 71,001 by 9 without doing a long division?"
+        },
+        {
+          "who": "Tron",
+          "text": "I can do it! First, we calculate the sum of digits: 7 + 1 + 0 + 0 + 1 = 9!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Since the sum 9 is divisible by 9, the number 71,001 is divisible by 9. The remainder is 0!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Fantastic job! You used the sum of digits to find the divisibility and remainder perfectly!"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "en": "PRIME NUMBERS",
+      "vi": "SỐ NGUYÊN TỐ",
+      "page": "p-010",
+      "cards": [
+        {
+          "t": "prime number",
+          "pos": "noun phrase",
+          "ipa": "/praɪm ˈnʌm.bər/",
+          "vi": "số nguyên tố",
+          "ex": "The number 17 is a prime number because it only has two divisors: 1 and 17."
+        },
+        {
+          "t": "composite number",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɒm.pə.zɪt ˈnʌm.bər/",
+          "vi": "hợp số",
+          "ex": "The number 1975 has a units digit of 5, making it a composite number."
+        },
+        {
+          "t": "prime factor",
+          "pos": "noun phrase",
+          "ipa": "/praɪm ˈfæk.tər/",
+          "vi": "thừa số nguyên tố",
+          "ex": "In the prime factorization 24 = 2³ · 3, the numbers 2 and 3 are prime factors of 24."
+        },
+        {
+          "t": "prime divisor",
+          "pos": "noun phrase",
+          "ipa": "/praɪm dɪˈvaɪ.zər/",
+          "vi": "ước nguyên tố",
+          "ex": "The prime divisors of the number 30 are 2, 3, and 5."
+        },
+        {
+          "t": "prime factorization",
+          "pos": "noun phrase",
+          "ipa": "/praɪm ˌfæk.tər.aɪˈzeɪ.ʃən/",
+          "vi": "phân tích ra thừa số nguyên tố",
+          "ex": "We can write the prime factorization of 140 as 140 = 2² · 5 · 7."
+        },
+        {
+          "t": "tree diagram",
+          "pos": "noun phrase",
+          "ipa": "/triː ˈdaɪ.ə.ɡræm/",
+          "vi": "sơ đồ cây",
+          "ex": "Use a tree diagram to find the prime factorization of 24 step by step."
+        },
+        {
+          "t": "column diagram",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɒl.əm ˈdaɪ.ə.ɡræm/",
+          "vi": "sơ đồ cột / sơ đồ phân tích theo cột dọc",
+          "ex": "The column diagram is a highly structured vertical division method to factor composite numbers."
+        },
+        {
+          "t": "Sieve of Eratosthenes",
+          "pos": "noun phrase",
+          "ipa": "/sɪv əv ˌer.əˈtɒs.θə.niːz/",
+          "vi": "sàng Eratosthenes",
+          "ex": "The Sieve of Eratosthenes is an ancient algorithm to filter out composite numbers and find primes."
+        },
+        {
+          "t": "twin primes",
+          "pos": "noun phrase",
+          "ipa": "/twɪn praɪmz/",
+          "vi": "số nguyên tố sinh đôi",
+          "ex": "The numbers 17 and 19 are twin primes because they are prime and differ by exactly two units."
+        },
+        {
+          "t": "smallest prime divisor",
+          "pos": "noun phrase",
+          "ipa": "/ˈsmɔː.lɪst praɪm dɪˈvaɪ.zər/",
+          "vi": "ước nguyên tố nhỏ nhất",
+          "ex": "The smallest prime divisor of any even natural number is 2."
+        },
+        {
+          "t": "factorized form",
+          "pos": "noun phrase",
+          "ipa": "/ˈfæk.tər.aɪzd fɔːm/",
+          "vi": "dạng phân tích (ra thừa số nguyên tố)",
+          "ex": "In standard factorized form, we arrange the prime factors from smallest to largest using exponents."
+        },
+        {
+          "t": "algorithm",
+          "pos": "noun",
+          "ipa": "/ˈæl.ɡə.rɪ.ðəm/",
+          "vi": "thuật toán",
+          "ex": "The ancient Greek mathematician Eratosthenes developed an algorithm to list all prime numbers."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Mai has 11 roses. Can she arrange them equally into multiple vases, with more than 1 rose in each?"
+        },
+        {
+          "who": "Tron",
+          "text": "No, Mr. Pi! Since 11 is a prime number, its only divisors are 1 and 11. She cannot divide them equally!"
+        },
+        {
+          "who": "Vuong",
+          "text": "But if she sets 1 rose aside, 10 is a composite number! She can easily place 5 roses into each of 2 vases!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Fantastic job, both of you! You have perfectly applied the concepts of prime and composite numbers!"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "en": "COMMON DIVISORS. GREATEST COMMON DIVISOR",
+      "vi": "ƯỚC CHUNG. ƯỚC CHUNG LỚN NHẤT",
+      "page": "p-011",
+      "cards": [
+        {
+          "t": "common divisor",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɒm.ən dɪˈvaɪ.zər/",
+          "vi": "ước chung",
+          "ex": "A number is a common divisor of a and b if it is a divisor of both a and b."
+        },
+        {
+          "t": "greatest common divisor",
+          "pos": "noun phrase",
+          "ipa": "/ˈɡreɪ.tɪst ˈkɒm.ən dɪˈvaɪ.zər/",
+          "vi": "ước chung lớn nhất",
+          "ex": "The greatest common divisor of 18 and 30 is 6, written as ƯCLN(18, 30) = 6."
+        },
+        {
+          "t": "set of common divisors",
+          "pos": "noun phrase",
+          "ipa": "/set əv ˈkɒm.ən dɪˈvaɪ.zəz/",
+          "vi": "tập hợp các ước chung",
+          "ex": "The set of common divisors of 24 and 28 is written as ƯC(24, 28) = {1, 2, 4}."
+        },
+        {
+          "t": "coprime numbers",
+          "pos": "noun phrase",
+          "ipa": "/kəʊˈpraɪm ˈnʌm.bəz/",
+          "vi": "các số nguyên tố cùng nhau",
+          "ex": "The numbers 8 and 15 are coprime numbers because their greatest common divisor is 1."
+        },
+        {
+          "t": "simplest form",
+          "pos": "noun phrase",
+          "ipa": "/ˈsɪm.plɪst fɔːm/",
+          "vi": "dạng tối giản",
+          "ex": "A fraction a/b is in simplest form if its numerator and denominator are coprime."
+        },
+        {
+          "t": "simplify",
+          "pos": "verb",
+          "ipa": "/ˈsɪm.plɪ.faɪ/",
+          "vi": "rút gọn",
+          "ex": "To simplify the fraction 18/30, we divide both the numerator and denominator by their greatest common divisor 6."
+        },
+        {
+          "t": "numerator",
+          "pos": "noun",
+          "ipa": "/ˈnjuː.mə.reɪ.tər/",
+          "vi": "tử số",
+          "ex": "In the fraction 3/5, the number 3 is the numerator."
+        },
+        {
+          "t": "denominator",
+          "pos": "noun",
+          "ipa": "/dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "mẫu số",
+          "ex": "In the fraction 3/5, the number 5 is the denominator."
+        },
+        {
+          "t": "common prime factor",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɒm.ən praɪm ˈfæk.tər/",
+          "vi": "thừa số nguyên tố chung",
+          "ex": "The common prime factors of 24 and 60 are 2 and 3."
+        },
+        {
+          "t": "smallest exponent",
+          "pos": "noun phrase",
+          "ipa": "/ˈsmɔː.lɪst ɪkˈspəʊ.nənt/",
+          "vi": "số mũ nhỏ nhất",
+          "ex": "When finding the greatest common divisor, we select each common prime factor with its smallest exponent."
+        },
+        {
+          "t": "Euclidean algorithm",
+          "pos": "noun phrase",
+          "ipa": "/juːˈklɪd.i.ən ˈæl.ɡə.rɪ.ðəm/",
+          "vi": "thuật toán Euclid",
+          "ex": "We can use the Euclidean algorithm to find the greatest common divisor of large numbers without factoring."
+        },
+        {
+          "t": "relatively prime",
+          "pos": "adjective phrase",
+          "ipa": "/ˈrel.ə.tɪv.li praɪm/",
+          "vi": "nguyên tố cùng nhau",
+          "ex": "Since their greatest common divisor is 1, the numbers 8 and 15 are relatively prime."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "A carpenter wants to cut two wood sheets of 18 dm and 30 dm into equal pieces without any waste. What is the greatest possible length?"
+        },
+        {
+          "who": "Tron",
+          "text": "The length must be a common divisor of 18 and 30. For the greatest length, we must find the greatest common divisor!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! Since 18 = 2 · 3² and 30 = 2 · 3 · 5, the common factors with smallest exponents are 2 and 3. So ƯCLN(18, 30) = 2 · 3 = 6!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Brilliant! The greatest length for each wood piece is exactly 6 dm. You solved the carpenter's problem!"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "en": "COMMON MULTIPLES. LEAST COMMON MULTIPLE",
+      "vi": "BỘI CHUNG. BỘI CHUNG NHỎ NHẤT",
+      "page": "p-012",
+      "cards": [
+        {
+          "t": "multiple",
+          "pos": "noun",
+          "ipa": "/ˈmʌl.tɪ.pəl/",
+          "vi": "bội",
+          "ex": "Since 12 is divisible by 4, we say that 12 is a multiple of 4."
+        },
+        {
+          "t": "common multiple",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɒm.ən ˈmʌl.tɪ.pəl/",
+          "vi": "bội chung",
+          "ex": "The numbers 12 and 24 are common multiples of 4 and 6."
+        },
+        {
+          "t": "least common multiple",
+          "pos": "noun phrase",
+          "ipa": "/liːst ˈkɒm.ən ˈmʌl.tɪ.pəl/",
+          "vi": "bội chung nhỏ nhất",
+          "ex": "The least common multiple of 4 and 6 is written as BCNN(4, 6) = 12."
+        },
+        {
+          "t": "set of common multiples",
+          "pos": "noun phrase",
+          "ipa": "/set əv ˈkɒm.ən ˈmʌl.tɪ.pəlz/",
+          "vi": "tập hợp các bội chung",
+          "ex": "We denote the set of common multiples of 4 and 6 as BC(4, 6) = {0, 12, 24, 36, ...}."
+        },
+        {
+          "t": "common prime factor",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɒm.ən praɪm ˈfæk.tər/",
+          "vi": "thừa số nguyên tố chung",
+          "ex": "In the factorizations 75 = 3 × 5² and 90 = 2 × 3² × 5, the common prime factors are 3 and 5."
+        },
+        {
+          "t": "unique prime factor",
+          "pos": "noun phrase",
+          "ipa": "/juːˈniːk praɪm ˈfæk.tər/",
+          "vi": "thừa số nguyên tố riêng",
+          "ex": "For 75 and 90, the number 2 is a unique prime factor because it only appears in the factorization of 90."
+        },
+        {
+          "t": "greatest exponent",
+          "pos": "noun phrase",
+          "ipa": "/ˈɡreɪ.tɪst ɪkˈspəʊ.nənt/",
+          "vi": "số mũ lớn nhất",
+          "ex": "To find the BCNN, we select each prime factor with its greatest exponent, such as 3² and 5²."
+        },
+        {
+          "t": "fraction",
+          "pos": "noun",
+          "ipa": "/ˈfræk.ʃən/",
+          "vi": "phân số",
+          "ex": "We can add fractions like 5/8 and 7/12 by finding their common denominator."
+        },
+        {
+          "t": "numerator",
+          "pos": "noun",
+          "ipa": "/ˈnjuː.mə.reɪ.tər/",
+          "vi": "tử số",
+          "ex": "In the fraction 5/8, the number 5 is the numerator."
+        },
+        {
+          "t": "denominator",
+          "pos": "noun",
+          "ipa": "/dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "mẫu số",
+          "ex": "In the fraction 5/8, the number 8 is the denominator."
+        },
+        {
+          "t": "find a common denominator",
+          "pos": "verb phrase",
+          "ipa": "/faɪnd ə ˈkɒm.ən dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "quy đồng mẫu số",
+          "ex": "To add two fractions, we find a common denominator by calculating the least common multiple of their denominators."
+        },
+        {
+          "t": "least common denominator",
+          "pos": "noun phrase",
+          "ipa": "/liːst ˈkɒm.ən dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "mẫu chung nhỏ nhất",
+          "ex": "The least common denominator of the fractions 5/8 and 7/12 is BCNN(8, 12) = 24."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Mai wants to buy equal quantities of plates and cups. Plates are in packs of 4, cups in packs of 6. How many should she buy?"
+        },
+        {
+          "who": "Tron",
+          "text": "The quantity must be a common multiple of 4 and 6! To buy the least amount, she needs their least common multiple!"
+        },
+        {
+          "who": "Vuong",
+          "text": "The least common multiple of 4 and 6 is 12! So she should buy exactly 12 of each item!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent! That means 3 packs of plates and 2 packs of cups. You solved it perfectly using BCNN!"
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "en": "THE SET OF INTEGERS",
+      "vi": "TẬP HỢP CÁC SỐ NGUYÊN",
+      "page": "p-013",
+      "cards": [
+        {
+          "t": "integer",
+          "pos": "noun",
+          "ipa": "/ˈɪn.tɪ.dʒər/",
+          "vi": "số nguyên",
+          "ex": "An integer can be positive, negative, or zero."
+        },
+        {
+          "t": "positive integer",
+          "pos": "noun phrase",
+          "ipa": "/ˈpɒz.ə.tɪv ˈɪn.tɪ.dʒər/",
+          "vi": "số nguyên dương",
+          "ex": "The numbers 1, 2, 3, ... are positive integers, sometimes written as +1, +2, +3, ..."
+        },
+        {
+          "t": "negative integer",
+          "pos": "noun phrase",
+          "ipa": "/ˈneɡ.ə.tɪv ˈɪn.tɪ.dʒər/",
+          "vi": "số nguyên âm",
+          "ex": "A negative integer is written with a minus sign, such as −1, −2, −3, ..."
+        },
+        {
+          "t": "set of integers",
+          "pos": "noun phrase",
+          "ipa": "/set əv ˈɪn.tɪ.dʒəz/",
+          "vi": "tập hợp các số nguyên",
+          "ex": "The set of integers is denoted by the letter ℤ = {..., −3, −2, −1, 0, 1, 2, 3, ...}."
+        },
+        {
+          "t": "number line",
+          "pos": "noun phrase",
+          "ipa": "/ˈnʌm.bər laɪn/",
+          "vi": "trục số",
+          "ex": "We can represent both positive and negative integers on a horizontal number line."
+        },
+        {
+          "t": "origin",
+          "pos": "noun",
+          "ipa": "/ˈɒr.ɪ.dʒɪn/",
+          "vi": "gốc (điểm gốc 0 của trục số)",
+          "ex": "The point representing the number 0 on the number line is called the origin O."
+        },
+        {
+          "t": "positive direction",
+          "pos": "noun phrase",
+          "ipa": "/ˈpɒz.ə.tɪv daɪˈrek.ʃən/",
+          "vi": "chiều dương",
+          "ex": "The positive direction on a horizontal number line is from left to right, indicated by an arrowhead."
+        },
+        {
+          "t": "negative direction",
+          "pos": "noun phrase",
+          "ipa": "/ˈneɡ.ə.tɪv daɪˈrek.ʃən/",
+          "vi": "chiều âm",
+          "ex": "The negative direction goes from right to left, opposite to the positive direction."
+        },
+        {
+          "t": "sea level",
+          "pos": "noun phrase",
+          "ipa": "/siː ˈlev.əl/",
+          "vi": "mực nước biển",
+          "ex": "We define the height of the sea level as 0 m when measuring altitudes."
+        },
+        {
+          "t": "elevation",
+          "pos": "noun",
+          "ipa": "/ˌel.ɪˈveɪ.ʃən/",
+          "vi": "độ cao",
+          "ex": "The Mariana Trench has a negative elevation of −10,971 m below sea level."
+        },
+        {
+          "t": "represent",
+          "pos": "verb",
+          "ipa": "/ˌrep.rɪˈzent/",
+          "vi": "biểu diễn",
+          "ex": "We use positive and negative numbers to represent opposite quantities in daily life."
+        },
+        {
+          "t": "compare",
+          "pos": "verb",
+          "ipa": "/kəmˈpeər/",
+          "vi": "so sánh",
+          "ex": "When we compare −3 and −5, we see that −3 > −5 because −3 is further to the right on the number line."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Fansipan is at 3,143 m and the Mariana Trench is at −10,971 m. What do these numbers mean?"
+        },
+        {
+          "who": "Tron",
+          "text": "3,143 is a positive integer representing elevation above sea level, and −10,971 is a negative integer below sea level!"
+        },
+        {
+          "who": "Vuong",
+          "text": "On a horizontal number line, negative numbers lie to the left of the origin 0, so −10,971 is much less than 3,143!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Exactly! You both understand the set of integers and how to compare them perfectly!"
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "en": "ADDITION AND SUBTRACTION OF INTEGERS",
+      "vi": "PHÉP CỘNG VÀ PHÉP TRỪ SỐ NGUYÊN",
+      "page": "p-014",
+      "cards": [
+        {
+          "t": "negative integer",
+          "pos": "noun phrase",
+          "ipa": "/ˈneɡ.ə.tɪv ˈɪn.tɪ.dʒər/",
+          "vi": "số nguyên âm",
+          "ex": "Numbers like −1, −2, −3, ... are negative integers, which are represented to the left of 0 on the number line."
+        },
+        {
+          "t": "positive integer",
+          "pos": "noun phrase",
+          "ipa": "/ˈpɒz.ə.tɪv ˈɪn.tɪ.dʒər/",
+          "vi": "số nguyên dương",
+          "ex": "The natural numbers 1, 2, 3, ... are positive integers, also written as +1, +2, +3, ..."
+        },
+        {
+          "t": "set of integers",
+          "pos": "noun phrase",
+          "ipa": "/set əv ˈɪn.tɪ.dʒəz/",
+          "vi": "tập hợp số nguyên",
+          "ex": "The set of integers consists of negative integers, zero, and positive integers, denoted by ℤ = {..., −2, −1, 0, 1, 2, ...}."
+        },
+        {
+          "t": "opposite number",
+          "pos": "noun phrase",
+          "ipa": "/ˈɒp.ə.zɪt ˈnʌm.bər/",
+          "vi": "số đối",
+          "ex": "The opposite number of 3 is −3, and their sum is always equal to 0."
+        },
+        {
+          "t": "same sign",
+          "pos": "noun phrase",
+          "ipa": "/seɪm saɪn/",
+          "vi": "cùng dấu",
+          "ex": "To add two integers with the same sign, such as (−3) + (−5), we add their natural parts and place their common sign in front."
+        },
+        {
+          "t": "different signs",
+          "pos": "noun phrase",
+          "ipa": "/ˈdɪf.ər.ənt saɪnz/",
+          "vi": "khác dấu",
+          "ex": "When adding two integers with different signs like (−12) + 9, we find the difference of their natural parts."
+        },
+        {
+          "t": "integer addition",
+          "pos": "noun phrase",
+          "ipa": "/ˈɪn.tɪ.dʒər əˈdɪʃ.ən/",
+          "vi": "phép cộng số nguyên",
+          "ex": "We can represent integer addition like 3 + (−5) = −2 as directional movements on the number line."
+        },
+        {
+          "t": "integer subtraction",
+          "pos": "noun phrase",
+          "ipa": "/ˈɪn.tɪ.dʒər səbˈtræk.ʃən/",
+          "vi": "phép trừ số nguyên",
+          "ex": "To perform integer subtraction, we add the opposite of the second number: a − b = a + (−b)."
+        },
+        {
+          "t": "sum",
+          "pos": "noun",
+          "ipa": "/sʌm/",
+          "vi": "tổng",
+          "ex": "The sum of (−28) and (−37) is equal to −(28 + 37) = −65."
+        },
+        {
+          "t": "difference",
+          "pos": "noun",
+          "ipa": "/ˈdɪf.ər.əns/",
+          "vi": "hiệu",
+          "ex": "The difference between (−7) and 8 is written as (−7) − 8 = −15."
+        },
+        {
+          "t": "commutative property",
+          "pos": "noun phrase",
+          "ipa": "/kəˈmjuː.tə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất giao hoán",
+          "ex": "By the commutative property of addition, we have (−7) + 11 = 11 + (−7) = 4."
+        },
+        {
+          "t": "associative property",
+          "pos": "noun phrase",
+          "ipa": "/əˈsəʊ.ʃi.ə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất kết hợp",
+          "ex": "The associative property allows us to group terms: [2 + (−4)] + (−6) = 2 + [(−4) + (−6)] = −8."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "The daytime temperature at Mau Son peak is −3°C. If it decreases by 5°C at night, what is the temperature?"
+        },
+        {
+          "who": "Tron",
+          "text": "To find the new temperature, we need to add: (−3) + (−5)!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! Since both are negative, we add their natural parts: 3 + 5 = 8. So (−3) + (−5) = −8°C!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Brilliant! The temperature is indeed −8°C. You have successfully mastered integer addition!"
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "en": "THE RULE OF BRACKETS",
+      "vi": "QUY TẮC DẤU NGOẶC",
+      "page": "p-015",
+      "cards": [
+        {
+          "t": "rule of brackets",
+          "pos": "noun phrase",
+          "ipa": "/ruːl əv ˈbræk.ɪts/",
+          "vi": "quy tắc dấu ngoặc",
+          "ex": "Apply the rule of brackets to calculate the value of the expression."
+        },
+        {
+          "t": "remove brackets",
+          "pos": "verb phrase",
+          "ipa": "/rɪˈmuːv ˈbræk.ɪts/",
+          "vi": "bỏ dấu ngoặc",
+          "ex": "When we remove brackets, we must pay close attention to the sign in front of them."
+        },
+        {
+          "t": "plus sign in front",
+          "pos": "phrase",
+          "ipa": "/plʌs saɪn ɪn frʌnt/",
+          "vi": "dấu '+' đằng trước",
+          "ex": "When there is a plus sign in front of the brackets, keep the sign of each term inside."
+        },
+        {
+          "t": "minus sign in front",
+          "pos": "phrase",
+          "ipa": "/ˈmaɪ.nəs saɪn ɪn frʌnt/",
+          "vi": "dấu '−' đằng trước",
+          "ex": "When there is a minus sign in front of the brackets, we must change the signs of all terms inside."
+        },
+        {
+          "t": "keep the sign",
+          "pos": "verb phrase",
+          "ipa": "/kiːp ðə saɪn/",
+          "vi": "giữ nguyên dấu",
+          "ex": "For x + (a − b), we remove brackets and keep the sign: x + a − b."
+        },
+        {
+          "t": "change signs",
+          "pos": "verb phrase",
+          "ipa": "/tʃeɪndʒ saɪnz/",
+          "vi": "đổi dấu",
+          "ex": "We must change signs of all terms inside the brackets when removing them: −(a − b) = −a + b."
+        },
+        {
+          "t": "term",
+          "pos": "noun",
+          "ipa": "/tɜːm/",
+          "vi": "số hạng",
+          "ex": "In the expression a − b − c, both b and c are terms accompanied by their signs."
+        },
+        {
+          "t": "group terms",
+          "pos": "verb phrase",
+          "ipa": "/ɡruːp tɜːmz/",
+          "vi": "nhóm các số hạng",
+          "ex": "We can group terms arbitrarily using brackets: 50 − 90 − 30 = 50 − (90 + 30)."
+        },
+        {
+          "t": "rearrange",
+          "pos": "verb",
+          "ipa": "/ˌriː.əˈreɪndʒ/",
+          "vi": "thay đổi vị trí / sắp xếp lại",
+          "ex": "Rearrange the terms along with their signs to calculate efficiently: a − b − c = −b + a − c."
+        },
+        {
+          "t": "calculation chain",
+          "pos": "noun phrase",
+          "ipa": "/ˌkæl.kjəˈleɪ.ʃən tʃeɪn/",
+          "vi": "dãy tính",
+          "ex": "We can represent a long calculation chain as a simplified sum without any brackets."
+        },
+        {
+          "t": "opposite number",
+          "pos": "noun phrase",
+          "ipa": "/ˈɒp.ə.zɪt ˈnʌm.bər/",
+          "vi": "số đối",
+          "ex": "The opposite number of −23 is +23, and their sum is equal to zero."
+        },
+        {
+          "t": "bracket",
+          "pos": "noun",
+          "ipa": "/ˈbræk.ɪt/",
+          "vi": "dấu ngoặc",
+          "ex": "Always perform calculations inside the innermost brackets first."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "How can we evaluate this expression quickly without calculating the terms in parentheses first? (−385 + 210) + (385 − 217)"
+        },
+        {
+          "who": "Tron",
+          "text": "We can remove the brackets first! Since there are plus signs in front, we keep all the signs: −385 + 210 + 385 − 217!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Now we rearrange and group the opposite numbers: (−385 + 385) + (210 − 217) = 0 + (−7) = −7!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Incredible! Removing brackets and grouping opposite numbers makes long calculations so easy!"
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "en": "MULTIPLICATION OF INTEGERS",
+      "vi": "PHÉP NHÂN SỐ NGUYÊN",
+      "page": "p-016",
+      "cards": [
+        {
+          "t": "multiplication",
+          "pos": "noun",
+          "ipa": "/ˌmʌl.tɪ.plɪˈkeɪ.ʃən/",
+          "vi": "phép nhân",
+          "ex": "The multiplication of −5 and 3 is written as (−5) · 3 = −15."
+        },
+        {
+          "t": "factor",
+          "pos": "noun",
+          "ipa": "/ˈfæk.tər/",
+          "vi": "thừa số",
+          "ex": "In the expression (−25) · (−17) · 4, each of these numbers is a factor."
+        },
+        {
+          "t": "product",
+          "pos": "noun",
+          "ipa": "/ˈprɒd.ʌkt/",
+          "vi": "tích",
+          "ex": "The product of two negative integers is always a positive integer, such as (−10) · (−15) = 150."
+        },
+        {
+          "t": "different signs",
+          "pos": "noun phrase",
+          "ipa": "/ˈdɪf.ər.ənt saɪnz/",
+          "vi": "khác dấu",
+          "ex": "To multiply two integers with different signs, we multiply their natural parts and place a minus sign in front."
+        },
+        {
+          "t": "same sign",
+          "pos": "noun phrase",
+          "ipa": "/seɪm saɪn/",
+          "vi": "cùng dấu",
+          "ex": "Two integers with the same sign, such as (−12) · (−12), always yield a positive product."
+        },
+        {
+          "t": "positive integer",
+          "pos": "noun phrase",
+          "ipa": "/ˈpɒz.ə.tɪv ˈɪn.tɪ.dʒər/",
+          "vi": "số nguyên dương",
+          "ex": "A positive integer can be written with or without a plus sign, like +6 or 6."
+        },
+        {
+          "t": "negative integer",
+          "pos": "noun phrase",
+          "ipa": "/ˈneɡ.ə.tɪv ˈɪn.tɪ.dʒər/",
+          "vi": "số nguyên âm",
+          "ex": "To record an expenditure, we can write it as a negative integer, like −15,000."
+        },
+        {
+          "t": "sign of the product",
+          "pos": "noun phrase",
+          "ipa": "/saɪn əv ðə ˈprɒd.ʌkt/",
+          "vi": "dấu của tích",
+          "ex": "The sign of the product is positive when multiplying two negative integers: (−3) · (−7) = 21."
+        },
+        {
+          "t": "commutative property",
+          "pos": "noun phrase",
+          "ipa": "/kəˈmjuː.tə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất giao hoán",
+          "ex": "By the commutative property, we have 5 · (−12) = (−12) · 5 = −60."
+        },
+        {
+          "t": "associative property",
+          "pos": "noun phrase",
+          "ipa": "/əˈsəʊ.ʃi.ə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất kết hợp",
+          "ex": "The associative property allows grouping: [(−25) · 4] · (−17) = (−100) · (−17) = 1,700."
+        },
+        {
+          "t": "distributive property",
+          "pos": "noun phrase",
+          "ipa": "/dɪˈstrɪb.jə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất phân phối",
+          "ex": "The distributive property of multiplication over addition is a · (b + c) = a · b + a · c."
+        },
+        {
+          "t": "calculate reasonably",
+          "pos": "verb phrase",
+          "ipa": "/ˈkælk.jə.leɪt ˈriː.zən.ə.bli/",
+          "vi": "tính một cách hợp lí",
+          "ex": "We can calculate reasonably by applying properties: (−154) · (−235) + 154 · (−35) = 154 · (235 − 35) = 30,800."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Cao spent −15,000 VND three times this month. How can we find his total spending using multiplication?"
+        },
+        {
+          "who": "Tron",
+          "text": "We can write it as the multiplication of a negative integer and a positive integer: (−15,000) × 3!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Since they have different signs, the product must be negative! So Cao spent −(15,000 × 3) = −45,000 VND!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent! You both evaluated and understood the sign of the product perfectly!"
+        }
+      ]
+    },
+    {
+      "n": 17,
+      "en": "DIVISIBILITY. DIVISORS AND MULTIPLES OF AN INTEGER",
+      "vi": "QUAN HỆ CHIA HẾT. ƯỚC VÀ BỘI CỦA MỘT SỐ NGUYÊN",
+      "page": "p-017",
+      "cards": [
+        {
+          "t": "exact division",
+          "pos": "noun phrase",
+          "ipa": "/ɪɡˈzækt dɪˈvɪʒ.ən/",
+          "vi": "phép chia hết",
+          "ex": "If a = bq with b ≠ 0 for integers a, b, q, we have an exact division a : b = q."
+        },
+        {
+          "t": "divisible",
+          "pos": "adjective",
+          "ipa": "/dɪˈvɪz.ə.bəl/",
+          "vi": "chia hết",
+          "ex": "Since −35 = 7 · (−5), we say that −35 is divisible by 7, written as −35 ⋮ 7."
+        },
+        {
+          "t": "divisor",
+          "pos": "noun",
+          "ipa": "/dɪˈvaɪ.zər/",
+          "vi": "ước",
+          "ex": "The number 3 is a divisor of −12 because −12 is divisible by 3."
+        },
+        {
+          "t": "multiple",
+          "pos": "noun",
+          "ipa": "/ˈmʌl.tɪ.pəl/",
+          "vi": "bội",
+          "ex": "The integer −35 is a multiple of −7 because (−35) : (−7) = 5."
+        },
+        {
+          "t": "sign of the quotient",
+          "pos": "noun phrase",
+          "ipa": "/saɪn əv ðə ˈkwəʊ.ʃənt/",
+          "vi": "dấu của thương",
+          "ex": "The sign of the quotient is positive when we divide two negative integers: (−24) : (−8) = 3."
+        },
+        {
+          "t": "quotient",
+          "pos": "noun",
+          "ipa": "/ˈkwəʊ.ʃənt/",
+          "vi": "thương",
+          "ex": "The quotient of −135 divided by −9 is equal to 15."
+        },
+        {
+          "t": "positive divisor",
+          "pos": "noun phrase",
+          "ipa": "/ˈpɒz.ə.tɪv dɪˈvaɪ.zər/",
+          "vi": "ước dương",
+          "ex": "The positive divisors of the integer 4 are 1, 2, and 4."
+        },
+        {
+          "t": "common divisor",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɒm.ən dɪˈvaɪ.zər/",
+          "vi": "ước chung",
+          "ex": "The numbers −2, −1, 1, and 2 are common divisors of 4 and 6."
+        },
+        {
+          "t": "integer",
+          "pos": "noun",
+          "ipa": "/ˈɪn.tɪ.dʒər/",
+          "vi": "số nguyên",
+          "ex": "In the set of integers ℤ, we can find both positive and negative divisors of any non-zero number."
+        },
+        {
+          "t": "set of divisors",
+          "pos": "noun phrase",
+          "ipa": "/set əv dɪˈvaɪ.zəz/",
+          "vi": "tập hợp các ước",
+          "ex": "The set of divisors of −9 is written as Ư(−9) = {1, −1, 3, −3, 9, −9}."
+        },
+        {
+          "t": "set of multiples",
+          "pos": "noun phrase",
+          "ipa": "/set əv ˈmʌl.tɪ.pəlz/",
+          "vi": "tập hợp các bội",
+          "ex": "The set of multiples of 4 in the range −20 < x < 20 is denoted as B(4)."
+        },
+        {
+          "t": "opposite number",
+          "pos": "noun phrase",
+          "ipa": "/ˈɒp.ə.zɪt ˈnʌm.bər/",
+          "vi": "số đối",
+          "ex": "To find all divisors of an integer, we find its positive divisors along with their opposite numbers."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Can you list all the divisors of the integer −9?"
+        },
+        {
+          "who": "Tron",
+          "text": "The positive divisors of 9 are 1, 3, and 9. So 1, 3, and 9 are also divisors of −9!"
+        },
+        {
+          "who": "Vuong",
+          "text": "And we must include their opposite numbers: −1, −3, and −9! So Ư(−9) has exactly 6 elements!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent! You both successfully used opposite numbers to find all negative and positive divisors!"
+        }
+      ]
+    },
+    {
+      "n": 18,
+      "en": "EQUILATERAL TRIANGLE. SQUARE. REGULAR HEXAGON",
+      "vi": "TAM GIÁC ĐỀU. HÌNH VUÔNG. LỤC GIÁC ĐỀU",
+      "page": "p-018",
+      "cards": [
+        {
+          "t": "equilateral triangle",
+          "pos": "noun phrase",
+          "ipa": "/ˌiː.kwɪˈlæt.ər.əl ˈtraɪ.æŋ.ɡəl/",
+          "vi": "hình tam giác đều",
+          "ex": "An equilateral triangle ABC has three equal sides: AB = BC = CA."
+        },
+        {
+          "t": "square",
+          "pos": "noun",
+          "ipa": "/skweər/",
+          "vi": "hình vuông",
+          "ex": "A square ABCD has four equal sides and four right angles."
+        },
+        {
+          "t": "regular hexagon",
+          "pos": "noun phrase",
+          "ipa": "/ˈreɡ.jə.lər ˈhek.sə.ɡən/",
+          "vi": "hình lục giác đều",
+          "ex": "We can construct a regular hexagon by assembling six identical equilateral triangles."
+        },
+        {
+          "t": "vertex",
+          "pos": "noun",
+          "ipa": "/ˈvɜː.teks/",
+          "vi": "đỉnh",
+          "ex": "An equilateral triangle ABC has three vertices: A, B, and C."
+        },
+        {
+          "t": "side",
+          "pos": "noun",
+          "ipa": "/saɪd/",
+          "vi": "cạnh",
+          "ex": "Measure the length of each side of the square to verify that they are equal."
+        },
+        {
+          "t": "angle",
+          "pos": "noun",
+          "ipa": "/ˈæŋ.ɡəl/",
+          "vi": "góc",
+          "ex": "Each angle of an equilateral triangle measures exactly 60°."
+        },
+        {
+          "t": "diagonal",
+          "pos": "noun",
+          "ipa": "/daɪˈæɡ.ən.əl/",
+          "vi": "đường chéo",
+          "ex": "The two diagonals of a square are equal in length and perpendicular to each other."
+        },
+        {
+          "t": "main diagonal",
+          "pos": "noun phrase",
+          "ipa": "/meɪn daɪˈæɡ.ən.əl/",
+          "vi": "đường chéo chính",
+          "ex": "The regular hexagon ABCDEF has three main diagonals: AD, BE, and CF."
+        },
+        {
+          "t": "equal",
+          "pos": "adjective",
+          "ipa": "/ˈiː.kwəl/",
+          "vi": "bằng nhau",
+          "ex": "In a regular hexagon, the six sides are always equal in length."
+        },
+        {
+          "t": "set square",
+          "pos": "noun phrase",
+          "ipa": "/set skweər/",
+          "vi": "ê ke",
+          "ex": "We use a set square with a 60° angle to draw a perfect equilateral triangle."
+        },
+        {
+          "t": "ruler",
+          "pos": "noun",
+          "ipa": "/ˈruː.lər/",
+          "vi": "thước thẳng",
+          "ex": "Use a straight ruler to draw the segment AB = 3 cm."
+        },
+        {
+          "t": "protractor",
+          "pos": "noun",
+          "ipa": "/prəˈtræk.tər/",
+          "vi": "thước đo góc",
+          "ex": "Use a protractor to check if each angle of the regular hexagon is 120°."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "How can we make a regular hexagon ABCDEF using equilateral triangles?"
+        },
+        {
+          "who": "Tron",
+          "text": "We can assemble six identical equilateral triangles to form a regular hexagon!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! And it has three equal main diagonals: AD, BE, and CF!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Brilliant! You both mastered regular hexagons and their parts perfectly!"
+        }
+      ]
+    },
+    {
+      "n": 19,
+      "en": "RECTANGLE. RHOMBUS. PARALLELOGRAM. ISOSCELES TRAPEZOID",
+      "vi": "HÌNH CHỮ NHẬT. HÌNH THOI. HÌNH BÌNH HÀNH. HÌNH THANG CÂN",
+      "page": "p-019",
+      "cards": [
+        {
+          "t": "rectangle",
+          "pos": "noun",
+          "ipa": "/ˈrek.tæŋ.ɡəl/",
+          "vi": "hình chữ nhật",
+          "ex": "A rectangle ABCD has four right angles and equal opposite sides: AB = CD and BC = AD."
+        },
+        {
+          "t": "rhombus",
+          "pos": "noun",
+          "ipa": "/ˈrɒm.bəs/",
+          "vi": "hình thoi",
+          "ex": "A rhombus ABCD is a quadrilateral with four equal sides: AB = BC = CD = DA."
+        },
+        {
+          "t": "parallelogram",
+          "pos": "noun",
+          "ipa": "/ˌpær.əˈlel.ə.ɡræm/",
+          "vi": "hình bình hành",
+          "ex": "In a parallelogram ABCD, the opposite sides are parallel: AB ∥ CD and AD ∥ BC."
+        },
+        {
+          "t": "isosceles trapezoid",
+          "pos": "noun phrase",
+          "ipa": "/aɪˈsɒs.əl.iːz ˈtræp.ɪ.zɔɪd/",
+          "vi": "hình thang cân",
+          "ex": "An isosceles trapezoid ABCD has two parallel bases and equal non-parallel lateral sides: AD = BC."
+        },
+        {
+          "t": "opposite sides",
+          "pos": "noun plural",
+          "ipa": "/ˈɒp.ə.zɪt saɪdz/",
+          "vi": "các cạnh đối",
+          "ex": "The opposite sides of a rectangle are parallel and equal."
+        },
+        {
+          "t": "opposite angles",
+          "pos": "noun plural",
+          "ipa": "/ˈɒp.ə.zɪt ˈæŋ.ɡəlz/",
+          "vi": "các góc đối",
+          "ex": "The opposite angles of a parallelogram are equal: Â = Ĉ and B̂ = D̂."
+        },
+        {
+          "t": "diagonal",
+          "pos": "noun",
+          "ipa": "/daɪˈæɡ.ən.əl/",
+          "vi": "đường chéo",
+          "ex": "The two diagonals of a rectangle are equal: AC = BD."
+        },
+        {
+          "t": "perpendicular",
+          "pos": "adjective",
+          "ipa": "/ˌpɜː.pənˈdɪk.jə.lər/",
+          "vi": "vuông góc",
+          "ex": "The diagonals of a rhombus are perpendicular to each other: AC ⊥ BD."
+        },
+        {
+          "t": "parallel",
+          "pos": "adjective",
+          "ipa": "/ˈpær.ə.lel/",
+          "vi": "song song",
+          "ex": "The two bases of a trapezoid are always parallel to each other: AB ∥ CD."
+        },
+        {
+          "t": "midpoint",
+          "pos": "noun",
+          "ipa": "/ˈmɪd.pɔɪnt/",
+          "vi": "trung điểm",
+          "ex": "The two diagonals of a parallelogram cut each other at their midpoint I."
+        },
+        {
+          "t": "base",
+          "pos": "noun",
+          "ipa": "/beɪs/",
+          "vi": "cạnh đáy",
+          "ex": "An isosceles trapezoid has two parallel bases: a major base CD and a minor base AB."
+        },
+        {
+          "t": "lateral side",
+          "pos": "noun phrase",
+          "ipa": "/ˈlæt.ər.əl saɪd/",
+          "vi": "cạnh bên",
+          "ex": "In an isosceles trapezoid, the two lateral sides are equal in length: AD = BC."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Today, let's construct a perfect rhombus from this rectangular sheet of paper! Who wants to try?"
+        },
+        {
+          "who": "Tron",
+          "text": "I will! First, I fold the paper in half, and then fold it in half again to create a right-angle corner."
+        },
+        {
+          "who": "Vuong",
+          "text": "Next, I draw a line connecting any two points on the folded edges and cut along it!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Brilliant! When you open it, you get a rhombus with four equal sides and perpendicular diagonals!"
+        }
+      ]
+    },
+    {
+      "n": 20,
+      "en": "PERIMETER AND AREA OF SOME QUADRILATERALS",
+      "vi": "CHU VI VÀ DIỆN TÍCH CỦA MỘT SỐ TỨ GIÁC",
+      "page": "p-020",
+      "cards": [
+        {
+          "t": "perimeter",
+          "pos": "noun",
+          "ipa": "/pəˈrɪm.ɪ.tər/",
+          "vi": "chu vi",
+          "ex": "The perimeter of a square with side length a is calculated as C = 4a."
+        },
+        {
+          "t": "area",
+          "pos": "noun",
+          "ipa": "/ˈeə.ri.ə/",
+          "vi": "diện tích",
+          "ex": "The area of a rectangle is the product of its length and width: S = a · b."
+        },
+        {
+          "t": "quadrilateral",
+          "pos": "noun",
+          "ipa": "/ˌkwɒd.rɪˈlæt.ər.əl/",
+          "vi": "tứ giác",
+          "ex": "Squares, rectangles, parallelograms, and trapezoids are all types of quadrilaterals."
+        },
+        {
+          "t": "trapezoid",
+          "pos": "noun",
+          "ipa": "/ˈtræp.ɪ.zɔɪd/",
+          "vi": "hình thang",
+          "ex": "To find the area of a trapezoid, use the formula S = ½(a + b)h."
+        },
+        {
+          "t": "isosceles trapezoid",
+          "pos": "noun phrase",
+          "ipa": "/aɪˈsɒs.əl.iːz ˈtræp.ɪ.zɔɪd/",
+          "vi": "hình thang cân",
+          "ex": "A tabletop in the shape of an isosceles trapezoid has two equal non-parallel sides."
+        },
+        {
+          "t": "parallelogram",
+          "pos": "noun",
+          "ipa": "/ˌpær.əˈlel.ə.ɡræm/",
+          "vi": "hình bình hành",
+          "ex": "Calculate the area of a parallelogram by multiplying its base by its corresponding height: S = a · h."
+        },
+        {
+          "t": "rhombus",
+          "pos": "noun",
+          "ipa": "/ˈrɒm.bəs/",
+          "vi": "hình thoi",
+          "ex": "The area of a rhombus is equal to half the product of its two diagonals: S = ½ AC · BD."
+        },
+        {
+          "t": "formula",
+          "pos": "noun",
+          "ipa": "/ˈfɔː.mjə.lə/",
+          "vi": "công thức",
+          "ex": "This lesson provides the formulas for calculating both the perimeter and the area of common quadrilaterals."
+        },
+        {
+          "t": "height",
+          "pos": "noun",
+          "ipa": "/haɪt/",
+          "vi": "chiều cao / đường cao",
+          "ex": "The height of the parallelogram is measured perpendicular to its base."
+        },
+        {
+          "t": "base",
+          "pos": "noun",
+          "ipa": "/beɪs/",
+          "vi": "cạnh đáy",
+          "ex": "An isosceles trapezoid has a major base of 1,200 mm and a minor base of 600 mm."
+        },
+        {
+          "t": "diagonal",
+          "pos": "noun",
+          "ipa": "/daɪˈæɡ.ən.əl/",
+          "vi": "đường chéo",
+          "ex": "A rhombus has two perpendicular diagonals of length AC = 8 cm and BD = 6 cm."
+        },
+        {
+          "t": "dimension",
+          "pos": "noun",
+          "ipa": "/daɪˈmen.ʃən/",
+          "vi": "kích thước",
+          "ex": "Measure all the dimensions of the room before buying tiles to pave the floor."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Bác Khôi wants to pave a room of 8 m by 6 m with square tiles of 40 cm. How many tiles does he need?"
+        },
+        {
+          "who": "Tron",
+          "text": "First, we find the area of the room: 8 m × 6 m = 48 square meters!"
+        },
+        {
+          "who": "Vuong",
+          "text": "And the area of one tile is 0.16 square meters. So we divide: 48 : 0.16 = 300 tiles!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent! You both correctly used the area formulas of rectangles and squares to solve this real problem!"
+        }
+      ]
+    },
+    {
+      "n": 21,
+      "en": "FIGURES WITH AN AXIS OF SYMMETRY",
+      "vi": "HÌNH CÓ TRỤC ĐỐI XỨNG",
+      "page": "p-021",
+      "cards": [
+        {
+          "t": "symmetric figure",
+          "pos": "noun phrase",
+          "ipa": "/sɪˈmet.rɪk ˈfɪɡ.ər/",
+          "vi": "hình có tính đối xứng",
+          "ex": "A butterfly with open wings is a beautiful example of a symmetric figure."
+        },
+        {
+          "t": "axis of symmetry",
+          "pos": "noun phrase",
+          "ipa": "/ˈæk.sɪs əv ˈsɪm.ə.tri/",
+          "vi": "trục đối xứng",
+          "ex": "The line d divides the shape into two matching halves and is called the axis of symmetry."
+        },
+        {
+          "t": "fold",
+          "pos": "verb",
+          "ipa": "/fəʊld/",
+          "vi": "gấp (giấy/hình)",
+          "ex": "Fold the paper circle in half along a straight line passing through its center."
+        },
+        {
+          "t": "overlap perfectly",
+          "pos": "verb phrase",
+          "ipa": "/ˌəʊ.vəˈlæp ˈpɜː.fekt.li/",
+          "vi": "chồng khít lên nhau",
+          "ex": "When we fold the heart shape along its axis of symmetry, the two halves overlap perfectly."
+        },
+        {
+          "t": "plane figure",
+          "pos": "noun phrase",
+          "ipa": "/pleɪn ˈfɪɡ.ər/",
+          "vi": "hình phẳng",
+          "ex": "In Grade 6, we study the symmetry of plane figures like circles, squares, and rectangles."
+        },
+        {
+          "t": "line segment",
+          "pos": "noun phrase",
+          "ipa": "/laɪn ˈseɡ.mənt/",
+          "vi": "đoạn thẳng",
+          "ex": "A horizontal line segment has one axis of symmetry which is its perpendicular bisector."
+        },
+        {
+          "t": "midpoint",
+          "pos": "noun",
+          "ipa": "/ˈmɪd.pɔɪnt/",
+          "vi": "trung điểm",
+          "ex": "The axis of symmetry of segment AB passes through its midpoint M."
+        },
+        {
+          "t": "perpendicular",
+          "pos": "adjective",
+          "ipa": "/ˌpɜː.pənˈdɪk.jə.lər/",
+          "vi": "vuông góc",
+          "ex": "The axis of symmetry of a line segment is perpendicular to the segment itself."
+        },
+        {
+          "t": "balanced",
+          "pos": "adjective",
+          "ipa": "/ˈbæl.ənst/",
+          "vi": "cân đối",
+          "ex": "Symmetric designs look balanced and are widely used in architecture and art."
+        },
+        {
+          "t": "harmony",
+          "pos": "noun",
+          "ipa": "/ˈhɑː.mə.ni/",
+          "vi": "sự hài hoà",
+          "ex": "Symmetry brings visual harmony to natural structures like snowflakes and starfish."
+        },
+        {
+          "t": "unfold",
+          "pos": "verb",
+          "ipa": "/ʌnˈfəʊld/",
+          "vi": "mở ra (sau khi gấp)",
+          "ex": "Cut out the drawn shape, then unfold the paper to reveal a symmetric letter A."
+        },
+        {
+          "t": "coincide",
+          "pos": "verb",
+          "ipa": "/ˌkəʊ.ɪnˈsaɪd/",
+          "vi": "trùng nhau / trùng khít",
+          "ex": "If you fold a square along its diagonal, the opposite vertices will coincide."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "If we fold this circle along any straight line passing through its center, what happens?"
+        },
+        {
+          "who": "Tron",
+          "text": "The two halves overlap perfectly, Mr. Pi! So every line through the center is an axis of symmetry!"
+        },
+        {
+          "who": "Vuong",
+          "text": "And if we fold paper, draw half of letter A, cut it out, and unfold it, we get a symmetric \"A\"!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Superb! You both understand how folding helps us discover axes of symmetry in letters and shapes!"
+        }
+      ]
+    },
+    {
+      "n": 22,
+      "en": "FIGURES WITH A CENTER OF SYMMETRY",
+      "vi": "HÌNH CÓ TÂM ĐỐI XỨNG",
+      "page": "p-022",
+      "cards": [
+        {
+          "t": "center of symmetry",
+          "pos": "noun phrase",
+          "ipa": "/ˈsen.tər əv ˈsɪm.ə.tri/",
+          "vi": "tâm đối xứng",
+          "ex": "The point O is the center of symmetry of the circle."
+        },
+        {
+          "t": "figures with a center of symmetry",
+          "pos": "noun phrase",
+          "ipa": "/ˈfɪɡ.əz wɪð ə ˈsen.tər əv ˈsɪm.ə.tri/",
+          "vi": "các hình có tâm đối xứng",
+          "ex": "A parallelogram and a regular hexagon are figures with a center of symmetry."
+        },
+        {
+          "t": "rotate half a turn",
+          "pos": "verb phrase",
+          "ipa": "/rəʊˈteɪt hɑːf ə tɜːn/",
+          "vi": "quay nửa vòng",
+          "ex": "If we rotate a parallelogram half a turn (180°) around its center, it coincides with itself."
+        },
+        {
+          "t": "coincide",
+          "pos": "verb",
+          "ipa": "/ˌkəʊ.ɪnˈsaɪd/",
+          "vi": "chồng khít",
+          "ex": "After rotating 180° around the center, the two-blade propeller image will completely coincide with its original shape."
+        },
+        {
+          "t": "original position",
+          "pos": "noun phrase",
+          "ipa": "/əˈrɪdʒ.ən.əl pəˈzɪʃ.ən/",
+          "vi": "vị trí ban đầu",
+          "ex": "A figure has a center of symmetry if it returns to its original position after a half-turn."
+        },
+        {
+          "t": "intersection",
+          "pos": "noun",
+          "ipa": "/ˌɪn.təˈsek.ʃən/",
+          "vi": "giao điểm",
+          "ex": "The intersection of the two diagonals of a rectangle is its center of symmetry."
+        },
+        {
+          "t": "diagonal",
+          "pos": "noun",
+          "ipa": "/daɪˈæɡ.ən.əl/",
+          "vi": "đường chéo",
+          "ex": "The diagonals of a rhombus are perpendicular to each other."
+        },
+        {
+          "t": "main diagonal",
+          "pos": "noun phrase",
+          "ipa": "/meɪn daɪˈæɡ.ən.əl/",
+          "vi": "đường chéo chính",
+          "ex": "A regular hexagon has three main diagonals which intersect at its center of symmetry."
+        },
+        {
+          "t": "equal",
+          "pos": "adjective",
+          "ipa": "/ˈiː.kwəl/",
+          "vi": "bằng nhau",
+          "ex": "In a regular hexagon, the six sides are always equal in length."
+        },
+        {
+          "t": "set square",
+          "pos": "noun phrase",
+          "ipa": "/set skweər/",
+          "vi": "ê ke",
+          "ex": "We use a set square with a 60° angle to draw a perfect equilateral triangle."
+        },
+        {
+          "t": "ruler",
+          "pos": "noun",
+          "ipa": "/ˈruː.lər/",
+          "vi": "thước thẳng",
+          "ex": "Use a straight ruler to draw the segment AB = 3 cm."
+        },
+        {
+          "t": "protractor",
+          "pos": "noun",
+          "ipa": "/prəˈtræk.tər/",
+          "vi": "thước đo góc",
+          "ex": "Use a protractor to check if each angle of the regular hexagon is 120°."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Look at these two toy propellers. Which one has a center of symmetry?"
+        },
+        {
+          "who": "Tron",
+          "text": "If I rotate the 2-blade propeller half a turn, it completely coincides with its original position! It has a center of symmetry!"
+        },
+        {
+          "who": "Vuong",
+          "text": "But the 3-blade propeller does not match after half a turn. So it does not have a center of symmetry!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent analysis! Only shapes that match perfectly after exactly half a turn have a center of symmetry!"
+        }
+      ]
+    },
+    {
+      "n": 23,
+      "en": "EXTENDING FRACTIONS. EQUAL FRACTIONS",
+      "vi": "MỞ RỘNG PHÂN SỐ. PHÂN SỐ BẰNG NHAU",
+      "page": "p-023",
+      "cards": [
+        {
+          "t": "fraction",
+          "pos": "noun",
+          "ipa": "/ˈfræk.ʃən/",
+          "vi": "phân số",
+          "ex": "With a, b ∈ ℤ and b ≠ 0, we call a/b a fraction."
+        },
+        {
+          "t": "numerator",
+          "pos": "noun",
+          "ipa": "/ˈnjuː.mə.reɪ.tər/",
+          "vi": "tử số (tử)",
+          "ex": "In the fraction −2/5, the integer −2 is the numerator."
+        },
+        {
+          "t": "denominator",
+          "pos": "noun",
+          "ipa": "/dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "mẫu số (mẫu)",
+          "ex": "The denominator of a fraction must always be a non-zero integer."
+        },
+        {
+          "t": "integer",
+          "pos": "noun",
+          "ipa": "/ˈɪn.tɪ.dʒər/",
+          "vi": "số nguyên",
+          "ex": "Every integer can be written under the form of a fraction with a denominator of 1."
+        },
+        {
+          "t": "equal fractions",
+          "pos": "noun phrase",
+          "ipa": "/ˈiː.kwəl ˈfræk.ʃənz/",
+          "vi": "hai phân số bằng nhau",
+          "ex": "The fractions 2/5 and 4/10 are equal fractions because they have the same value."
+        },
+        {
+          "t": "equality rule",
+          "pos": "noun phrase",
+          "ipa": "/ɪˈkwɒl.ə.ti ruːl/",
+          "vi": "quy tắc bằng nhau (của hai phân số)",
+          "ex": "According to the equality rule, a/b = c/d if a · d = b · c."
+        },
+        {
+          "t": "basic property",
+          "pos": "noun phrase",
+          "ipa": "/ˈbeɪ.sɪk ˈprɒp.ə.ti/",
+          "vi": "tính chất cơ bản",
+          "ex": "We use the basic properties of fractions to multiply or divide both the numerator and denominator."
+        },
+        {
+          "t": "common divisor",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɒm.ən dɪˈvaɪ.zər/",
+          "vi": "ước chung",
+          "ex": "We can divide both the numerator and denominator by a common divisor to get an equal fraction."
+        },
+        {
+          "t": "positive denominator",
+          "pos": "noun phrase",
+          "ipa": "/ˈpɒz.ə.tɪv dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "mẫu dương",
+          "ex": "Every fraction can be rewritten to have a positive denominator, such as 3/−4 = −3/4."
+        },
+        {
+          "t": "simplify",
+          "pos": "verb",
+          "ipa": "/ˈsɪm.plɪ.faɪ/",
+          "vi": "rút gọn (phân số)",
+          "ex": "To simplify the fraction −9/21, we divide both the numerator and denominator by 3."
+        },
+        {
+          "t": "simplest form",
+          "pos": "noun phrase",
+          "ipa": "/ˈsɪm.plɪst fɔːm/",
+          "vi": "dạng tối giản",
+          "ex": "After simplifying, the fraction is written in its simplest form."
+        },
+        {
+          "t": "irreducible fraction",
+          "pos": "noun phrase",
+          "ipa": "/ˌɪr.ɪˈdʒuː.sə.bəl ˈfræk.ʃən/",
+          "vi": "phân số tối giản",
+          "ex": "The fraction −3/7 is an irreducible fraction because its terms have no common divisors other than 1 and −1."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Tron says every integer can be written as a fraction, but Vuong disagrees. Who is correct? −5"
+        },
+        {
+          "who": "Vuong",
+          "text": "How can an integer like −5 be a fraction? A fraction must have both numerator and denominator!"
+        },
+        {
+          "who": "Tron",
+          "text": "We can write −5 as −5 over 1! The numerator is −5 and the denominator is 1, so it is a fraction!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent, Tron! Vuong, you see? Any integer a can be written as a over 1. Tron is absolutely correct!"
+        }
+      ]
+    },
+    {
+      "n": 24,
+      "en": "COMPARING FRACTIONS. POSITIVE MIXED NUMBERS",
+      "vi": "SO SÁNH PHÂN SỐ. HỖN SỐ DƯƠNG",
+      "page": "p-024",
+      "cards": [
+        {
+          "t": "comparing fractions",
+          "pos": "noun phrase",
+          "ipa": "/kəmˈpeə.rɪŋ ˈfræk.ʃənz/",
+          "vi": "so sánh phân số",
+          "ex": "In Lesson 24, we learn the systematic rules for comparing fractions with different denominators."
+        },
+        {
+          "t": "positive mixed number",
+          "pos": "noun phrase",
+          "ipa": "/ˈpɒz.ə.tɪv mɪkst ˈnʌm.bər/",
+          "vi": "hỗn số dương",
+          "ex": "We can write the improper fraction 3/2 as the positive mixed number 1 1/2."
+        },
+        {
+          "t": "common denominator",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɒm.ən dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "mẫu (số) chung",
+          "ex": "To compare two fractions with different denominators, we must first find a common denominator."
+        },
+        {
+          "t": "find a common denominator",
+          "pos": "verb phrase",
+          "ipa": "/faɪnd ə ˈkɒm.ən dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "quy đồng mẫu số",
+          "ex": "Find a common denominator for the fractions 5/6 and 7/4 by choosing their lowest common multiple."
+        },
+        {
+          "t": "lowest common multiple",
+          "pos": "noun phrase",
+          "ipa": "/ˈləʊ.ɪst ˈkɒm.ən ˈmʌl.tɪ.pəl/",
+          "vi": "bội chung nhỏ nhất (BCNN)",
+          "ex": "We find BCNN(6, 8) = 24 to use as the common denominator for our calculations."
+        },
+        {
+          "t": "numerator",
+          "pos": "noun",
+          "ipa": "/ˈnjuː.mə.reɪ.tər/",
+          "vi": "tử số",
+          "ex": "In two fractions with the same positive denominator, the fraction with the larger numerator is the greater one."
+        },
+        {
+          "t": "denominator",
+          "pos": "noun",
+          "ipa": "/dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "mẫu số",
+          "ex": "Always rewrite fractions with a positive denominator before attempting to compare their numerators."
+        },
+        {
+          "t": "integer",
+          "pos": "noun",
+          "ipa": "/ˈɪn.tɪ.dʒər/",
+          "vi": "số nguyên",
+          "ex": "A fraction is written in the form a/b, where the numerator and denominator are both integers."
+        },
+        {
+          "t": "whole part",
+          "pos": "noun phrase",
+          "ipa": "/həʊl pɑːt/",
+          "vi": "phần nguyên (của hỗn số)",
+          "ex": "In the positive mixed number 3 4/5, the number 3 is the whole part."
+        },
+        {
+          "t": "fractional part",
+          "pos": "noun phrase",
+          "ipa": "/ˈfræk.ʃən.əl pɑːt/",
+          "vi": "phần phân số (của hỗn số)",
+          "ex": "According to the textbook convention, the fractional part of a mixed number is always strictly less than 1."
+        },
+        {
+          "t": "ascending order",
+          "pos": "noun phrase",
+          "ipa": "/əˈsen.dɪŋ ˈɔː.dər/",
+          "vi": "thứ tự tăng dần",
+          "ex": ""
+        },
+        {
+          "t": "greater than",
+          "pos": "phrase",
+          "ipa": "/ˈɡreɪ.tər ðæn/",
+          "vi": "lớn hơn",
+          "ex": "Because −21 > −22, the fraction −21/36 is greater than −22/36."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Tron has 3/4 of a cake left, and Vuong has 5/6 left. Whose remaining portion is larger?"
+        },
+        {
+          "who": "Tron",
+          "text": "The denominators are 4 and 6. Let's find a common denominator! The BCNN(4, 6) is 12!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Exactly! 3/4 = 9/12 and 5/6 = 10/12. Since the numerator 10 is greater than 9, 5/6 is larger!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Brilliant! By finding a common denominator, you compared the fractions perfectly!"
+        }
+      ]
+    },
+    {
+      "n": 25,
+      "en": "ADDITION AND SUBTRACTION OF FRACTIONS",
+      "vi": "PHÉP CỘNG VÀ PHÉP TRỪ PHÂN SỐ",
+      "page": "p-025",
+      "cards": [
+        {
+          "t": "fraction addition",
+          "pos": "noun phrase",
+          "ipa": "/ˈfræk.ʃən əˈdɪʃ.ən/",
+          "vi": "phép cộng phân số",
+          "ex": "To perform fraction addition with the same denominator, we add their numerators and keep the denominator: −4/7 + 3/7 = −1/7."
+        },
+        {
+          "t": "fraction subtraction",
+          "pos": "noun phrase",
+          "ipa": "/ˈfræk.ʃən səbˈtræk.ʃən/",
+          "vi": "phép trừ phân số",
+          "ex": "We perform fraction subtraction by subtracting their numerators: 17/15 − 21/15 = −4/15."
+        },
+        {
+          "t": "same denominator",
+          "pos": "noun phrase",
+          "ipa": "/seɪm dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "cùng mẫu / cùng mẫu số",
+          "ex": "For two fractions with the same denominator, we can directly add or subtract their numerators."
+        },
+        {
+          "t": "different denominators",
+          "pos": "noun phrase",
+          "ipa": "/ˈdɪf.ər.ənt dɪˈnɒm.ɪ.neɪ.tərz/",
+          "vi": "khác mẫu / khác mẫu số",
+          "ex": "To add fractions with different denominators like 5/7 and −3/4, we must first rewrite them with a common denominator."
+        },
+        {
+          "t": "opposite number",
+          "pos": "noun phrase",
+          "ipa": "/ˈɒp.ə.zɪt ˈnʌm.bər/",
+          "vi": "số đối",
+          "ex": "Two numbers are opposite numbers if their sum is 0. The opposite of a/b is −a/b."
+        },
+        {
+          "t": "sum",
+          "pos": "noun",
+          "ipa": "/sʌm/",
+          "vi": "tổng",
+          "ex": "The sum of −5/6 and 7/9 after finding a common denominator is equal to −1/18."
+        },
+        {
+          "t": "difference",
+          "pos": "noun",
+          "ipa": "/ˈdɪf.ər.əns/",
+          "vi": "hiệu",
+          "ex": "The difference between 8/9 and −1/3 is calculated as 8/9 − (−1/3) = 11/9."
+        },
+        {
+          "t": "commutative property",
+          "pos": "noun phrase",
+          "ipa": "/kəˈmjuː.tə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất giao hoán",
+          "ex": "By the commutative property, we can write −1/3 + 2/3 = 2/3 + (−1/3) = 1/3."
+        },
+        {
+          "t": "associative property",
+          "pos": "noun phrase",
+          "ipa": "/əˈsəʊ.ʃi.ə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất kết hợp",
+          "ex": "Using the associative property, we can group terms without changing the result: (1/2 + (−1/3)) + 1/3 = 1/2."
+        },
+        {
+          "t": "common denominator",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɒm.ən dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "mẫu (số) chung",
+          "ex": "When adding or subtracting fractions, we choose a positive common denominator to simplify calculations."
+        },
+        {
+          "t": "rule of brackets",
+          "pos": "noun phrase",
+          "ipa": "/ruːl ɒv ˈbræk.ɪts/",
+          "vi": "quy tắc dấu ngoặc",
+          "ex": "Apply the rule of brackets and commutative properties to calculate complex expression chains reasonably."
+        },
+        {
+          "t": "simplify",
+          "pos": "verb",
+          "ipa": "/ˈsɪm.plɪ.faɪ/",
+          "vi": "rút gọn (phân số)",
+          "ex": "Always simplify your final calculation result by dividing both terms by their greatest common divisor."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Tuan needs 3 hours to paint a picture. He draws for 2/3 hour in the morning and 5/3 hours in the afternoon. How much time is left for the evening?"
+        },
+        {
+          "who": "Tron",
+          "text": "First, we add the morning and afternoon hours! 2/3 + 5/3 = 7/3. They have the same denominator!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Now we subtract 7/3 from the total 3 hours: 3 − 7/3 = 9/3 − 7/3 = 2/3 hour! Tuan has 2/3 hour left!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent work! You both combined and subtracted fractions with matching denominators perfectly to solve this real-world task!"
+        }
+      ]
+    },
+    {
+      "n": 26,
+      "en": "MULTIPLICATION AND DIVISION OF FRACTIONS",
+      "vi": "PHÉP NHÂN VÀ PHÉP CHIA PHÂN SỐ",
+      "page": "p-026",
+      "cards": [
+        {
+          "t": "multiplication",
+          "pos": "noun",
+          "ipa": "/ˌmʌl.tɪ.plɪˈkeɪ.ʃən/",
+          "vi": "phép nhân",
+          "ex": "The multiplication of two fractions is calculated by multiplying their numerators and denominators: a/b · c/d = (a · c)/(b · d)."
+        },
+        {
+          "t": "division",
+          "pos": "noun",
+          "ipa": "/dɪˈvɪʒ.ən/",
+          "vi": "phép chia",
+          "ex": "To perform fraction division, we multiply the first fraction by the reciprocal of the second: a/b : c/d = (a · d)/(b · c)."
+        },
+        {
+          "t": "reciprocal fraction",
+          "pos": "noun phrase",
+          "ipa": "/rɪˈsɪp.rə.kəl ˈfræk.ʃən/",
+          "vi": "phân số nghịch đảo",
+          "ex": "The reciprocal fraction of 4/5 is 5/4, because their product is equal to 1."
+        },
+        {
+          "t": "numerator",
+          "pos": "noun",
+          "ipa": "/ˈnjuː.mə.reɪ.tər/",
+          "vi": "tử số",
+          "ex": "When multiplying fractions, we multiply the numerator of the first by the numerator of the second."
+        },
+        {
+          "t": "denominator",
+          "pos": "noun",
+          "ipa": "/dɪˈnɒm.ɪ.neɪ.tər/",
+          "vi": "mẫu số",
+          "ex": "The denominator of any fraction or reciprocal fraction must always be different from zero."
+        },
+        {
+          "t": "product",
+          "pos": "noun",
+          "ipa": "/ˈprɒd.ʌkt/",
+          "vi": "tích",
+          "ex": "The product of −4/7 and 3/5 is equal to −12/35."
+        },
+        {
+          "t": "quotient",
+          "pos": "noun",
+          "ipa": "/ˈkwəʊ.ʃənt/",
+          "vi": "thương",
+          "ex": "The quotient of −3/5 divided by 3/4 is calculated as −3/5 · 4/3 = −4/5."
+        },
+        {
+          "t": "commutative property",
+          "pos": "noun phrase",
+          "ipa": "/kəˈmjuː.tə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất giao hoán",
+          "ex": "By the commutative property, we can write −2/5 · 5/4 = 5/4 · (−2/5) = −1/2."
+        },
+        {
+          "t": "associative property",
+          "pos": "noun phrase",
+          "ipa": "/əˈsəʊ.ʃi.ə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất kết hợp",
+          "ex": "The associative property allows grouping: (1/2 · (−1/3)) · 3/5 = 1/2 · ((−1/3) · 3/5)."
+        },
+        {
+          "t": "distributive property",
+          "pos": "noun phrase",
+          "ipa": "/dɪˈstrɪb.jə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất phân phối",
+          "ex": "We use the distributive property of multiplication over addition: a(b + c) = ab + ac."
+        },
+        {
+          "t": "multiply by one",
+          "pos": "verb phrase",
+          "ipa": "/ˈmʌl.tɪ.plaɪ baɪ wʌn/",
+          "vi": "nhân với số 1",
+          "ex": "Any fraction remains unchanged when we multiply by one: a/b · 1 = a/b."
+        },
+        {
+          "t": "simplify",
+          "pos": "verb",
+          "ipa": "/ˈsɪm.plɪ.faɪ/",
+          "vi": "rút gọn",
+          "ex": "Always simplify the product to its simplest form, such as reducing −15/35 to −3/7."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Minh's mom spends 2/3 of her salary on expenses. 1/5 of that spending is for Minh's lunch. What fraction of her total salary is it?"
+        },
+        {
+          "who": "Tron",
+          "text": "To find a fraction of another fraction, we must multiply them: 2/3 · 1/5!"
+        },
+        {
+          "who": "Vuong",
+          "text": "We multiply the numerators and the denominators: (2 · 1)/(3 · 5) = 2/15. It is 2/15 of her salary!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Fabulous! You solved the real-world problem easily by multiplying the numerators and denominators!"
+        }
+      ]
+    },
+    {
+      "n": 27,
+      "en": "TWO CLASSICAL PROBLEMS ABOUT FRACTIONS",
+      "vi": "HAI BÀI TOÁN VỀ PHÂN SỐ",
+      "page": "p-027",
+      "cards": [
+        {
+          "t": "fraction",
+          "pos": "noun",
+          "ipa": "/ˈfræk.ʃən/",
+          "vi": "phân số",
+          "ex": "We will apply rules of fractions to solve two classical mathematical problems."
+        },
+        {
+          "t": "value of a fraction",
+          "pos": "noun phrase",
+          "ipa": "/ˈvæl.juː ɒv ə ˈfræk.ʃən/",
+          "vi": "giá trị phân số",
+          "ex": "Calculate the value of a fraction of a given number: a · m/n."
+        },
+        {
+          "t": "given number",
+          "pos": "noun phrase",
+          "ipa": "/ˈɡɪv.ən ˈnʌm.bər/",
+          "vi": "số cho trước",
+          "ex": "To find the fraction of a given number, multiply the number by the fraction."
+        },
+        {
+          "t": "solve",
+          "pos": "verb",
+          "ipa": "/sɒlv/",
+          "vi": "giải / giải quyết",
+          "ex": "Use division or multiplication to solve word problems involving fractions."
+        },
+        {
+          "t": "maximum speed",
+          "pos": "noun phrase",
+          "ipa": "/ˈmæk.sɪ.məm spiːd/",
+          "vi": "tốc độ tối đa",
+          "ex": "The maximum speed of a lion is 2/3 of the maximum speed of a cheetah."
+        },
+        {
+          "t": "cheetah",
+          "pos": "noun",
+          "ipa": "/ˈtʃiː.tə/",
+          "vi": "báo Cheetah (báo săn)",
+          "ex": "The cheetah is considered the fastest running land animal on Earth, reaching speeds up to 120 km/h."
+        },
+        {
+          "t": "savings",
+          "pos": "noun plural",
+          "ipa": "/ˈseɪ.vɪŋz/",
+          "vi": "số tiền tiết kiệm được",
+          "ex": "The gift cost 400 thousand VND, which is equal to 4/5 of her savings."
+        },
+        {
+          "t": "calculate",
+          "pos": "verb",
+          "ipa": "/ˈkæl.kjə.leɪt/",
+          "vi": "tính toán",
+          "ex": "We can calculate the total amount of money saved by using division."
+        },
+        {
+          "t": "rule",
+          "pos": "noun",
+          "ipa": "/ruːl/",
+          "vi": "quy tắc",
+          "ex": "The rule for finding a number when knowing its fraction value involves division: b : m/n."
+        },
+        {
+          "t": "discount",
+          "pos": "noun / verb",
+          "ipa": "/ˈdɪs.kaʊnt/",
+          "vi": "giảm giá",
+          "ex": "During Black Friday, many items are sold at a significant discount."
+        },
+        {
+          "t": "item",
+          "pos": "noun",
+          "ipa": "/ˈaɪ.təm/",
+          "vi": "mặt hàng",
+          "ex": "There are about 8,000 items in the supermarket, and many of them are on sale."
+        },
+        {
+          "t": "supermarket",
+          "pos": "noun",
+          "ipa": "/ˈsuː.pə.mɑː.kɪt/",
+          "vi": "siêu thị",
+          "ex": "The supermarket has 6,000 discounted items, which represents 3/4 of the total items."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "The maximum speed of a cheetah is 120 km/h. A lion's maximum speed is 2/3 of that. What is the lion's maximum speed?"
+        },
+        {
+          "who": "Tron",
+          "text": "First rule: value of a fraction of a given number: a · m/n. To find 2/3 of 120, we use the first rule! We multiply the given number 120 by the fraction 2/3!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! 120 × 2/3 = 80. So the maximum speed of the lion is 80 km/h!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent! You both solved the first mathematical problem about fractions perfectly!"
+        }
+      ]
+    },
+    {
+      "n": 28,
+      "en": "DECIMALS",
+      "vi": "SỐ THẬP PHÂN",
+      "page": "p-028",
+      "cards": [
+        {
+          "t": "decimal fraction",
+          "pos": "noun phrase",
+          "ipa": "/ˈdes.ɪ.məl ˈfræk.ʃən/",
+          "vi": "phân số thập phân",
+          "ex": "The fractions 17/10, 34/100, and −25/1000 are all examples of decimal fractions."
+        },
+        {
+          "t": "decimal number",
+          "pos": "noun phrase",
+          "ipa": "/ˈdes.ɪ.məl ˈnʌm.bər/",
+          "vi": "số thập phân",
+          "ex": "Every decimal fraction can be written under the form of a decimal number, such as 34/100 = 0.34."
+        },
+        {
+          "t": "negative decimal",
+          "pos": "noun phrase",
+          "ipa": "/ˈneɡ.ə.tɪv ˈdes.ɪ.məl/",
+          "vi": "số thập phân âm",
+          "ex": "The temperature at Pha Din was −4.2°C, which is a negative decimal."
+        },
+        {
+          "t": "positive decimal",
+          "pos": "noun phrase",
+          "ipa": "/ˈpɒz.ə.tɪv ˈdes.ɪ.məl/",
+          "vi": "số thập phân dương",
+          "ex": "The value +1.7 is a positive decimal, and it is usually written simply as 1.7."
+        },
+        {
+          "t": "opposite number",
+          "pos": "noun phrase",
+          "ipa": "/ˈɒp.ə.zɪt ˈnʌm.bər/",
+          "vi": "số đối",
+          "ex": "The opposite number of −1.7 is 1.7, and their sum is equal to zero."
+        },
+        {
+          "t": "integer part",
+          "pos": "noun phrase",
+          "ipa": "/ˈɪn.tɪ.dʒər pɑːt/",
+          "vi": "phần số nguyên (của số thập phân)",
+          "ex": "In the decimal number −215.417, the integer part is −215, which lies to the left of the decimal comma."
+        },
+        {
+          "t": "decimal part",
+          "pos": "noun phrase",
+          "ipa": "/ˈdes.ɪ.məl pɑːt/",
+          "vi": "phần thập phân (của số thập phân)",
+          "ex": "The decimal part of −215.417 is 417, which represents the fractional value of the number."
+        },
+        {
+          "t": "tenths",
+          "pos": "noun plural",
+          "ipa": "/tenθs/",
+          "vi": "hàng phần mười",
+          "ex": "In the number −215.417, the digit 4 is in the tenths place, representing 4/10."
+        },
+        {
+          "t": "hundredths",
+          "pos": "noun plural",
+          "ipa": "/ˈhʌn.drətθs/",
+          "vi": "hàng phần trăm",
+          "ex": "In the number −215.417, the digit 1 is in the hundredths place, representing 1/100."
+        },
+        {
+          "t": "thousandths",
+          "pos": "noun plural",
+          "ipa": "/ˈθaʊ.zəndθs/",
+          "vi": "hàng phần nghìn",
+          "ex": "In the number −215.417, the digit 7 is in the thousandths place, representing 7/1000."
+        },
+        {
+          "t": "decimal point",
+          "pos": "noun phrase",
+          "ipa": "/ˈdes.ɪ.məl pɔɪnt/",
+          "vi": "dấu phẩy thập phân",
+          "ex": "In Vietnam, we use a comma as the decimal point to separate the integer part from the decimal part."
+        },
+        {
+          "t": "compare",
+          "pos": "verb",
+          "ipa": "/kəmˈpeər/",
+          "vi": "so sánh",
+          "ex": "When we compare the decimals −10.186 and −10.08, we find that −10.186 < −10.08."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "At Pha Din, the temperature was −2.4°C in the evening and −4.2°C in the morning. When was it colder?"
+        },
+        {
+          "who": "Tron",
+          "text": "To find out, we need to compare the two negative decimals: −2.4 and −4.2!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Exactly! Since 4.2 > 2.4, their opposites must reverse: −4.2 < −2.4. So −4.2°C is lower!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent! The temperature in the morning was indeed lower. You compared negative decimals perfectly!"
+        }
+      ]
+    },
+    {
+      "n": 29,
+      "en": "CALCULATIONS WITH DECIMALS",
+      "vi": "TÍNH TOÁN VỚI SỐ THẬP PHÂN",
+      "page": "p-029",
+      "cards": [
+        {
+          "t": "decimal addition",
+          "pos": "noun phrase",
+          "ipa": "/ˈdes.ɪ.məl əˈdɪʃ.ən/",
+          "vi": "phép cộng số thập phân",
+          "ex": "To perform decimal addition with two negative numbers, we add their absolute values and place a minus sign in front: (−2.5) + (−0.25) = −2.75."
+        },
+        {
+          "t": "decimal subtraction",
+          "pos": "noun phrase",
+          "ipa": "/ˈdes.ɪ.məl səbˈtræk.ʃən/",
+          "vi": "phép trừ số thập phân",
+          "ex": "We convert decimal subtraction into an addition by adding the opposite of the second number: a − b = a + (−b)."
+        },
+        {
+          "t": "decimal multiplication",
+          "pos": "noun phrase",
+          "ipa": "/ˈdes.ɪ.məl ˌmʌl.tɪ.plɪˈkeɪ.ʃən/",
+          "vi": "phép nhân số thập phân",
+          "ex": "In decimal multiplication, multiplying two negative numbers yields a positive product: (−12.5) · (−1.2) = 15."
+        },
+        {
+          "t": "decimal division",
+          "pos": "noun phrase",
+          "ipa": "/ˈdes.ɪ.məl dɪˈvɪʒ.ən/",
+          "vi": "phép chia số thập phân",
+          "ex": "To perform decimal division with different signs, the quotient is negative: 24.25 : (−0.625) = −38.8."
+        },
+        {
+          "t": "same sign",
+          "pos": "noun phrase",
+          "ipa": "/seɪm saɪn/",
+          "vi": "cùng dấu",
+          "ex": "When we multiply or divide two decimals with the same sign, the final result is always a positive decimal."
+        },
+        {
+          "t": "different signs",
+          "pos": "noun phrase",
+          "ipa": "/ˈdɪf.ər.ənt saɪnz/",
+          "vi": "khác dấu",
+          "ex": "To add two decimals with different signs, we subtract the smaller absolute value from the larger one."
+        },
+        {
+          "t": "opposite number",
+          "pos": "noun phrase",
+          "ipa": "/ˈɒp.ə.zɪt ˈnʌm.bər/",
+          "vi": "số đối",
+          "ex": "The opposite number of −11.5 is +11.5, and their sum is equal to zero."
+        },
+        {
+          "t": "rule of brackets",
+          "pos": "noun phrase",
+          "ipa": "/ruːl ɒv ˈbræk.ɪts/",
+          "vi": "quy tắc dấu ngoặc",
+          "ex": "Apply the rule of brackets to evaluate the expression: 210.1 − [4 − (−3.2 − 4.8)] : 0.1."
+        },
+        {
+          "t": "commutative property",
+          "pos": "noun phrase",
+          "ipa": "/kəˈmjuː.tə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất giao hoán",
+          "ex": "By the commutative property of addition, we can rearrange the terms: 3.45 − 5.7 + 8.55 = (3.45 + 8.55) − 5.7."
+        },
+        {
+          "t": "associative property",
+          "pos": "noun phrase",
+          "ipa": "/əˈsəʊ.ʃi.ə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất kết hợp",
+          "ex": "The associative property helps us group terms to calculate reasonably: (3.45 + 8.55) − 5.7 = 12 − 5.7."
+        },
+        {
+          "t": "distributive property",
+          "pos": "noun phrase",
+          "ipa": "/dɪˈstrɪb.jə.tɪv ˈprɒp.ə.ti/",
+          "vi": "tính chất phân phối",
+          "ex": "Use the distributive property to simplify: 2.6 · 1 − 2.6 · 3 = 2.6 · (1 − 3)."
+        },
+        {
+          "t": "value of an expression",
+          "pos": "noun phrase",
+          "ipa": "/ˈvæl.juː ɒv ən ɪkˈspreʃ.ən/",
+          "vi": "giá trị của biểu thức",
+          "ex": "Evaluate the value of the expression A = (2x − 1.5) + x : 2 when x = −1.2."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "A submarine probe is at an elevation of −0.32 km. If it rises by 0.11 km, how can we find its new elevation?"
+        },
+        {
+          "who": "Tron",
+          "text": "We can calculate the new elevation by performing decimal addition: (−0.32) + 0.11!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Since they have different signs and |−0.32| > 0.11, the sum is negative: −(0.32 − 0.11) = −0.21. The new elevation is −0.21 km!"
+        }
+      ],
+      "note": "Lưu ý: trong tài liệu gốc, khung hội thoại thứ 4 của bài này chỉ có tiêu đề và kết quả, không có lời thoại, nên ở đây chỉ có 3 lời thoại."
+    },
+    {
+      "n": 30,
+      "en": "ROUNDING AND ESTIMATION",
+      "vi": "LÀM TRÒN VÀ ƯỚC LƯỢNG",
+      "page": "p-030",
+      "cards": [
+        {
+          "t": "rounding",
+          "pos": "noun",
+          "ipa": "/ˈraʊn.dɪŋ/",
+          "vi": "sự làm tròn / phép làm tròn",
+          "ex": "We use rounding to simplify the decimal 24.037 to 24.0."
+        },
+        {
+          "t": "estimation",
+          "pos": "noun",
+          "ipa": "/ˌes.tɪˈmeɪ.ʃən/",
+          "vi": "sự ước lượng",
+          "ex": "Estimation helps us find a close result, such as estimating the total cost of buying 2.8 kg of apples."
+        },
+        {
+          "t": "rounding place",
+          "pos": "noun phrase",
+          "ipa": "/ˈraʊn.dɪŋ pleɪs/",
+          "vi": "hàng làm tròn",
+          "ex": "Locate the rounding place first before deciding whether to increase the digit by 1."
+        },
+        {
+          "t": "ones place",
+          "pos": "noun phrase",
+          "ipa": "/wʌnz pleɪs/",
+          "vi": "hàng đơn vị",
+          "ex": "Rounding 6.2 kg to the ones place gives 6 kg, while rounding 4.8 kg to the ones place gives 5 kg."
+        },
+        {
+          "t": "tenths place",
+          "pos": "noun phrase",
+          "ipa": "/tenθs pleɪs/",
+          "vi": "hàng phần mười",
+          "ex": "When we round 24.037 to the tenths place, we get 24.0 because the digit to its right is 3, which is less than 5."
+        },
+        {
+          "t": "thousandths place",
+          "pos": "noun phrase",
+          "ipa": "/ˈθaʊ.zəndθs pleɪs/",
+          "vi": "hàng phần nghìn",
+          "ex": "Round the decimal number 3.14159 to the thousandths place to get 3.142."
+        },
+        {
+          "t": "tens place",
+          "pos": "noun phrase",
+          "ipa": "/tenz pleɪs/",
+          "vi": "hàng chục",
+          "ex": "To round 2,156.8 to the tens place, we increase 5 to 6 because the units digit is 6 (> 5), giving 2,160."
+        },
+        {
+          "t": "decimal part",
+          "pos": "noun phrase",
+          "ipa": "/ˈdes.ɪ.məl pɑːt/",
+          "vi": "phần thập phân",
+          "ex": "If the digits after the rounding place are in the decimal part, we simply discard them."
+        },
+        {
+          "t": "integer part",
+          "pos": "noun phrase",
+          "ipa": "/ˈɪn.tɪ.dʒər pɑːt/",
+          "vi": "phần số nguyên",
+          "ex": "If the digits after the rounding place are in the integer part, we replace them with zeros."
+        },
+        {
+          "t": "opposite number",
+          "pos": "noun phrase",
+          "ipa": "/ˈɒp.ə.zɪt ˈnʌm.bər/",
+          "vi": "số đối",
+          "ex": "To round a negative decimal, round its opposite number first, then place a minus sign in front: −2.37 ≈ −2.4."
+        },
+        {
+          "t": "approximately equal to",
+          "pos": "phrase",
+          "ipa": "/əˈprɒk.sɪ.mət.li ˈiː.kwəl tuː/",
+          "vi": "xấp xỉ bằng",
+          "ex": "One astronomical unit (AU) is approximately equal to 150 million kilometers."
+        },
+        {
+          "t": "estimate",
+          "pos": "verb",
+          "ipa": "/ˈes.tɪ.meɪt/",
+          "vi": "ước lượng",
+          "ex": "We can estimate the total weight of a loaded truck to check if it is allowed to cross a bridge of at most 25 tons."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Nam has 200,000 VND. Apples cost 65,000 VND/kg. Can he buy a basket of apples weighing 2.8 kg?"
+        },
+        {
+          "who": "Tron",
+          "text": "We can estimate the weight! Since 2.8 kg is close to 3 kg, let's round 2.8 up to 3 kg!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! 65,000 × 3 = 195,000 VND. Since 195,000 VND is less than 200,000 VND, Nam has enough money!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Fabulous job! You used estimation to solve the real-world budget problem instantly without exact calculations!"
+        }
+      ]
+    },
+    {
+      "n": 31,
+      "en": "SOME PROBLEMS ABOUT RATIO AND PERCENTAGE",
+      "vi": "MỘT SỐ BÀI TOÁN VỀ TỈ SỐ VÀ TỈ SỐ PHẦN TRĂM",
+      "page": "p-031",
+      "cards": [
+        {
+          "t": "ratio",
+          "pos": "noun",
+          "ipa": "/ˈreɪ.ʃi.əʊ/",
+          "vi": "tỉ số",
+          "ex": "The ratio of two arbitrary numbers a and b (b ≠ 0) is the quotient of the division of a by b, written as a : b or a/b."
+        },
+        {
+          "t": "percentage",
+          "pos": "noun",
+          "ipa": "/pəˈsen.tɪdʒ/",
+          "vi": "tỉ số phần trăm",
+          "ex": "The percentage of two numbers a and b is calculated as a/b · 100%."
+        },
+        {
+          "t": "interest rate",
+          "pos": "noun phrase",
+          "ipa": "/ˈɪn.trəst reɪt/",
+          "vi": "lãi suất",
+          "ex": "The interest rate of a deposit is the percentage ratio of the interest earned after one year to the original deposit amount."
+        },
+        {
+          "t": "profit",
+          "pos": "noun",
+          "ipa": "/ˈprɒf.ɪt/",
+          "vi": "lợi nhuận",
+          "ex": "A shop owner sold a television and made a profit of 3 million VND, which was equal to 25% of its cost price."
+        },
+        {
+          "t": "loss",
+          "pos": "noun",
+          "ipa": "/lɒs/",
+          "vi": "thua lỗ",
+          "ex": "Calculating profit and loss is essential for evaluating a business's monthly budget."
+        },
+        {
+          "t": "cost price",
+          "pos": "noun phrase",
+          "ipa": "/kɒst praɪs/",
+          "vi": "giá vốn",
+          "ex": "To find the cost price of the television, we divide the profit of 3 million VND by 25%."
+        },
+        {
+          "t": "discount",
+          "pos": "noun / verb",
+          "ipa": "/ˈdɪs.kaʊnt/",
+          "vi": "giảm giá / mức giảm giá",
+          "ex": "During the promotion, this mobile phone is sold with a 10% discount on its list price."
+        },
+        {
+          "t": "deposit",
+          "pos": "noun / verb",
+          "ipa": "/dɪˈpɒz.ɪt/",
+          "vi": "tiền gửi / gửi tiền",
+          "ex": "Uncle Duc puts a deposit of 150 million VND into the bank with a one-year term."
+        },
+        {
+          "t": "vote",
+          "pos": "noun / verb",
+          "ipa": "/vəʊt/",
+          "vi": "phiếu bầu / bình chọn",
+          "ex": "Tan received 120 votes, which represents 60% of the total votes in the class election."
+        },
+        {
+          "t": "oxygen",
+          "pos": "noun",
+          "ipa": "/ˈɒk.sɪ.dʒən/",
+          "vi": "khí ô-xy",
+          "ex": "Under normal conditions, oxygen gas accounts for approximately 21% of the air volume."
+        },
+        {
+          "t": "carbohydrate",
+          "pos": "noun",
+          "ipa": "/ˌkɑː.bəʊˈhaɪ.dreɪt/",
+          "vi": "chất bột đường",
+          "ex": "There are 57 grams of carbohydrate in 200 grams of sweet potato, which represents a ratio of 28.5%."
+        },
+        {
+          "t": "fiber",
+          "pos": "noun",
+          "ipa": "/ˈfaɪ.bər/",
+          "vi": "chất xơ",
+          "ex": "In 200 grams of sweet potato, there are about 2.6 grams of fiber."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Uncle Duc deposits 150 million VND into a bank with an interest rate of 7.4% per year. How much interest does he receive after one year?"
+        },
+        {
+          "who": "Tron",
+          "text": "To find the interest, we calculate 7.4% of 150 million! We multiply: 150 × 7.4/100 = 1110/100 = 11.1 million VND!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! And if he withdraws both the principal and interest, the total amount is 150 + 11.1 = 161.1 million VND!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent! You both successfully used the ratio and percentage rules to solve this financial problem!"
+        }
+      ]
+    },
+    {
+      "n": 32,
+      "en": "POINT AND LINE",
+      "vi": "ĐIỂM VÀ ĐƯỜNG THẲNG",
+      "page": "p-032",
+      "cards": [
+        {
+          "t": "point",
+          "pos": "noun",
+          "ipa": "/pɔɪnt/",
+          "vi": "điểm",
+          "ex": "We usually use capital letters like A, B, C to denote a point."
+        },
+        {
+          "t": "line",
+          "pos": "noun",
+          "ipa": "/laɪn/",
+          "vi": "đường thẳng",
+          "ex": "A straight line d is made up of infinitely many points and has no thickness."
+        },
+        {
+          "t": "belong to",
+          "pos": "verb phrase",
+          "ipa": "/bɪˈlɒŋ tuː/",
+          "vi": "thuộc (nằm trên)",
+          "ex": "If point M lies on line d, we say M belongs to d, written as M ∈ d."
+        },
+        {
+          "t": "not belong to",
+          "pos": "phrase",
+          "ipa": "/nɒt bɪˈlɒŋ tuː/",
+          "vi": "không thuộc (không nằm trên)",
+          "ex": "If point N is outside line d, we say N does not belong to d, written as N ∉ d."
+        },
+        {
+          "t": "distinct points",
+          "pos": "noun phrase",
+          "ipa": "/dɪˈstɪŋkt pɔɪnts/",
+          "vi": "các điểm phân biệt",
+          "ex": "There is one and only one line passing through two distinct points A and B."
+        },
+        {
+          "t": "collinear points",
+          "pos": "noun phrase",
+          "ipa": "/kəˈlɪn.i.ər pɔɪnts/",
+          "vi": "các điểm thẳng hàng",
+          "ex": "Points A, B, and C are collinear points because they all lie on the same straight line."
+        },
+        {
+          "t": "non-collinear points",
+          "pos": "noun phrase",
+          "ipa": "/nɒn kəˈlɪn.i.ər pɔɪnts/",
+          "vi": "các điểm không thẳng hàng",
+          "ex": "Points M, N, and P are non-collinear points because they do not lie on any single straight line."
+        },
+        {
+          "t": "parallel lines",
+          "pos": "noun phrase",
+          "ipa": "/ˈpær.ə.lel laɪnz/",
+          "vi": "các đường thẳng song song",
+          "ex": "Two parallel lines a and b do not have any common points, written as a ∥ b."
+        },
+        {
+          "t": "intersecting lines",
+          "pos": "noun phrase",
+          "ipa": "/ˌɪn.təˈsek.tɪŋ laɪnz/",
+          "vi": "các đường thẳng cắt nhau",
+          "ex": "Two intersecting lines a and b have exactly one common point."
+        },
+        {
+          "t": "intersection point",
+          "pos": "noun phrase",
+          "ipa": "/ˌɪn.təˈsek.ʃən pɔɪnt/",
+          "vi": "giao điểm",
+          "ex": "The common point P of two crossing lines is called their intersection point."
+        },
+        {
+          "t": "coinciding lines",
+          "pos": "noun phrase",
+          "ipa": "/ˌkəʊ.ɪnˈsaɪ.dɪŋ laɪnz/",
+          "vi": "các đường thẳng trùng nhau",
+          "ex": "If we draw a line through A and B, and another through B and C where they are collinear, they are coinciding lines."
+        },
+        {
+          "t": "pairwise intersecting",
+          "pos": "adjective phrase",
+          "ipa": "/ˈpeə.waɪz ˌɪn.təˈsek.tɪŋ/",
+          "vi": "đôi một cắt nhau",
+          "ex": "If we draw lines through pairs of three non-collinear points, we get three pairwise intersecting lines."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Hello class! I have marked two distinct points A and B. How many straight lines can we draw passing through both of them?"
+        },
+        {
+          "who": "Tron",
+          "text": "There is only one unique line that can pass through two distinct points, Mr. Pi! We can call it line AB!"
+        },
+        {
+          "who": "Vuong",
+          "text": "And if we add a point C on the same line, points A, B, and C are collinear points because they lie on the same line!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent work, Tron and Vuong! You have mastered points, lines, and collinearity perfectly in English!"
+        }
+      ]
+    },
+    {
+      "n": 33,
+      "en": "POINT BETWEEN TWO POINTS. RAY",
+      "vi": "ĐIỂM NẰM GIỮA HAI ĐIỂM. TIA",
+      "page": "p-033",
+      "cards": [
+        {
+          "t": "point between two points",
+          "pos": "noun phrase",
+          "ipa": "/pɔɪnt bɪˈtwiːn tuː pɔɪnts/",
+          "vi": "điểm nằm giữa hai điểm",
+          "ex": "If point B is a point between two points A and C, then all three points must be collinear."
+        },
+        {
+          "t": "ray",
+          "pos": "noun",
+          "ipa": "/reɪ/",
+          "vi": "tia",
+          "ex": "A ray Ox starts at origin O and extends infinitely in one direction."
+        },
+        {
+          "t": "origin",
+          "pos": "noun",
+          "ipa": "/ˈɒr.ɪ.dʒɪn/",
+          "vi": "gốc (gốc của tia)",
+          "ex": "The starting point O is called the origin of the ray Ox."
+        },
+        {
+          "t": "opposite rays",
+          "pos": "noun phrase",
+          "ipa": "/ˈɒp.ə.zɪt reɪz/",
+          "vi": "hai tia đối nhau",
+          "ex": "Two rays Ox and Oy sharing the same origin O and forming a straight line are opposite rays."
+        },
+        {
+          "t": "same side",
+          "pos": "noun phrase",
+          "ipa": "/seɪm saɪd/",
+          "vi": "cùng phía",
+          "ex": "Since B lies between A and C, the points A and B lie on the same side of point C."
+        },
+        {
+          "t": "different sides",
+          "pos": "noun phrase",
+          "ipa": "/ˈdɪf.ər.ənt saɪdz/",
+          "vi": "khác phía",
+          "ex": "The points A and C lie on different sides of point B because B is between them."
+        },
+        {
+          "t": "distinct points",
+          "pos": "noun phrase",
+          "ipa": "/dɪˈstɪŋkt pɔɪnts/",
+          "vi": "các điểm phân biệt",
+          "ex": "Mark two distinct points A and B on a flat sheet of paper to draw a straight line passing through them."
+        },
+        {
+          "t": "collinear points",
+          "pos": "noun phrase",
+          "ipa": "/kəˈlɪn.i.ər pɔɪnts/",
+          "vi": "các điểm thẳng hàng",
+          "ex": "Collinear points are three or more points that lie on the same straight line."
+        },
+        {
+          "t": "solar eclipse",
+          "pos": "noun phrase",
+          "ipa": "/ˈsəʊ.lər ɪˈklɪps/",
+          "vi": "nhật thực",
+          "ex": "A solar eclipse occurs when the Moon lies between the Earth and the Sun, aligning in a straight line."
+        },
+        {
+          "t": "lunar eclipse",
+          "pos": "noun phrase",
+          "ipa": "/ˈluː.nər ɪˈklɪps/",
+          "vi": "nguyệt thực",
+          "ex": "During a lunar eclipse, the Earth is the body that lies between the Sun and the Moon."
+        },
+        {
+          "t": "diagonal",
+          "pos": "noun",
+          "ipa": "/daɪˈæɡ.ən.əl/",
+          "vi": "đường chéo",
+          "ex": "The diagonals AC and BD of a parallelogram intersect at their shared midpoint."
+        },
+        {
+          "t": "intersection",
+          "pos": "noun",
+          "ipa": "/ˌɪn.təˈsek.ʃən/",
+          "vi": "giao điểm",
+          "ex": "The intersection of the two diagonals is a point that lies between both pairs of opposite vertices."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "A solar eclipse occurs when the Sun, Moon, and Earth are collinear. Which body lies between the other two?"
+        },
+        {
+          "who": "Tron",
+          "text": "During a solar eclipse, the Moon lies between the Sun and the Earth! It is the point in the middle!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! And during a lunar eclipse, the Earth is the body that lies between the Sun and the Moon!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent! Eclipses are beautiful real-world examples of a point lying between two other points!"
+        }
+      ]
+    },
+    {
+      "n": 34,
+      "en": "SEGMENT. LENGTH OF A SEGMENT",
+      "vi": "ĐOẠN THẲNG. ĐỘ DÀI ĐOẠN THẲNG",
+      "page": "p-034",
+      "cards": [
+        {
+          "t": "segment",
+          "pos": "noun",
+          "ipa": "/ˈseɡ.mənt/",
+          "vi": "đoạn thẳng",
+          "ex": "A segment AB (or BA) is a figure consisting of two points A, B and all points lying between A and B."
+        },
+        {
+          "t": "endpoint",
+          "pos": "noun",
+          "ipa": "/ˈend.pɔɪnt/",
+          "vi": "đầu mút / mút (của đoạn thẳng)",
+          "ex": "Points A and B are called the two endpoints of the segment AB."
+        },
+        {
+          "t": "length",
+          "pos": "noun",
+          "ipa": "/leŋθ/",
+          "vi": "độ dài",
+          "ex": "Every segment has a length which is represented by a positive number."
+        },
+        {
+          "t": "distance",
+          "pos": "noun",
+          "ipa": "/ˈdɪs.təns/",
+          "vi": "khoảng cách",
+          "ex": "The length of the segment AB is also called the distance between two points A and B."
+        },
+        {
+          "t": "unit of length",
+          "pos": "noun phrase",
+          "ipa": "/ˈjuː.nɪt ɒv leŋθ/",
+          "vi": "đơn vị độ dài",
+          "ex": "Centimeter (cm) and millimeter (mm) are common units of length used in geometry."
+        },
+        {
+          "t": "measure",
+          "pos": "verb / noun",
+          "ipa": "/ˈmeʒ.ər/",
+          "vi": "đo / phép đo",
+          "ex": "We use a calibrated ruler to measure the exact length of any given segment."
+        },
+        {
+          "t": "equal",
+          "pos": "adjective",
+          "ipa": "/ˈiː.kwəl/",
+          "vi": "bằng nhau",
+          "ex": "If two segments AB and CD have the same length, we write AB = CD and say they are equal."
+        },
+        {
+          "t": "shorter",
+          "pos": "adjective",
+          "ipa": "/ˈʃɔː.tər/",
+          "vi": "ngắn hơn",
+          "ex": "Since 23 mm < 4 cm, segment AB is shorter than segment CD."
+        },
+        {
+          "t": "longer",
+          "pos": "adjective",
+          "ipa": "/ˈlɒŋ.ɡər/",
+          "vi": "dài hơn",
+          "ex": "If CD > AB, we write that segment CD is longer than segment AB."
+        },
+        {
+          "t": "compass",
+          "pos": "noun",
+          "ipa": "/ˈkʌm.pəs/",
+          "vi": "com-pa (compa)",
+          "ex": "Use a compass to draw a circle with a radius equal to 2 cm."
+        },
+        {
+          "t": "ruler",
+          "pos": "noun",
+          "ipa": "/ˈruː.lər/",
+          "vi": "thước thẳng",
+          "ex": "We can use a straight ruler with millimeter divisions to draw accurate segments."
+        },
+        {
+          "t": "coincide",
+          "pos": "verb",
+          "ipa": "/ˌkəʊ.ɪnˈsaɪd/",
+          "vi": "trùng nhau",
+          "ex": "The distance between two points that coincide is defined as 0 (units)."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Viet wants to measure segment AB, but his ruler is broken at the start. Point A aligns with 3 cm, and point B aligns with 12 cm. What is the length of AB?"
+        },
+        {
+          "who": "Tron",
+          "text": "Since it does not start at 0, we can find the distance by calculating the difference between the two marks!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! The length of segment AB is: 12 cm − 3 cm, which is equal to exactly 9 cm!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Superb! Even with a broken ruler, you used subtraction to find the length of the segment perfectly!"
+        }
+      ]
+    },
+    {
+      "n": 35,
+      "en": "MIDPOINT OF A SEGMENT",
+      "vi": "TRUNG ĐIỂM CỦA ĐOẠN THẲNG",
+      "page": "p-035",
+      "cards": [
+        {
+          "t": "midpoint",
+          "pos": "noun",
+          "ipa": "/ˈmɪd.pɔɪnt/",
+          "vi": "trung điểm",
+          "ex": "If point I lies between A and B such that IA = IB, then I is the midpoint of segment AB."
+        },
+        {
+          "t": "segment",
+          "pos": "noun",
+          "ipa": "/ˈseɡ.mənt/",
+          "vi": "đoạn thẳng",
+          "ex": "We can find the midpoint of any given segment by using a straight metric ruler."
+        },
+        {
+          "t": "lie between",
+          "pos": "verb phrase",
+          "ipa": "/laɪ bɪˈtwiːn/",
+          "vi": "nằm giữa",
+          "ex": "The midpoint I of segment AB must lie between the two endpoints A and B."
+        },
+        {
+          "t": "equidistant",
+          "pos": "adjective",
+          "ipa": "/ˌiː.kwɪˈdɪs.tənt/",
+          "vi": "cách đều",
+          "ex": "The midpoint of a segment is the point that is equidistant from its two endpoints."
+        },
+        {
+          "t": "endpoint",
+          "pos": "noun",
+          "ipa": "/ˈend.pɔɪnt/",
+          "vi": "đầu mút / mút (của đoạn thẳng)",
+          "ex": "A segment is bounded by two endpoints, and its midpoint lies exactly halfway between them."
+        },
+        {
+          "t": "fold in half",
+          "pos": "verb phrase",
+          "ipa": "/fəʊld ɪn hɑːf/",
+          "vi": "gấp đôi",
+          "ex": "Fold the 120 cm string in half so that its two ends coincide to locate its midpoint."
+        },
+        {
+          "t": "coincide",
+          "pos": "verb",
+          "ipa": "/ˌkəʊ.ɪnˈsaɪd/",
+          "vi": "trùng nhau / trùng khít",
+          "ex": "When we fold the string in half, the two endpoints must coincide."
+        },
+        {
+          "t": "distance",
+          "pos": "noun",
+          "ipa": "/ˈdɪs.təns/",
+          "vi": "khoảng cách",
+          "ex": "The distance from the midpoint to either endpoint of a 100 km segment is 50 km."
+        },
+        {
+          "t": "seesaw",
+          "pos": "noun",
+          "ipa": "/ˈsiː.sɔː/",
+          "vi": "bập bênh",
+          "ex": "In a seesaw, the axle must be attached at the midpoint of the wooden plank to maintain balance."
+        },
+        {
+          "t": "axis",
+          "pos": "noun",
+          "ipa": "/ˈæk.sɪs/",
+          "vi": "trục / trục quay",
+          "ex": "The axis of the seesaw must be positioned exactly in the middle of the board."
+        },
+        {
+          "t": "length",
+          "pos": "noun",
+          "ipa": "/leŋθ/",
+          "vi": "độ dài",
+          "ex": "If the length of segment AB is 4 cm, the length of AM is 2 cm when M is the midpoint."
+        },
+        {
+          "t": "bisect",
+          "pos": "verb",
+          "ipa": "/baɪˈsekt/",
+          "vi": "chia đôi / chia thành hai phần bằng nhau",
+          "ex": "The midpoint bisects the segment into two smaller segments of equal length."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "I have a string of 120 cm. If we fold it in half so that its two ends coincide, what is the distance from the fold point A to each end?"
+        },
+        {
+          "who": "Tron",
+          "text": "Since we fold it in half, the fold point A divides the string into two equal parts! The distance to each end is 120 : 2 = 60 cm!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! And in mathematics, point A is called the midpoint of the string because it lies between the two ends and is equidistant from them!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent! A midpoint always lies between the endpoints and divides the segment into two equal halves!"
+        }
+      ]
+    },
+    {
+      "n": 36,
+      "en": "ANGLE",
+      "vi": "GÓC",
+      "page": "p-036",
+      "cards": [
+        {
+          "t": "point",
+          "pos": "noun",
+          "ipa": "/pɔɪnt/",
+          "vi": "điểm",
+          "ex": "We usually use capital letters like A, B, C to denote a point."
+        },
+        {
+          "t": "line",
+          "pos": "noun",
+          "ipa": "/laɪn/",
+          "vi": "đường thẳng",
+          "ex": "A straight line d is made up of infinitely many points and has no thickness."
+        },
+        {
+          "t": "belong to",
+          "pos": "verb phrase",
+          "ipa": "/bɪˈlɒŋ tuː/",
+          "vi": "thuộc (nằm trên)",
+          "ex": "If point M lies on line d, we say M belongs to d, written as M ∈ d."
+        },
+        {
+          "t": "not belong to",
+          "pos": "phrase",
+          "ipa": "/nɒt bɪˈlɒŋ tuː/",
+          "vi": "không thuộc (không nằm trên)",
+          "ex": "If point N is outside line d, we say N does not belong to d, written as N ∉ d."
+        },
+        {
+          "t": "distinct points",
+          "pos": "noun phrase",
+          "ipa": "/dɪˈstɪŋkt pɔɪnts/",
+          "vi": "các điểm phân biệt",
+          "ex": "There is one and only one line passing through two distinct points A and B."
+        },
+        {
+          "t": "collinear points",
+          "pos": "noun phrase",
+          "ipa": "/kəˈlɪn.i.ər pɔɪnts/",
+          "vi": "các điểm thẳng hàng",
+          "ex": "Points A, B, and C are collinear points because they all lie on the same straight line."
+        },
+        {
+          "t": "non-collinear points",
+          "pos": "noun phrase",
+          "ipa": "/nɒn kəˈlɪn.i.ər pɔɪnts/",
+          "vi": "các điểm không thẳng hàng",
+          "ex": "Points M, N, and P are non-collinear points because they do not lie on any single straight line."
+        },
+        {
+          "t": "parallel lines",
+          "pos": "noun phrase",
+          "ipa": "/ˈpær.ə.lel laɪnz/",
+          "vi": "các đường thẳng song song",
+          "ex": "Two parallel lines a and b do not have any common points, written as a ∥ b."
+        },
+        {
+          "t": "intersecting lines",
+          "pos": "noun phrase",
+          "ipa": "/ˌɪn.təˈsek.tɪŋ laɪnz/",
+          "vi": "các đường thẳng cắt nhau",
+          "ex": "Two intersecting lines a and b have exactly one common point."
+        },
+        {
+          "t": "intersection point",
+          "pos": "noun phrase",
+          "ipa": "/ˌɪn.təˈsek.ʃən pɔɪnt/",
+          "vi": "giao điểm",
+          "ex": "The common point P of two crossing lines is called their intersection point."
+        },
+        {
+          "t": "coinciding lines",
+          "pos": "noun phrase",
+          "ipa": "/ˌkəʊ.ɪnˈsaɪ.dɪŋ laɪnz/",
+          "vi": "các đường thẳng trùng nhau",
+          "ex": "If we draw a line through A and B, and another through B and C where they are collinear, they are coinciding lines."
+        },
+        {
+          "t": "pairwise intersecting",
+          "pos": "adjective phrase",
+          "ipa": "/ˈpeə.waɪz ˌɪn.təˈsek.tɪŋ/",
+          "vi": "đôi một cắt nhau",
+          "ex": "If we draw lines through pairs of three non-collinear points, we get three pairwise intersecting lines."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Look at this goal and ball setup. The two goalposts and the ball form a shooting angle. Which player lies inside it?"
+        },
+        {
+          "who": "Tron",
+          "text": "We can trace two rays from the ball to the two posts to form our angle! The player inside must be in the shaded area!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! The player inside is an interior point of the shooting angle, while the other players are outside!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Brilliant! You used the concept of an interior point of an angle to find the player with a clear shooting angle!"
+        }
+      ],
+      "note": "Lưu ý: trong tài liệu gốc, trang Bài 36 (Góc) in lại 12 thẻ từ của Bài 32 (Điểm và đường thẳng); chỉ phần hội thoại nói về góc. Từ vựng về góc xem ở Bài 37."
+    },
+    {
+      "n": 37,
+      "en": "ANGLE MEASURE",
+      "vi": "SỐ ĐO GÓC",
+      "page": "p-037",
+      "cards": [
+        {
+          "t": "angle measure",
+          "pos": "noun phrase",
+          "ipa": "/ˈæŋ.ɡəl ˈmeʒ.ər/",
+          "vi": "số đo góc",
+          "ex": "Every angle has a unique angle measure which cannot exceed 180°."
+        },
+        {
+          "t": "protractor",
+          "pos": "noun",
+          "ipa": "/prəˈtræk.tər/",
+          "vi": "thước đo góc",
+          "ex": "Place the center of the protractor exactly at the vertex O of the angle to find its measure."
+        },
+        {
+          "t": "degree",
+          "pos": "noun",
+          "ipa": "/dɪˈɡriː/",
+          "vi": "độ",
+          "ex": "The unit of angle measurement is the degree, denoted by the small circular superscript symbol: 110°."
+        },
+        {
+          "t": "right angle",
+          "pos": "noun phrase",
+          "ipa": "/raɪt ˈæŋ.ɡəl/",
+          "vi": "góc vuông",
+          "ex": "An angle whose measure is exactly 90° is called a right angle."
+        },
+        {
+          "t": "acute angle",
+          "pos": "noun phrase",
+          "ipa": "/əˈkjuːt ˈæŋ.ɡəl/",
+          "vi": "góc nhọn",
+          "ex": "An acute angle is strictly smaller than a right angle: 0° < ∠O < 90°."
+        },
+        {
+          "t": "obtuse angle",
+          "pos": "noun phrase",
+          "ipa": "/əbˈtjuːs ˈæŋ.ɡəl/",
+          "vi": "góc tù",
+          "ex": "An obtuse angle is larger than a right angle but smaller than a straight angle: 90° < ∠O < 180°."
+        },
+        {
+          "t": "straight angle",
+          "pos": "noun phrase",
+          "ipa": "/streɪt ˈæŋ.ɡəl/",
+          "vi": "góc bẹt",
+          "ex": "The two opposite rays form a straight angle, which measures exactly 180°."
+        },
+        {
+          "t": "equal angles",
+          "pos": "noun phrase",
+          "ipa": "/ˈiː.kwəl ˈæŋ.ɡəlz/",
+          "vi": "hai góc bằng nhau",
+          "ex": "Two angles are equal angles if their measures are identical: ∠xAy = ∠mCn."
+        },
+        {
+          "t": "greater than",
+          "pos": "phrase",
+          "ipa": "/ˈɡreɪ.tər ðæn/",
+          "vi": "lớn hơn",
+          "ex": "Since 110° > 50°, we can write that angle tBz is greater than angle xAy."
+        },
+        {
+          "t": "smaller than",
+          "pos": "phrase",
+          "ipa": "/ˈsmɔː.lər ðæn/",
+          "vi": "nhỏ hơn",
+          "ex": "Angle xAy is smaller than angle tBz, which can be written as ∠xAy < ∠tBz."
+        },
+        {
+          "t": "estimate",
+          "pos": "verb",
+          "ipa": "/ˈes.tɪ.meɪt/",
+          "vi": "ước lượng",
+          "ex": "You should estimate by eye to classify the angle before measuring it with tools."
+        },
+        {
+          "t": "set square",
+          "pos": "noun phrase",
+          "ipa": "/set skweər/",
+          "vi": "ê-ke",
+          "ex": "Use a set square to quickly check whether an angle is a right angle."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Look at the clock at 9:00! What special angle do the hour and minute hands form, and how can we verify its measure?"
+        },
+        {
+          "who": "Tron",
+          "text": "They form a right angle, Mr. Pi! I can fit my set square perfectly into the corner between the hands!"
+        },
+        {
+          "who": "Vuong",
+          "text": "And when I measure it with a protractor, the angle measures exactly 90 degrees! It is indeed a right angle!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent work! A right angle always measures exactly 90 degrees. You both verified and classified it perfectly!"
+        }
+      ]
+    },
+    {
+      "n": 38,
+      "en": "DATA AND DATA COLLECTION",
+      "vi": "DỮ LIỆU VÀ THU THẬP DỮ LIỆU",
+      "page": "p-038",
+      "cards": [
+        {
+          "t": "data",
+          "pos": "noun (plural)",
+          "ipa": "/ˈdeɪ.tə/",
+          "vi": "dữ liệu",
+          "ex": "The weather forecast table provides various kinds of data."
+        },
+        {
+          "t": "numerical data",
+          "pos": "noun phrase",
+          "ipa": "/njuːˈmer.ɪ.kəl ˈdeɪ.tə/",
+          "vi": "số liệu",
+          "ex": "In the collected forecast, the daily low temperatures are numerical data."
+        },
+        {
+          "t": "data collection",
+          "pos": "noun phrase",
+          "ipa": "/ˈdeɪ.tə kəˈlek.ʃən/",
+          "vi": "thu thập dữ liệu",
+          "ex": "We can perform data collection using surveys, direct observations, or experiments."
+        },
+        {
+          "t": "reasonable",
+          "pos": "adjective",
+          "ipa": "/ˈriː.zən.ə.bəl/",
+          "vi": "hợp lí",
+          "ex": "Class sizes like 35, 38, or 40 students are reasonable values for a local school."
+        },
+        {
+          "t": "unreasonable",
+          "pos": "adjective",
+          "ipa": "/ʌnˈriː.zən.ə.bəl/",
+          "vi": "không hợp lí",
+          "ex": "A class size of 87 students is an unreasonable data point for standard classrooms."
+        },
+        {
+          "t": "survey",
+          "pos": "noun / verb",
+          "ipa": "/ˈsɜː.veɪ/",
+          "vi": "khảo sát",
+          "ex": "Students conducted a classroom survey to find the favorite dishes of their family members."
+        },
+        {
+          "t": "questionnaire",
+          "pos": "noun",
+          "ipa": "/ˌkwes.tʃəˈneər/",
+          "vi": "phiếu hỏi",
+          "ex": "We can design a questionnaire to collect data about transport vehicles used by teachers."
+        },
+        {
+          "t": "observation",
+          "pos": "noun",
+          "ipa": "/ˌɒb.zəˈveɪ.ʃən/",
+          "vi": "sự quan sát",
+          "ex": "Observation is used to count and record how many classmates wear glasses."
+        },
+        {
+          "t": "experiment",
+          "pos": "noun",
+          "ipa": "/ɪkˈsper.ɪ.mənt/",
+          "vi": "thí nghiệm",
+          "ex": "Vuong performed a coin-tossing experiment 5 times and recorded the outcomes."
+        },
+        {
+          "t": "heads",
+          "pos": "noun (usually plural)",
+          "ipa": "/hedz/",
+          "vi": "mặt sấp",
+          "ex": "When a coin is tossed, the side showing the numerical value is called heads."
+        },
+        {
+          "t": "tails",
+          "pos": "noun (usually plural)",
+          "ipa": "/teɪlz/",
+          "vi": "mặt ngửa",
+          "ex": "The opposite side of the coin's value face is called tails."
+        },
+        {
+          "t": "existing source",
+          "pos": "noun phrase",
+          "ipa": "/ɪɡˈzɪs.tɪŋ sɔːs/",
+          "vi": "nguồn có sẵn",
+          "ex": "We can collect reliable weather data from an existing source on the Internet."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Look at our collected data list of plants. Is there any unreasonable data in this group?"
+        },
+        {
+          "who": "Tron",
+          "text": "Yes! Bacteria (vi khuẩn) is not a plant, so it is unreasonable data in this list!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Exactly! Just like in our favorite food survey, wine (rượu vang) is unreasonable for children!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Excellent! Checking if your collected data is reasonable is a key step in statistics!"
+        }
+      ]
+    },
+    {
+      "n": 39,
+      "en": "STATISTICAL TABLES AND PICTOGRAPHS",
+      "vi": "BẢNG THỐNG KÊ VÀ BIỂU ĐỒ TRANH",
+      "page": "p-039",
+      "cards": [
+        {
+          "t": "statistical table",
+          "pos": "noun",
+          "ipa": "/stəˈtɪs.tɪ.kəl ˈteɪ.bəl/",
+          "vi": "bảng thống kê",
+          "ex": "A statistical table helps us organize raw data into clean rows and columns for easier analysis."
+        },
+        {
+          "t": "pictograph",
+          "pos": "noun",
+          "ipa": "/ˈpɪk.tə.ɡrɑːf/",
+          "vi": "biểu đồ tranh",
+          "ex": "We can represent the number of shirts sold in each size by drawing a colorful pictograph."
+        },
+        {
+          "t": "represent",
+          "pos": "verb",
+          "ipa": "/ˌrep.rɪˈzent/",
+          "vi": "biểu diễn / đại diện cho",
+          "ex": "Let each book symbol in the pictograph represent 5 real books in our classroom library."
+        },
+        {
+          "t": "analyze",
+          "pos": "verb",
+          "ipa": "/ˈæn.əl.aɪz/",
+          "vi": "phân tích (dữ liệu)",
+          "ex": "We analyze the statistical table to find out which shirt size was sold the most."
+        },
+        {
+          "t": "symbol",
+          "pos": "noun",
+          "ipa": "/ˈsɪm.bəl/",
+          "vi": "biểu tượng / hình ảnh biểu diễn",
+          "ex": "When designing a pictograph, choose a simple and recognizable symbol related to the topic."
+        },
+        {
+          "t": "key",
+          "pos": "noun",
+          "ipa": "/kiː/",
+          "vi": "phần chú giải (biểu đồ tranh)",
+          "ex": "According to the key of our pictograph, each soccer ball symbol is equal to 3 goals."
+        },
+        {
+          "t": "quantity",
+          "pos": "noun",
+          "ipa": "/ˈkwɒn.tə.ti/",
+          "vi": "số lượng",
+          "ex": "Count the tally marks carefully to write down the correct quantity in the statistical table."
+        },
+        {
+          "t": "row",
+          "pos": "noun",
+          "ipa": "/rəʊ/",
+          "vi": "hàng (trong bảng)",
+          "ex": "The first row of the table lists the different breakfast dishes chosen by the students."
+        },
+        {
+          "t": "column",
+          "pos": "noun",
+          "ipa": "/ˈkɒl.əm/",
+          "vi": "cột (trong bảng)",
+          "ex": "In our area and population table, the second column displays the area of each province in km²."
+        },
+        {
+          "t": "medal",
+          "pos": "noun",
+          "ipa": "/ˈmed.əl/",
+          "vi": "huy chương",
+          "ex": "The school team won 3 gold medals, 2 silver medals, and 1 bronze medal during the youth science tournament."
+        },
+        {
+          "t": "data entry",
+          "pos": "noun phrase",
+          "ipa": "/ˈdeɪ.tə ˈen.tri/",
+          "vi": "mục dữ liệu / việc nhập dữ liệu",
+          "ex": "Verify each data entry in the table to make sure the population numbers are correct."
+        },
+        {
+          "t": "survey",
+          "pos": "noun / verb",
+          "ipa": "/ˈsɜː.veɪ/",
+          "vi": "cuộc khảo sát / khảo sát",
+          "ex": "A survey on classroom hygiene showed that 50 students use hand soap regularly."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "In our school cup, Khanh scored 3 goals, Tung scored 9 goals, and Thang scored 12 goals. How can we make a pictograph to show this?"
+        },
+        {
+          "who": "Tron",
+          "text": "Since 3, 9, and 12 are all multiples of 3, let's use a soccer ball symbol to represent 3 goals!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Exactly! Khanh gets 1 ball symbol, Tung gets 3 ball symbols, and Thang gets 4. And we write a key: 1 ball = 3 goals!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Fabulous job! Your pictograph looks incredibly clean and makes it so easy to compare their goals at a single glance!"
+        }
+      ]
+    },
+    {
+      "n": 40,
+      "en": "COLUMN CHART",
+      "vi": "BIỂU ĐỒ CỘT",
+      "page": "p-040",
+      "cards": [
+        {
+          "t": "column chart",
+          "pos": "noun phrase",
+          "ipa": "/ˈkɒl.əm tʃɑːt/",
+          "vi": "biểu đồ cột",
+          "ex": "We use a column chart to represent the number of fundraising envelopes sold by different classes."
+        },
+        {
+          "t": "horizontal axis",
+          "pos": "noun phrase",
+          "ipa": "/ˌhɒr.ɪˈzɒn.təl ˈæk.sɪs/",
+          "vi": "trục ngang / trục hoành",
+          "ex": "The horizontal axis represents the categories, which are the different classes: 6A, 6B, 6C, and 6D."
+        },
+        {
+          "t": "vertical axis",
+          "pos": "noun phrase",
+          "ipa": "/ˈvɜː.tɪ.kəl ˈæk.sɪs/",
+          "vi": "trục đứng / trục tung",
+          "ex": "The vertical axis represents the quantity of items, indicating the number of envelopes sold."
+        },
+        {
+          "t": "rectangle",
+          "pos": "noun",
+          "ipa": "/ˈrek.tæŋ.ɡəl/",
+          "vi": "hình chữ nhật / cột",
+          "ex": "For each class, draw a vertical rectangle with a height equal to the value of the collected data."
+        },
+        {
+          "t": "height",
+          "pos": "noun",
+          "ipa": "/haɪt/",
+          "vi": "chiều cao",
+          "ex": "The height of the column represents the specific value, such as 35 envelopes sold by class 6C."
+        },
+        {
+          "t": "width",
+          "pos": "noun",
+          "ipa": "/wɪdθ/",
+          "vi": "chiều rộng",
+          "ex": "The widths of all vertical rectangles in a column chart must be strictly equal."
+        },
+        {
+          "t": "label",
+          "pos": "noun / verb",
+          "ipa": "/ˈleɪ.bəl/",
+          "vi": "nhãn / chú thích",
+          "ex": "Remember to write the title of the chart and label both axes clearly."
+        },
+        {
+          "t": "scale",
+          "pos": "noun",
+          "ipa": "/skeɪl/",
+          "vi": "thang đo / vạch chia",
+          "ex": "Choose an appropriate scale for the vertical axis so all data points fit easily."
+        },
+        {
+          "t": "trend",
+          "pos": "noun",
+          "ipa": "/trend/",
+          "vi": "xu hướng",
+          "ex": "From the chart, we can easily identify the growth trend of Vietnam's GDP from 2014 to 2017."
+        },
+        {
+          "t": "increase",
+          "pos": "verb / noun",
+          "ipa": "/ɪnˈkriːs/",
+          "vi": "tăng / sự tăng lên",
+          "ex": "The annual GDP of Vietnam increased steadily from 186 billion USD in 2014 to 224 billion USD in 2017."
+        },
+        {
+          "t": "decrease",
+          "pos": "verb / noun",
+          "ipa": "/dɪˈkriːs/",
+          "vi": "giảm / sự giảm đi",
+          "ex": "A decrease in column height over consecutive months indicates a loss in business profit."
+        },
+        {
+          "t": "data analysis",
+          "pos": "noun phrase",
+          "ipa": "/ˈdeɪ.tə əˈnæl.ə.sɪs/",
+          "vi": "phân tích dữ liệu",
+          "ex": "Data analysis of the column chart helps us know which activity attracted the most students during recess."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Classes 6A, 6B, 6C, and 6D sold 32, 27, 35, and 30 fundraising envelopes. How can we show this data visually?"
+        },
+        {
+          "who": "Tron",
+          "text": "If we use a picture graph, we must draw too many icons! 32 or 27 little envelopes will take forever to sketch!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Let's draw a column chart instead! We can represent each class with a rectangle whose height matches its sales!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Brilliant, Vuong! A column chart is incredibly fast to draw and makes comparing data visual and easy!"
+        }
+      ]
+    },
+    {
+      "n": 41,
+      "en": "DOUBLE COLUMN CHART",
+      "vi": "BIỂU ĐỒ CỘT KÉP",
+      "page": "p-041",
+      "cards": [
+        {
+          "t": "double column chart",
+          "pos": "noun phrase",
+          "ipa": "/ˈdʌb.əl ˈkɒl.əm tʃɑːt/",
+          "vi": "biểu đồ cột kép",
+          "ex": "We use a double column chart to easily compare the academic performance of class 6A and class 6B."
+        },
+        {
+          "t": "double horizontal bar chart",
+          "pos": "noun phrase",
+          "ipa": "/ˈdʌb.əl ˌhɒr.ɪˈzɒn.təl bɑː tʃɑːt/",
+          "vi": "biểu đồ thanh ngang kép",
+          "ex": "A double horizontal bar chart represents the same comparative data but with horizontal rows of paired bars."
+        },
+        {
+          "t": "compare",
+          "pos": "verb",
+          "ipa": "/kəmˈpeər/",
+          "vi": "so sánh",
+          "ex": "A double column chart helps us compare the number of boys and girls born during the first three days of 2020."
+        },
+        {
+          "t": "legend",
+          "pos": "noun",
+          "ipa": "/ˈledʒ.ənd/",
+          "vi": "chú giải / chú thích (biểu đồ)",
+          "ex": "The legend shows that the blue column represents class 6A and the orange column represents class 6B."
+        },
+        {
+          "t": "horizontal axis",
+          "pos": "noun phrase",
+          "ipa": "/ˌhɒr.ɪˈzɒn.təl ˈæk.sɪs/",
+          "vi": "trục ngang / trục hoành",
+          "ex": "The horizontal axis in our chart represents the categories of student academic performance: Good, Fair, Average, and Poor."
+        },
+        {
+          "t": "vertical axis",
+          "pos": "noun phrase",
+          "ipa": "/ˈvɜː.tɪ.kəl ˈæk.sɪs/",
+          "vi": "trục đứng / trục tung",
+          "ex": "The vertical axis represents the number of students, with a scale ranging from 0 to 25."
+        },
+        {
+          "t": "height",
+          "pos": "noun",
+          "ipa": "/haɪt/",
+          "vi": "chiều cao / độ cao",
+          "ex": "The height of each rectangle corresponds to the number of students in that academic category."
+        },
+        {
+          "t": "width",
+          "pos": "noun",
+          "ipa": "/wɪdθ/",
+          "vi": "chiều rộng",
+          "ex": "The widths of all rectangles in a double column chart must be identical."
+        },
+        {
+          "t": "data analysis",
+          "pos": "noun phrase",
+          "ipa": "/ˈdeɪ.tə əˈnæl.ə.sɪs/",
+          "vi": "phân tích dữ liệu",
+          "ex": "Through data analysis of Messi and Ronaldo's goals from 2016 to 2018, we can observe their annual performance trends."
+        },
+        {
+          "t": "trend",
+          "pos": "noun",
+          "ipa": "/trend/",
+          "vi": "xu hướng",
+          "ex": "The descending columns of both players show a decreasing trend in their goals from 2016 to 2018."
+        },
+        {
+          "t": "increase",
+          "pos": "verb / noun",
+          "ipa": "/ɪnˈkriːs/",
+          "vi": "tăng / sự tăng lên",
+          "ex": "The amount of rainfall at Nha Trang station showed a significant increase during the final months of 2018."
+        },
+        {
+          "t": "decrease",
+          "pos": "verb / noun",
+          "ipa": "/dɪˈkriːs/",
+          "vi": "giảm / sự giảm đi",
+          "ex": "A decrease in the height of the columns represents a reduction in rainfall at the Tuyen Quang station."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Class 6A and 6B want to compare their scores. Class 6A has 13 Good grades, while 6B has 9. How can we compare them visually?"
+        },
+        {
+          "who": "Tron",
+          "text": "If we draw two separate column charts, we have to look back and forth! It is quite difficult to compare!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Let's combine them! For each grade category, we draw the 6A column and 6B column side-by-side in different colors!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Brilliant! That is a double column chart! It makes comparison between the two classes incredibly easy and clear!"
+        }
+      ]
+    },
+    {
+      "n": 42,
+      "en": "POSSIBLE OUTCOMES AND EVENTS IN GAMES AND EXPERIMENTS",
+      "vi": "KẾT QUẢ CÓ THỂ VÀ SỰ KIỆN TRONG TRÒ CHƠI, THÍ NGHIỆM",
+      "page": "p-042",
+      "cards": [
+        {
+          "t": "possible outcome",
+          "pos": "noun phrase",
+          "ipa": "/ˈpɒs.ə.bəl ˈaʊt.kʌm/",
+          "vi": "kết quả có thể (xảy ra)",
+          "ex": "When we roll a standard six-sided die, there are six possible outcomes: landing on 1, 2, 3, 4, 5, or 6 dots."
+        },
+        {
+          "t": "event",
+          "pos": "noun",
+          "ipa": "/ɪˈvent/",
+          "vi": "sự kiện",
+          "ex": "An event like 'getting an even number of dots' occurs when the die lands on 2, 4, or 6."
+        },
+        {
+          "t": "game",
+          "pos": "noun",
+          "ipa": "/ɡeɪm/",
+          "vi": "trò chơi",
+          "ex": "The 'Secret Door' is a fascinating game with three hidden rewards: one car and two goats."
+        },
+        {
+          "t": "experiment",
+          "pos": "noun",
+          "ipa": "/ɪkˈsper.ɪ.mənt/",
+          "vi": "thí nghiệm / phép thử",
+          "ex": "Tossing two coins simultaneously is a classic mathematical experiment to observe outcomes."
+        },
+        {
+          "t": "randomly",
+          "pos": "adverb",
+          "ipa": "/ˈræn.dəm.li/",
+          "vi": "một cách ngẫu nhiên",
+          "ex": "Without looking, a student randomly draws a ball from a bag containing red and green balls."
+        },
+        {
+          "t": "roll a die",
+          "pos": "verb phrase",
+          "ipa": "/rəʊl ə daɪ/",
+          "vi": "gieo một con xúc xắc",
+          "ex": "Roll a die five times and record the number of dots on the top face of each roll."
+        },
+        {
+          "t": "toss a coin",
+          "pos": "verb phrase",
+          "ipa": "/tɒs ə kɔɪn/",
+          "vi": "tung một đồng xu",
+          "ex": "In this game, each player will toss a coin thirty times and record whether it lands on heads or tails."
+        },
+        {
+          "t": "heads",
+          "pos": "noun (usually plural)",
+          "ipa": "/hedz/",
+          "vi": "mặt sấp (mặt ghi mệnh giá)",
+          "ex": "The event 'getting both coins showing heads' occurred twice during their ten turns."
+        },
+        {
+          "t": "tails",
+          "pos": "noun (usually plural)",
+          "ipa": "/teɪlz/",
+          "vi": "mặt ngửa (mặt còn lại)",
+          "ex": "The opposite side of the coin's face value is called tails and usually features an emblem."
+        },
+        {
+          "t": "total number of dots",
+          "pos": "noun phrase",
+          "ipa": "/ˈtəʊ.təl ˈnʌm.bər ɒv dɒts/",
+          "vi": "tổng số chấm",
+          "ex": "Calculate the total number of dots on two rolled dice to see if the sum is greater than 7."
+        },
+        {
+          "t": "occur",
+          "pos": "verb",
+          "ipa": "/əˈkɜːr/",
+          "vi": "xảy ra",
+          "ex": "Depending on the actual results of the game, a specific event may occur or not occur."
+        },
+        {
+          "t": "winner",
+          "pos": "noun",
+          "ipa": "/ˈwɪn.ər/",
+          "vi": "người thắng cuộc / người thắng",
+          "ex": "The winner is the player who gets more red balls after ten turns of random drawing."
+        }
+      ],
+      "dlg": [
+        {
+          "who": "Mr. Pi",
+          "text": "Welcome to the 'Secret Door' game! Behind these three doors, we have placed one car and two goats. What are the possible outcomes when choosing a door?"
+        },
+        {
+          "who": "Tron",
+          "text": "When we select any door, the possible outcomes we can get are either a 'car' or a 'goat'! There are only two possible types of rewards!"
+        },
+        {
+          "who": "Vuong",
+          "text": "Yes! And 'getting a car' is an event. It may occur if we select the correct door, or it may not occur if we select a goat!"
+        },
+        {
+          "who": "Mr. Pi",
+          "text": "Brilliant! You both understand that while we cannot predict the exact result beforehand, we can list all possible outcomes and analyze our events!"
+        }
+      ]
+    }
+  ]
+}
