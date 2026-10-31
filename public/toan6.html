@@ -173,7 +173,7 @@ details.settings summary{min-height:40px;display:flex;align-items:center;cursor:
 <body>
 <div class="top"><div class="wrap">
   <div class="row">
-    <div class="brand"><b id="brand" tabindex="0" role="link">Toán 6</b><span class="muted small">Từ vựng tiếng Anh · 42 bài</span></div>
+    <div class="brand"><a href="/" class="btn back-pill" title="Quay lại ứng dụng chính (Lớp 6–9)">← Về trang chính</a><b id="brand" tabindex="0" role="link">Toán 6</b><span class="muted small">Từ vựng tiếng Anh · 42 bài</span></div>
     <div class="search"><label class="sr" for="q">Tìm từ</label><input id="q" type="search" placeholder="Tìm từ hoặc nghĩa… (vd: fraction, phân số)" autocomplete="off"></div>
   </div>
   <div class="lessonbar">
@@ -204,6 +204,14 @@ details.settings summary{min-height:40px;display:flex;align-items:center;cursor:
 </div></div>
 
 <main class="wrap" id="main" aria-live="polite"></main>
+
+<footer class="author-footer wrap">
+  <div class="badge">Toán Song Ngữ THCS · Lớp 6 Chuẩn SGK (42 bài)</div>
+  <div><b>© Bản quyền nội dung &amp; Phần mềm: Thầy Lê Tâm</b></div>
+  <div>Giáo viên trường THCS Quang Trung, Phường Xuân Hương, TP. Đà Lạt, Tỉnh Lâm Đồng</div>
+  <div class="author-contact" style="margin-top:6px;">📞 Liên hệ / Zalo: <a href="tel:0913443127"><b>0913.443.127</b></a></div>
+</footer>
+
 
 <script>
 /* ===== CẤU HÌNH (người dùng có thể ghi đè trước khi nhúng) =====
@@ -306,8 +314,7 @@ function rankVoice(v){
   return sc;
 }
 function loadVoices(){
-  if(!TTS.ok)return;
-  const all=speechSynthesis.getVoices().map(v=>({v,s:rankVoice(v)})).filter(x=>x.s>=0).sort((a,b)=>b.s-a.s);
+  const all=speechSynthesis.getVoices().map(v=>({v,s:rankVoice(v)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s);
   TTS.voices=all.map(x=>x.v);
   const sel=$("#voice"); const saved=store.get("voice",null);
   sel.innerHTML=TTS.voices.length?TTS.voices.map(v=>`<option value="${esc(v.voiceURI)}">${esc(v.name)} (${esc(v.lang)})</option>`).join(""):'<option value="">Mặc định của trình duyệt</option>';

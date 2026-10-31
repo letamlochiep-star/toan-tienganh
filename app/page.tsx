@@ -35,6 +35,8 @@ export default function Home() {
             <a href="#hom-nay" data-r="hom-nay">Hôm nay</a>
             <a href="#toan-6" data-r="toan-6">Toán 6 (42 bài)</a>
             <a href="#toan-7" data-r="toan-7">Toán 7 (35 bài)</a>
+            <a href="#toan-8" data-r="toan-8">Toán 8 (39 bài)</a>
+            <a href="#toan-9" data-r="toan-9">Toán 9 (32 bài)</a>
             <a href="#kiem-tra" data-r="kiem-tra">Kiểm tra</a>
             <a href="#lo-trinh" data-r="lo-trinh">Lộ trình 40 ngày</a>
             <a href="#tu-dien" data-r="tu-dien">Từ điển</a>
@@ -65,6 +67,8 @@ export default function Home() {
       <Script src="/word-icons.js" strategy="beforeInteractive" />
       <Script src="/toan6-data.js" strategy="beforeInteractive" />
       <Script src="/toan7-data.js" strategy="beforeInteractive" />
+      <Script src="/toan8-data.js" strategy="beforeInteractive" />
+      <Script src="/toan9-data.js" strategy="beforeInteractive" />
       <Script src="/app.js" strategy="afterInteractive" />
     </>
   );

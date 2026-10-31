@@ -87,7 +87,7 @@ function updateVisitUI() {
 }
 try { fetchVisits(); } catch(e){}
 
-const ROUTES={"hom-nay":vToday,"toan-6":vToan6,"toan-7":vToan7,"kiem-tra":vQuiz,"lo-trinh":vRoad,"tu-dien":vDict,"on-tap":vReview,"thong-ke":vStats,"mo-rong":vExt};
+const ROUTES={"hom-nay":vToday,"toan-6":vToan6,"toan-7":vToan7,"toan-8":vToan8,"toan-9":vToan9,"kiem-tra":vQuiz,"lo-trinh":vRoad,"tu-dien":vDict,"on-tap":vReview,"thong-ke":vStats,"mo-rong":vExt};
 function route(){const r=(location.hash||"#hom-nay").slice(1);const key=ROUTES[r]?r:"hom-nay";
   document.querySelectorAll("#tabs a").forEach(a=>{if(a.dataset.r===key)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
   stopSpeak();ROUTES[key]();header();}
@@ -304,6 +304,26 @@ document.addEventListener("click", e => {
       btn7.textContent = isHidden ? "Ẩn danh sách từ" : "👁️ Xem từ vựng";
     }
   }
+  const btn8 = e.target.closest("[data-t8-toggle]");
+  if (btn8) {
+    const num = btn8.dataset.t8Toggle;
+    const sub = $("#t8-sub-" + num);
+    if (sub) {
+      const isHidden = sub.hidden;
+      sub.hidden = !isHidden;
+      btn8.textContent = isHidden ? "Ẩn danh sách từ" : "👁️ Xem từ vựng";
+    }
+  }
+  const btn9 = e.target.closest("[data-t9-toggle]");
+  if (btn9) {
+    const num = btn9.dataset.t9Toggle;
+    const sub = $("#t9-sub-" + num);
+    if (sub) {
+      const isHidden = sub.hidden;
+      sub.hidden = !isHidden;
+      btn9.textContent = isHidden ? "Ẩn danh sách từ" : "👁️ Xem từ vựng";
+    }
+  }
 });
 
 /* ---- Toán 7 (35 bài chuẩn SGK) ---- */
@@ -392,6 +412,187 @@ function vToan7() {
     inputQ.addEventListener("input", e => {
       T7_FILTER = e.target.value;
       vToan7();
+    });
+  }
+}
+
+/* ---- Toán 8 (39 bài chuẩn SGK) ---- */
+let T8_FILTER = "";
+function vToan8() {
+  const data = window.TOAN8_DATA || [];
+  const groups = window.TOAN8_GROUPS || [
+    ["Đa thức", 1, 9],
+    ["Tứ giác", 10, 14],
+    ["Định lí Thalès", 15, 17],
+    ["Dữ liệu và biểu đồ", 18, 20],
+    ["Phân thức đại số", 21, 24],
+    ["Phương trình bậc nhất, hàm số bậc nhất", 25, 29],
+    ["Xác suất", 30, 32],
+    ["Hình đồng dạng, định lí Pythagore", 33, 37],
+    ["Hình chóp", 38, 39]
+  ];
+
+  let totalTerms = data.reduce((sum, l) => sum + (l.cards ? l.cards.length : 0), 0);
+
+  let h = '<section class="t6-hero">' +
+    '<h2>Toán 8 · 39 bài Từ vựng Tiếng Anh Chuẩn SGK</h2>' +
+    '<p>Trọn bộ <b>39 bài học</b> với <b>' + (totalTerms || 780) + ' thuật ngữ</b>, phiên âm chuẩn IPA (Anh–Anh), ví dụ phong phú và hội thoại minh họa sinh động. Bao quát đa thức, phân thức, tứ giác, định lí Thalès, hình đồng dạng và hình chóp!</p>' +
+    '<div class="t6-actions">' +
+      '<a href="/toan8.html" class="t6-btn-room">🚀 Mở giao diện học tương tác Toán 8 (Toàn màn hình & Hội thoại)</a>' +
+      '<span class="chip">📚 39 bài học</span>' +
+      '<span class="chip">🔊 Giọng đọc chuẩn Anh–Anh</span>' +
+      '<span class="chip">💬 Math Class Dialogues</span>' +
+    '</div>' +
+  '</section>';
+
+  h += '<section class="panel">' +
+    '<div class="filters" style="margin-bottom:14px">' +
+      '<div class="grow">' +
+        '<label class="f" for="t8q">Tìm bài học hoặc từ vựng trong 39 bài Toán 8</label>' +
+        '<input type="search" id="t8q" value="' + esc(T8_FILTER) + '" placeholder="Ví dụ: monomial, đa thức, quadrilateral, thales, pythagore...">' +
+      '</div>' +
+    '</div>' +
+  '</section>';
+
+  const q = (T8_FILTER || "").toLowerCase().trim();
+
+  h += '<div class="t6-groups" id="t8-groups-container">';
+  groups.forEach(([gName, startL, endL]) => {
+    const lessonsInGroup = data.filter(l => l.n >= startL && l.n <= endL);
+    const matchedLessons = lessonsInGroup.filter(l => {
+      if (!q) return true;
+      if (l.en.toLowerCase().includes(q) || (l.vi && l.vi.toLowerCase().includes(q)) || ("bài " + l.n).includes(q)) return true;
+      return l.cards && l.cards.some(c => c.t.toLowerCase().includes(q) || (c.vi && c.vi.toLowerCase().includes(q)));
+    });
+
+    if (matchedLessons.length === 0) return;
+
+    h += '<div class="t6-group-card">' +
+      '<div class="t6-group-head">' +
+        '<h3>' + esc(gName) + ' <span class="muted small">(Bài ' + startL + '–' + endL + ')</span></h3>' +
+        '<span class="t6-badge">' + matchedLessons.length + ' bài</span>' +
+      '</div>' +
+      '<div class="t6-lesson-grid">' +
+        matchedLessons.map(l => {
+          return '<div class="t6-lesson-tile">' +
+            '<div>' +
+              '<span class="n">BÀI ' + l.n + '</span>' +
+              '<div class="en">' + esc(l.en) + '</div>' +
+              '<div class="vi">' + esc(l.vi || "") + '</div>' +
+              '<div class="small muted" style="margin-top:4px">' + (l.cards ? l.cards.length : 20) + ' từ vựng & hội thoại tương tác</div>' +
+            '</div>' +
+            '<div class="t6-lesson-acts">' +
+              '<a href="/toan8.html#bai-' + l.n + '" class="btn primary" title="Mở bài học tương tác">▶ Vào bài ' + l.n + '</a>' +
+              '<button type="button" class="btn" data-t8-toggle="' + l.n + '">👁️ Xem ' + (l.cards ? l.cards.length : "") + ' từ</button>' +
+            '</div>' +
+            '<div class="t6-subwords" id="t8-sub-' + l.n + '" hidden>' +
+              (l.cards || []).map(c => '<div>' + sw(esc(c.t), c.t, "t8-" + l.n + "-" + c.t) + ' <span class="ipa">' + esc(c.ipa) + '</span>: ' + esc(c.vi) + '</div>').join("") +
+            '</div>' +
+          '</div>';
+        }).join("") +
+      '</div>' +
+    '</div>';
+  });
+  h += '</div>';
+
+  $("#view").innerHTML = h;
+
+  const inputQ = $("#t8q");
+  if (inputQ) {
+    inputQ.addEventListener("input", e => {
+      T8_FILTER = e.target.value;
+      vToan8();
+    });
+  }
+}
+
+/* ---- Toán 9 (32 bài chuẩn SGK) ---- */
+let T9_FILTER = "";
+function vToan9() {
+  const data = window.TOAN9_DATA || [];
+  const groups = window.TOAN9_GROUPS || [
+    ["Hệ phương trình bậc nhất hai ẩn", 1, 3],
+    ["Phương trình, bất phương trình bậc nhất", 4, 6],
+    ["Căn thức", 7, 10],
+    ["Hệ thức lượng trong tam giác vuông", 11, 12],
+    ["Đường tròn", 13, 17],
+    ["Hàm số y = ax² và phương trình bậc hai", 18, 21],
+    ["Tần số và tần số tương đối", 22, 24],
+    ["Xác suất", 25, 26],
+    ["Góc nội tiếp, đa giác đều", 27, 30],
+    ["Hình trụ, hình nón, hình cầu", 31, 32]
+  ];
+
+  let totalTerms = data.reduce((sum, l) => sum + (l.cards ? l.cards.length : 0), 0);
+
+  let h = '<section class="t6-hero">' +
+    '<h2>Toán 9 · 32 bài Từ vựng Tiếng Anh Chuẩn SGK</h2>' +
+    '<p>Trọn bộ <b>32 bài học</b> với <b>' + (totalTerms || 482) + ' thuật ngữ</b>, phiên âm chuẩn IPA (Anh–Anh), ví dụ chi tiết và hội thoại tương tác. Bao quát hệ phương trình, căn thức, hệ thức lượng, đường tròn, góc nội tiếp và hình học không gian!</p>' +
+    '<div class="t6-actions">' +
+      '<a href="/toan9.html" class="t6-btn-room">🚀 Mở giao diện học tương tác Toán 9 (Toàn màn hình & Hội thoại)</a>' +
+      '<span class="chip">📚 32 bài học</span>' +
+      '<span class="chip">🔊 Giọng đọc chuẩn Anh–Anh</span>' +
+      '<span class="chip">💬 Math Class Dialogues</span>' +
+    '</div>' +
+  '</section>';
+
+  h += '<section class="panel">' +
+    '<div class="filters" style="margin-bottom:14px">' +
+      '<div class="grow">' +
+        '<label class="f" for="t9q">Tìm bài học hoặc từ vựng trong 32 bài Toán 9</label>' +
+        '<input type="search" id="t9q" value="' + esc(T9_FILTER) + '" placeholder="Ví dụ: linear equation, căn thức, radical, circle, đường tròn...">' +
+      '</div>' +
+    '</div>' +
+  '</section>';
+
+  const q = (T9_FILTER || "").toLowerCase().trim();
+
+  h += '<div class="t6-groups" id="t9-groups-container">';
+  groups.forEach(([gName, startL, endL]) => {
+    const lessonsInGroup = data.filter(l => l.n >= startL && l.n <= endL);
+    const matchedLessons = lessonsInGroup.filter(l => {
+      if (!q) return true;
+      if (l.en.toLowerCase().includes(q) || (l.vi && l.vi.toLowerCase().includes(q)) || ("bài " + l.n).includes(q)) return true;
+      return l.cards && l.cards.some(c => c.t.toLowerCase().includes(q) || (c.vi && c.vi.toLowerCase().includes(q)));
+    });
+
+    if (matchedLessons.length === 0) return;
+
+    h += '<div class="t6-group-card">' +
+      '<div class="t6-group-head">' +
+        '<h3>' + esc(gName) + ' <span class="muted small">(Bài ' + startL + '–' + endL + ')</span></h3>' +
+        '<span class="t6-badge">' + matchedLessons.length + ' bài</span>' +
+      '</div>' +
+      '<div class="t6-lesson-grid">' +
+        matchedLessons.map(l => {
+          return '<div class="t6-lesson-tile">' +
+            '<div>' +
+              '<span class="n">BÀI ' + l.n + '</span>' +
+              '<div class="en">' + esc(l.en) + '</div>' +
+              '<div class="vi">' + esc(l.vi || "") + '</div>' +
+              '<div class="small muted" style="margin-top:4px">' + (l.cards ? l.cards.length : 15) + ' từ vựng & hội thoại tương tác</div>' +
+            '</div>' +
+            '<div class="t6-lesson-acts">' +
+              '<a href="/toan9.html#bai-' + l.n + '" class="btn primary" title="Mở bài học tương tác">▶ Vào bài ' + l.n + '</a>' +
+              '<button type="button" class="btn" data-t9-toggle="' + l.n + '">👁️ Xem ' + (l.cards ? l.cards.length : "") + ' từ</button>' +
+            '</div>' +
+            '<div class="t6-subwords" id="t9-sub-' + l.n + '" hidden>' +
+              (l.cards || []).map(c => '<div>' + sw(esc(c.t), c.t, "t9-" + l.n + "-" + c.t) + ' <span class="ipa">' + esc(c.ipa) + '</span>: ' + esc(c.vi) + '</div>').join("") +
+            '</div>' +
+          '</div>';
+        }).join("") +
+      '</div>' +
+    '</div>';
+  });
+  h += '</div>';
+
+  $("#view").innerHTML = h;
+
+  const inputQ = $("#t9q");
+  if (inputQ) {
+    inputQ.addEventListener("input", e => {
+      T9_FILTER = e.target.value;
+      vToan9();
     });
   }
 }

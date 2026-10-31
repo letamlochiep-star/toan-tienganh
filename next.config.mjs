@@ -27,6 +27,22 @@ const nextConfig = {
         source: '/lop-7',
         destination: '/toan7.html',
       },
+      {
+        source: '/toan-8',
+        destination: '/toan8.html',
+      },
+      {
+        source: '/lop-8',
+        destination: '/toan8.html',
+      },
+      {
+        source: '/toan-9',
+        destination: '/toan9.html',
+      },
+      {
+        source: '/lop-9',
+        destination: '/toan9.html',
+      },
     ];
   },
 };
