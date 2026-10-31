@@ -19,6 +19,14 @@ const nextConfig = {
         source: '/lop-6',
         destination: '/toan6.html',
       },
+      {
+        source: '/toan-7',
+        destination: '/toan7.html',
+      },
+      {
+        source: '/lop-7',
+        destination: '/toan7.html',
+      },
     ];
   },
 };

@@ -81,7 +81,7 @@ function updateVisitUI() {
 }
 try { fetchVisits(); } catch(e){}
 
-const ROUTES={"hom-nay":vToday,"toan-6":vToan6,"kiem-tra":vQuiz,"lo-trinh":vRoad,"tu-dien":vDict,"on-tap":vReview,"thong-ke":vStats,"mo-rong":vExt};
+const ROUTES={"hom-nay":vToday,"toan-6":vToan6,"toan-7":vToan7,"kiem-tra":vQuiz,"lo-trinh":vRoad,"tu-dien":vDict,"on-tap":vReview,"thong-ke":vStats,"mo-rong":vExt};
 function route(){const r=(location.hash||"#hom-nay").slice(1);const key=ROUTES[r]?r:"hom-nay";
   document.querySelectorAll("#tabs a").forEach(a=>{if(a.dataset.r===key)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
   stopSpeak();ROUTES[key]();header();}
@@ -288,7 +288,107 @@ document.addEventListener("click", e => {
       btn.textContent = isHidden ? "Ẩn danh sách từ" : "👁️ Xem 12 từ";
     }
   }
+  const btn7 = e.target.closest("[data-t7-toggle]");
+  if (btn7) {
+    const num = btn7.dataset.t7Toggle;
+    const sub = $("#t7-sub-" + num);
+    if (sub) {
+      const isHidden = sub.hidden;
+      sub.hidden = !isHidden;
+      btn7.textContent = isHidden ? "Ẩn danh sách từ" : "👁️ Xem từ vựng";
+    }
+  }
 });
+
+/* ---- Toán 7 (35 bài chuẩn SGK) ---- */
+let T7_FILTER = "";
+function vToan7() {
+  const data = window.TOAN7_DATA || [];
+  const groups = window.TOAN7_GROUPS || [
+    ["Số hữu tỉ và số thực", 1, 7],
+    ["Góc, đường thẳng song song, tam giác", 8, 10],
+    ["Tam giác bằng nhau", 13, 16],
+    ["Thống kê", 17, 19],
+    ["Tỉ lệ thức, đại lượng tỉ lệ", 20, 23],
+    ["Biểu thức đại số và đa thức", 24, 28],
+    ["Xác suất", 29, 30],
+    ["Quan hệ trong tam giác", 31, 35],
+    ["Hình hộp và lăng trụ", 36, 37]
+  ];
+
+  let totalTerms = data.reduce((sum, l) => sum + (l.cards ? l.cards.length : 0), 0);
+
+  let h = '<section class="t6-hero">' +
+    '<h2>Toán 7 – 35 bài Từ vựng Tiếng Anh Chuẩn SGK</h2>' +
+    '<p>Trọn bộ <b>35 bài học</b> với <b>' + (totalTerms || 684) + ' thuật ngữ</b>, phiên âm chuẩn IPA, ví dụ thực tế và các đoạn hội thoại sinh động giữa <b>Mr. Pi, Tron, Vuong & Ms. Linh</b>. Tích hợp audio phát âm giọng bản ngữ và luyện tập trực quan!</p>' +
+    '<div class="t6-actions">' +
+      '<a href="/toan7.html" class="t6-btn-room">🚀 Mở giao diện học tương tác Toán 7 (Toàn màn hình & Hội thoại)</a>' +
+      '<span class="chip">📚 35 bài học</span>' +
+      '<span class="chip">🔊 Phát âm giọng đọc chuẩn</span>' +
+      '<span class="chip">💬 Math Class Dialogues</span>' +
+    '</div>' +
+  '</section>';
+
+  h += '<section class="panel">' +
+    '<div class="filters" style="margin-bottom:14px">' +
+      '<div class="grow">' +
+        '<label class="f" for="t7q">Tìm bài học hoặc từ vựng trong 35 bài Toán 7</label>' +
+        '<input type="search" id="t7q" value="' + esc(T7_FILTER) + '" placeholder="Ví dụ: rational number, tam giác, congruent, tỉ lệ thức, probability...">' +
+      '</div>' +
+    '</div>' +
+  '</section>';
+
+  const q = (T7_FILTER || "").toLowerCase().trim();
+
+  h += '<div class="t6-groups" id="t7-groups-container">';
+  groups.forEach(([gName, startL, endL]) => {
+    const lessonsInGroup = data.filter(l => l.n >= startL && l.n <= endL);
+    const matchedLessons = lessonsInGroup.filter(l => {
+      if (!q) return true;
+      if (l.en.toLowerCase().includes(q) || (l.vi && l.vi.toLowerCase().includes(q)) || ("bài " + l.n).includes(q)) return true;
+      return l.cards && l.cards.some(c => c.t.toLowerCase().includes(q) || (c.vi && c.vi.toLowerCase().includes(q)));
+    });
+
+    if (matchedLessons.length === 0) return;
+
+    h += '<div class="t6-group-card">' +
+      '<div class="t6-group-head">' +
+        '<h3>' + esc(gName) + ' <span class="muted small">(Bài ' + startL + '–' + endL + ')</span></h3>' +
+        '<span class="t6-badge">' + matchedLessons.length + ' bài</span>' +
+      '</div>' +
+      '<div class="t6-lesson-grid">' +
+        matchedLessons.map(l => {
+          return '<div class="t6-lesson-tile">' +
+            '<div>' +
+              '<span class="n">BÀI ' + l.n + '</span>' +
+              '<div class="en">' + esc(l.en) + '</div>' +
+              '<div class="vi">' + esc(l.vi || "") + '</div>' +
+              '<div class="small muted" style="margin-top:4px">' + (l.cards ? l.cards.length : 20) + ' từ vựng & hội thoại tương tác</div>' +
+            '</div>' +
+            '<div class="t6-lesson-acts">' +
+              '<a href="/toan7.html#bai-' + l.n + '" class="btn primary" title="Mở bài học tương tác">▶ Vào bài ' + l.n + '</a>' +
+              '<button type="button" class="btn" data-t7-toggle="' + l.n + '">👁️ Xem ' + (l.cards ? l.cards.length : "") + ' từ</button>' +
+            '</div>' +
+            '<div class="t6-subwords" id="t7-sub-' + l.n + '" hidden>' +
+              (l.cards || []).map(c => '<div>' + sw(esc(c.t), c.t, "t7-" + l.n + "-" + c.t) + ' <span class="ipa">' + esc(c.ipa) + '</span>: ' + esc(c.vi) + '</div>').join("") +
+            '</div>' +
+          '</div>';
+        }).join("") +
+      '</div>' +
+    '</div>';
+  });
+  h += '</div>';
+
+  $("#view").innerHTML = h;
+
+  const inputQ = $("#t7q");
+  if (inputQ) {
+    inputQ.addEventListener("input", e => {
+      T7_FILTER = e.target.value;
+      vToan7();
+    });
+  }
+}
 
 /* ---- Lộ trình ---- */
 function vRoad(){
