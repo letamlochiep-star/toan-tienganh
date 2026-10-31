@@ -158,6 +158,15 @@ details.settings summary{min-height:40px;display:flex;align-items:center;cursor:
 @keyframes wave{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
 .sp.on .w1,.sp.on .w2{transform-origin:center;animation:wave .7s infinite}
 .sp.on .w2{animation-delay:.2s}
+
+/* Nút quay về trang chính & chân trang tác giả */
+.back-pill{background:var(--accent-soft);color:var(--accent);font-weight:600;border:1px solid var(--accent);text-decoration:none;margin-right:4px}
+.back-pill:hover{background:var(--accent);color:var(--accent-ink)}
+.author-footer{margin-top:48px;padding:24px 16px;text-align:center;border-top:1px solid var(--line);background:var(--paper);border-radius:14px;color:var(--muted);font-size:.88rem;line-height:1.7}
+.author-footer .badge{display:inline-block;padding:3px 12px;background:var(--accent-soft);color:var(--accent);border-radius:999px;font-size:.78rem;font-weight:700;margin-bottom:8px}
+.author-footer a{color:var(--accent);text-decoration:none}
+.author-footer a:hover{text-decoration:underline}
+
 </style>
 
 </head>
@@ -182,6 +191,8 @@ details.settings summary{min-height:40px;display:flex;align-items:center;cursor:
           <button class="btn" data-rate="0.75">Chậm</button>
           <button class="btn" data-rate="0.95">Vừa</button>
         </div></div>
+      <div><span class="lab" id="lacc">Giọng (phiên âm trong tài liệu là Anh–Anh)</span>
+        <div class="seg" role="group" aria-labelledby="lacc"><button class="btn" data-acc="gb">Anh–Anh</button><button class="btn" data-acc="us">Anh–Mỹ</button></div></div>
       <div><label for="voice">Giọng đọc (tiếng Anh)</label><select class="btn" id="voice" style="width:100%"></select>
         <div class="ph" id="vnote"></div></div>
       <div><span class="lab">Chế độ tự học</span>
@@ -273,15 +284,25 @@ function normalize(s){
 window.normalize=normalize;
 
 /* ---------- giọng đọc ---------- */
-const TTS={ok:"speechSynthesis" in window&&"SpeechSynthesisUtterance" in window,voices:[],voice:null,rate:store.get("rate",0.75),token:0,audio:null};
+const TTS={ok:"speechSynthesis" in window&&"SpeechSynthesisUtterance" in window,voices:[],voice:null,rate:store.get("rate",0.75),token:0,audio:null,accent:store.get("accent","gb")};
 function rankVoice(v){
   const n=v.name.toLowerCase(), l=(v.lang||"").replace("_","-").toLowerCase();
   if(!l.startsWith("en"))return -1;
-  let sc=l==="en-us"?50:l.startsWith("en-")?20:10;
-  if(/natural|neural|online/.test(n))sc+=60;
-  if(/google us english/.test(n))sc+=40;
-  if(/aria|jenny|guy|samantha|ava|allison|evan|nicky|zira|alex|serena/.test(n))sc+=25;
-  if(/compact|novelty|bad news|bahh|bells|boing|bubbles|cellos|good news|jester|organ|superstar|trinoids|whisper|wobble|zarvox|fred|albert|junior|ralph|kathy/.test(n))sc-=80;
+  const isGB = l === "en-gb";
+  const isUS = l === "en-us";
+  const wantGB = TTS.accent === "gb";
+  
+  // Điểm nền: 1000 cho đúng giọng đã chọn (ưu tiên tuyệt đối Anh-Anh khi chọn gb)
+  let sc = (wantGB ? isGB : isUS) ? 1000 : (wantGB ? isUS : isGB) ? 100 : (l.startsWith("en-") ? 50 : 10);
+  if(/natural|neural|online/.test(n)) sc += 200;
+  if(wantGB){
+    if(/google uk english/.test(n)) sc += 150;
+    if(/sonia|ryan|libby|maisie|george|hazel|susan|daniel|oliver|serena|kate|arthur|martha|stephanie/.test(n)) sc += 100;
+  } else {
+    if(/google us english/.test(n)) sc += 150;
+    if(/aria|jenny|guy|samantha|ava|allison|evan|nicky|zira/.test(n)) sc += 100;
+  }
+  if(/compact|novelty|bad news|bahh|bells|boing|bubbles|cellos|good news|jester|organ|superstar|trinoids|whisper|wobble|zarvox|fred|albert|junior|ralph|kathy/.test(n)) sc -= 500;
   return sc;
 }
 function loadVoices(){
@@ -290,9 +311,12 @@ function loadVoices(){
   TTS.voices=all.map(x=>x.v);
   const sel=$("#voice"); const saved=store.get("voice",null);
   sel.innerHTML=TTS.voices.length?TTS.voices.map(v=>`<option value="${esc(v.voiceURI)}">${esc(v.name)} (${esc(v.lang)})</option>`).join(""):'<option value="">Mặc định của trình duyệt</option>';
-  TTS.voice=TTS.voices.find(v=>v.voiceURI===saved)||TTS.voices[0]||null;
+  const wantLang = TTS.accent==="gb" ? "en-gb" : "en-us";
+  TTS.voice=TTS.voices.find(v=>v.voiceURI===saved&&(v.lang||"").replace("_","-").toLowerCase()===wantLang)
+    || TTS.voices.find(v=>(v.lang||"").replace("_","-").toLowerCase()===wantLang)
+    || TTS.voices[0] || null;
   if(TTS.voice)sel.value=TTS.voice.voiceURI;
-  $("#vnote").textContent=TTS.voices.length?"Đã chọn giọng Anh–Mỹ tốt nhất có trên thiết bị. Có thể đổi ở đây.":"Thiết bị chưa có giọng tiếng Anh; hãy cài giọng English (US) trong cài đặt hệ thống.";
+  $("#vnote").textContent=TTS.voices.length?(TTS.voice&&(TTS.voice.lang||"").replace("_","-").toLowerCase()===wantLang?"Đã chọn giọng "+(TTS.accent==="gb"?"Anh–Anh (chuẩn phiên âm tài liệu)":"Anh–Mỹ")+" tốt nhất trên thiết bị. Có thể đổi ở đây.":"Thiết bị chưa có giọng "+(TTS.accent==="gb"?"Anh–Anh (en-GB)":"Anh–Mỹ")+", đang dùng giọng tiếng Anh gần nhất. Hãy cài thêm giọng English (UK) trong cài đặt hệ thống để đọc chuẩn nhất."):"Thiết bị chưa có giọng tiếng Anh; hãy cài giọng English (UK) trong cài đặt hệ thống của thiết bị.";
 }
 if(TTS.ok){loadVoices();speechSynthesis.addEventListener&&speechSynthesis.addEventListener("voiceschanged",loadVoices)}
 else setTimeout(()=>{$("#vnote").textContent="Trình duyệt này không hỗ trợ đọc tiếng Anh. Hãy mở bằng Chrome, Edge hoặc Safari."},0);
@@ -315,7 +339,7 @@ function speakTTS(text,rateMul,pitch,token){
   return new Promise(res=>{
     if(!TTS.ok){res(false);return}
     const u=new SpeechSynthesisUtterance(normalize(text));
-    u.lang=TTS.voice?TTS.voice.lang:"en-US"; if(TTS.voice)u.voice=TTS.voice;
+    u.lang=TTS.voice?TTS.voice.lang:(TTS.accent==="gb"?"en-GB":"en-US"); if(TTS.voice)u.voice=TTS.voice;
     u.rate=Math.max(.4,Math.min(1.2,TTS.rate*rateMul)); u.pitch=pitch||1; u.volume=1;
     let done=false; const fin=ok=>{if(!done){done=true;clearInterval(iv);res(ok)}};
     u.onend=()=>fin(true); u.onerror=()=>fin(false);
@@ -496,6 +520,7 @@ document.addEventListener("click",e=>{
     return;
   }
   const m=t.closest(".mean.hidden"); if(m){m.classList.remove("hidden");return}
+  const ac=t.closest("[data-acc]"); if(ac){TTS.accent=ac.dataset.acc;store.set("accent",TTS.accent);store.set("voice",null);loadVoices();syncAcc();say("Mathematics is fun!");return}
   const cl=t.closest("[data-rate]"); if(cl){TTS.rate=+cl.dataset.rate;store.set("rate",TTS.rate);syncRate();say("Mathematics is fun!");return}
   switch(t.closest("button")?.id){
     case "playAll":playSeq(cur,false);break; case "playEx":playSeq(cur,true);break;
@@ -530,12 +555,13 @@ $("#voice").addEventListener("change",e=>{TTS.voice=TTS.voices.find(v=>v.voiceUR
 let qt; $("#q").addEventListener("input",e=>{clearTimeout(qt);qt=setTimeout(()=>e.target.value.trim()?renderSearch(e.target.value):hashGo(),200)});
 window.addEventListener("hashchange",hashGo);
 window.addEventListener("pagehide",stopAll);
+function syncAcc(){$$("[data-acc]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.acc===TTS.accent)))}
 function syncRate(){$$("[data-rate]").forEach(b=>b.setAttribute("aria-pressed",String(+b.dataset.rate===TTS.rate)))}
 function syncToggles(){$("#hideVi").setAttribute("aria-pressed",String(hideVi));$("#pause").setAttribute("aria-pressed",String(gap))}
 function refreshCards(){$$(".card .mean").forEach(m=>{m.classList.toggle("hidden",hideVi);if(hideVi){m.setAttribute("tabindex","0");m.setAttribute("role","button")}else{m.removeAttribute("tabindex");m.removeAttribute("role")}})}
 /* khởi tạo */
 $("#sel").innerHTML='<option value="">— Chọn bài —</option>'+DATA.map(l=>`<option value="${l.n}">Bài ${l.n}: ${esc(capEn(l.en)).slice(0,60)}</option>`).join("");
-syncRate(); syncToggles(); hashGo();
+syncRate(); syncAcc(); syncToggles(); hashGo();
 </script>
 
 </body>

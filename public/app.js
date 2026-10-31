@@ -30,9 +30,15 @@ const ext=id=>S.ext[id]||{};
 const SPK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor"/><path class="w" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="w" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
 function sw(text,say,id,cls){return '<span class="sw"><span class="'+(cls||"")+'">'+text+'</span><button type="button" class="spk" data-say="'+esc(say)+'"'+(id?' data-id="'+id+'"':'')+' aria-label="Nghe phát âm: '+esc(say)+'" title="Nghe phát âm">'+SPK+'</button></span>';}
 
-/* Phát âm: file có sẵn -> giọng trình duyệt en-US */
+/* Phát âm: file có sẵn -> giọng trình duyệt chuẩn Anh–Anh (en-GB) */
 let curBtn=null,curAudio=null,voice=null;
-function pickVoice(){const v=speechSynthesis.getVoices().filter(x=>/^en[-_]US/i.test(x.lang));voice=v.find(x=>/google us|samantha|aria|jenny|zira/i.test(x.name))||v[0]||null;}
+function pickVoice(){
+  if(!("speechSynthesis" in window))return;
+  const all=speechSynthesis.getVoices().filter(x=>/^en/i.test(x.lang));
+  const gb=all.filter(x=>/^en[-_]GB/i.test(x.lang));
+  const pool=gb.length?gb:all;
+  voice=pool.find(x=>/sonia|ryan|libby|maisie|google uk|george|hazel|susan|daniel|oliver|serena|kate/i.test(x.name))||pool[0]||null;
+}
 try{if("speechSynthesis" in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice;}}catch(e){}
 function stopSpeak(){try{speechSynthesis.cancel();}catch(e){}if(curAudio){try{curAudio.pause();}catch(e){}curAudio=null;}if(curBtn){curBtn.classList.remove("playing");curBtn=null;}}
 function speak(btn){
@@ -41,7 +47,7 @@ function speak(btn){
   const done=()=>{if(curBtn===btn){btn.classList.remove("playing");curBtn=null;}};
   const tts=()=>{
     if(!("speechSynthesis" in window)){done();toast("Trình duyệt này chưa hỗ trợ đọc thành tiếng.");return;}
-    const u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.85;if(voice)u.voice=voice;u.onend=done;u.onerror=done;speechSynthesis.speak(u);
+    const u=new SpeechSynthesisUtterance(text);u.lang=voice?voice.lang:"en-GB";u.rate=.82;if(voice)u.voice=voice;u.onend=done;u.onerror=done;speechSynthesis.speak(u);
   };
   const e=id?ext(id):{}; const path=(e.audio||"").trim();
   if(path){const a=new Audio((S.settings.audioBase||"")+path);curAudio=a;a.onended=done;a.onerror=()=>{curAudio=null;tts();};a.play().catch(()=>{curAudio=null;tts();});}

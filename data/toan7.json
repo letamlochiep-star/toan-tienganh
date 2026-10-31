@@ -1250,7 +1250,7 @@
         {
           "t": "alternate interior angles",
           "pos": "noun",
-          "ipa": "/ˈɒl.tə.nət ɪnˈtɪə.ri.ər ˈæŋ.ɡəlz/",
+          "ipa": "/ˈɔːl.tə.nət ɪnˈtɪə.ri.ər ˈæŋ.ɡəlz/",
           "vi": "hai góc so le trong",
           "ex": "Angles A1 and B3 are alternate interior angles and they are equal."
         },
@@ -5212,7 +5212,7 @@
     {
       "n": 33,
       "en": "RELATIONSHIP BETWEEN THE THREE SIDES OF A TRIANGLE",
-      "vi": "Quan hệ giữa ba cạnh của một tam giác",
+      "vi": "Quan hệ giữa ba cạnh của một tam giác. Bất đẳng thức tam giác",
       "page": 31,
       "focus": "",
       "cards": [
@@ -5396,7 +5396,7 @@
     {
       "n": 34,
       "en": "CONCURRENCE OF THREE MEDIANS AND THREE ANGLE BISECTORS",
-      "vi": "Sự đồng quy của ba đường trung tuyến, ba đường phân giác",
+      "vi": "Sự đồng quy của ba đường trung tuyến, ba đường phân giác trong một tam giác",
       "page": 32,
       "focus": "",
       "cards": [
@@ -5473,7 +5473,7 @@
         {
           "t": "degree",
           "pos": "noun",
-          "ipa": "/ˈdɪɡ.riː/",
+          "ipa": "/dɪˈɡriː/",
           "vi": "bậc (của đa thức)",
           "ex": "The degree of the polynomial 2x³ − 5x² + 7 is three."
         },
@@ -5581,7 +5581,7 @@
     {
       "n": 35,
       "en": "CONCURRENCE OF THREE PERPENDICULAR BISECTORS AND THREE ALTITUDES IN A TRIANGLE",
-      "vi": "Sự đồng quy của ba đường trung trực, ba đường cao",
+      "vi": "Sự đồng quy của ba đường trung trực, ba đường cao trong một tam giác",
       "page": 33,
       "focus": "Understanding geometric concurrence and solving real-world optimization problems",
       "cards": [
@@ -5952,7 +5952,7 @@
     {
       "n": 37,
       "en": "TRIANGULAR AND QUADRILATERAL RIGHT PRISMS",
-      "vi": "Hình lăng trụ đứng tam giác và tứ giác",
+      "vi": "Hình lăng trụ đứng tam giác và hình lăng trụ đứng tứ giác",
       "page": 35,
       "focus": "",
       "cards": [
